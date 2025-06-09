@@ -1,17 +1,37 @@
-import React from "react";
-import { Link, NavLink } from "react-router-dom";
-import PropertyListing from "../components/PropertyListing";
+import React, { useState, useEffect } from "react";
 import { FiSearch } from "react-icons/fi";
+import PropertyListing from "../components/PropertyListing";
 import { GetImageUrl } from "../../utils/GetImageURL";
 
 const Property = () => {
+  const [isSearching, setIsSearching] = useState("");
+  const [searchInput, setSearchInput] = useState("");
+  const [selectedType, setSelectedType] = useState("");
+
+  useEffect(() => {
+    if (searchInput.trim() === "") {
+      setIsSearching("");
+    }
+  }, [searchInput]);
+
+  const handleSearch = () => {
+    if (searchInput.trim() !== "") {
+      setIsSearching(searchInput.trim());
+    }
+  };
+
+  const handleTypeFilter = (type) => {
+    setSelectedType(type.toLowerCase());
+  };
+
   return (
     <>
       <section className="pages-section">
         <div className="row">
           <div className="container text-light d-flex justify-content-between align-items-start about-section-content">
-            <h2 className="col-6  fw-bolder">
-              Premium properties <img src={GetImageUrl("/images/star.png")} alt="img err" />
+            <h2 className="col-6 fw-bolder">
+              Premium properties{" "}
+              <img src={GetImageUrl("/images/star.png")} alt="img err" />
               <br />
               just curated for you
             </h2>
@@ -21,59 +41,49 @@ const Property = () => {
                 Apartments to Luxurious Villas, We Bring You Homes That Match
                 Your Lifestyle, Aspirations, and Every Chapter of Life.
               </p>
-              <a href="#" className="explore-btn  px-5">
+              <a href="#" className="explore-btn px-5">
                 Explore Properties
               </a>
             </div>
           </div>
         </div>
       </section>
+
       <section className="property-listing-page section">
         <div className="container property-tab-header">
           <div id="property-tab">
-            <NavLink
-              to="/properties"
-              end
-              className={({ isActive }) =>
-                `nav-item ${isActive ? "active-link" : ""}`
-              }
-            >
-              Residential property
-            </NavLink>
-            <NavLink
-              to="/about"
-              className={({ isActive }) =>
-                `nav-item ${isActive ? "active-link" : ""}`
-              }
-            >
-              Commercial property
-            </NavLink>
-            <NavLink
-              to="/"
-              className={({ isActive }) =>
-                `nav-item ${isActive ? "active-link" : ""}`
-              }
-            >
-              Industrial property
-            </NavLink>
-            <NavLink
-              to="/career"
-              className={({ isActive }) =>
-                `nav-item ${isActive ? "active-link" : ""}`
-              }
-            >
-              Agriculture property
-            </NavLink>
+            {["Residential", "Commercial", "Industrial", "Agriculture"].map(
+              (type) => (
+                <button
+                  key={type}
+                  className={`filterTag ${
+                    selectedType === type.toLowerCase() ? "active" : ""
+                  }`}
+                  onClick={() => handleTypeFilter(type)}
+                >
+                  {type} property
+                </button>
+              )
+            )}
           </div>
 
           <div className="searchbar">
-            <span className="searchIcon">
+            <span className="searchIcon" onClick={handleSearch}>
               <FiSearch />
             </span>
-            <input type="search" placeholder="Search here" />
+            <input
+              type="search"
+              placeholder="Search here"
+              value={searchInput}
+              onChange={(e) => setSearchInput(e.target.value)}
+            />
           </div>
         </div>
-        <PropertyListing />
+
+        <PropertyListing
+          searchQuery={isSearching}
+          selectedType={selectedType}
+        />
       </section>
     </>
   );

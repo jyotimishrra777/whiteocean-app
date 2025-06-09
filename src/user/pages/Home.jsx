@@ -102,7 +102,7 @@ const Home = () => {
               </div>
             </div>
 
-            <Link to="#" className="explore-btn px-4">
+            <Link to="/properties" className="explore-btn px-4">
               Explore All Properties
             </Link>
           </div>
@@ -132,52 +132,58 @@ const Home = () => {
 
       {/* second section */}
       <section className="section">
-        <h6 className="dealer-choose">
-          {" "}
-          <span>
-            <TfiLayoutLineSolid />
-          </span>{" "}
-          Who Choose Us
-        </h6>
-        <div className="dealer">
-          <div className="dealer1 mb-5">
-            <h2>We are Trusted Property Dealer in Ahmedabad.</h2>
-            <p>
-              At White Properties, we believe finding the right home is more
-              than a transaction — it’s a deeply personal journey built on
-              trust, care, and understanding. From your first consultation to
-              the final closing, we’re by your side with expert guidance and
-              truly personalized service. We take the time to listen, tailor
-              every step to your needs, and celebrate your success as if it were
-              our own.
-            </p>
-          </div>
-
-          <div className="dealer2 ">
-            <div className="dealer-explore">
-              <img
-                src={GetImageUrl("/images/kitchen.png")}
-                alt="img"
-                className="rounded-5"
-              />
-              <img
-                src={GetImageUrl("/images/arrow1.png")}
-                alt="img"
-                className="dealer1-arrow1"
-              />
+        <div className="container">
+          <h6 className="dealer-choose">
+            {" "}
+            <span>
+              <TfiLayoutLineSolid />
+            </span>{" "}
+            Who Choose Us
+          </h6>
+          <div className="dealer">
+            <div className="dealer1 mb-5">
+              <h2>We are Trusted Property Dealer in Ahmedabad.</h2>
+              <p>
+                At White Properties, we believe finding the right home is more
+                than a transaction — it’s a deeply personal journey built on
+                trust, care, and understanding. From your first consultation to
+                the final closing, we’re by your side with expert guidance and
+                truly personalized service. We take the time to listen, tailor
+                every step to your needs, and celebrate your success as if it
+                were our own.
+              </p>
             </div>
-            <div className="card-columns card-container">
-              {Dealer.map((item, i) => (
-                <div key={i} className="card dealer-card ">
-                  <div className="card-body text-start">
-                    <img src={item.img} alt="" className="mb-3" />
-                    <h5 className="card-title mb-3 font-weight-bolder">
-                      {item.title}
-                    </h5>
-                    <p className="card-text">{item.desc}</p>
+
+            <div className="dealer2 ">
+              <div className="dealer-explore">
+                <img
+                  src={GetImageUrl("/images/kitchen.png")}
+                  alt="img"
+                  className="rounded-5"
+                />
+                <img
+                  src={GetImageUrl("/images/arrow1.png")}
+                  alt="img"
+                  className="dealer1-arrow1"
+                />
+              </div>
+              <div className="card-columns card-container">
+                {Dealer.map((item, i) => (
+                  <div key={i} className="card dealer-card ">
+                    <div className="card-body text-start">
+                      <img
+                        src={GetImageUrl(item.img)}
+                        alt="Error"
+                        className="mb-3"
+                      />
+                      <h5 className="card-title mb-3 font-weight-bolder">
+                        {item.title}
+                      </h5>
+                      <p className="card-text">{item.desc}</p>
+                    </div>
                   </div>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
           </div>
         </div>
@@ -214,22 +220,24 @@ const Home = () => {
 
       {/* fourth section */}
       <section className="section explore-section">
-        <h6 className="dealer-choose">
-          {" "}
-          <span>
-            <TfiLayoutLineSolid />
-          </span>{" "}
-          Our specialization
-        </h6>
-        <div className="dealer">
-          <div className="dealer1 mb-5 col-12 px-0">
-            <h2 className="col-6 px-0">
-              Whether buying or investing, we’ll help you find the right
-              property
-            </h2>
-            <Link to="#" className="explore-btn px-4">
-              Explore All Properties
-            </Link>
+        <div className="container">
+          <h6 className="dealer-choose">
+            {" "}
+            <span>
+              <TfiLayoutLineSolid />
+            </span>{" "}
+            Our specialization
+          </h6>
+          <div className="dealer">
+            <div className="dealer1 mb-5 col-12 px-0">
+              <h2 className="col-6 px-0">
+                Whether buying or investing, we’ll help you find the right
+                property
+              </h2>
+              <Link to="/properties" className="explore-btn px-4">
+                Explore All Properties
+              </Link>
+            </div>
           </div>
         </div>
         <SpecialProperty />
@@ -283,22 +291,24 @@ const Home = () => {
       {/* seven section */}
 
       <section className="section service-section">
-        <h6 className="dealer-choose">
-          {" "}
-          <span>
-            <TfiLayoutLineSolid />
-          </span>{" "}
-          Services
-        </h6>
-        <div className="dealer">
-          <div className="dealer1 mb-5 col-12 px-0">
-            <h2 className="col-6 px-0">
-              Whether buying or investing, we’ll help you find the right
-              property
-            </h2>
-            <Link to="#" className="explore-btn px-4">
-              View all Services
-            </Link>
+        <div className="container">
+          <h6 className="dealer-choose">
+            {" "}
+            <span>
+              <TfiLayoutLineSolid />
+            </span>{" "}
+            Services
+          </h6>
+          <div className="dealer">
+            <div className="dealer1 mb-5 col-12 px-0">
+              <h2 className="col-6 px-0">
+                Whether buying or investing, we’ll help you find the right
+                property
+              </h2>
+              <Link to="#" className="explore-btn px-4">
+                View all Services
+              </Link>
+            </div>
           </div>
         </div>
 
@@ -376,21 +386,23 @@ const Home = () => {
       {/* eight section */}
 
       <section className="section timeline-section">
-        <h6 className="dealer-choose">
-          {" "}
-          <span>
-            <TfiLayoutLineSolid />
-          </span>{" "}
-          Our process
-        </h6>
-        <div className="dealer">
-          <div className="dealer1 mb-5 col-12 px-0">
-            <h2 className="col-6 px-0 ">
-              Customer satisfication is our key of Motivation.
-            </h2>
-            <Link to="#" className="explore-btn px-4">
-              Connect with us
-            </Link>
+        <div className="container">
+          <h6 className="dealer-choose">
+            {" "}
+            <span>
+              <TfiLayoutLineSolid />
+            </span>{" "}
+            Our process
+          </h6>
+          <div className="dealer">
+            <div className="dealer1 mb-5 col-12 px-0">
+              <h2 className="col-6 px-0 ">
+                Customer satisfication is our key of Motivation.
+              </h2>
+              <Link to="/contact" className="explore-btn px-4">
+                Connect with us
+              </Link>
+            </div>
           </div>
         </div>
 

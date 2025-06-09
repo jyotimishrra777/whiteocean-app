@@ -44,7 +44,7 @@ const Footer = () => {
                       </li>
                       <li className=" nav-item mb-2 mx-0">
                         <Link
-                          to="#"
+                          to="/career"
                           className="footer-link nav-link p-0 text-muted"
                         >
                           Career

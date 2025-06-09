@@ -36,74 +36,89 @@ const TeamData = [
 ];
 
 const Team = () => {
-  var settings = {
-    dots: true,
-    infinite: false,
-    speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    initialSlide: 0,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 1,
-          infinite: true,
-          dots: true,
-        },
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-          initialSlide: 1,
-        },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-    ],
-  };
+  // var settings = {
+  //   dots: true,
+  //   infinite: false,
+  //   speed: 500,
+  //   slidesToShow: 3,
+  //   slidesToScroll: 1,
+  //   initialSlide: 0,
+  //   responsive: [
+  //     {
+  //       breakpoint: 1024,
+  //       settings: {
+  //         slidesToShow: 3,
+  //         slidesToScroll: 1,
+  //         infinite: true,
+  //         dots: true,
+  //       },
+  //     },
+  //     {
+  //       breakpoint: 600,
+  //       settings: {
+  //         slidesToShow: 2,
+  //         slidesToScroll: 1,
+  //         initialSlide: 1,
+  //       },
+  //     },
+  //     {
+  //       breakpoint: 480,
+  //       settings: {
+  //         slidesToShow: 1,
+  //         slidesToScroll: 1,
+  //       },
+  //     },
+  //   ],
+  // };
 
   return (
     <>
-      <section className="section">
-        <h6 className="dealer-choose">
-          {" "}
-          <span>
-            <TfiLayoutLineSolid />
-          </span>{" "}
-          Our team
-        </h6>
-        <div className="dealer">
-          <div className="dealer1  col-12 px-0">
-            <h2 className="col-6 px-0">
-              Meet the Experts Behind Your Next Move
-            </h2>
-            <Link to="#" className="explore-btn  px-5">
-              Book a call
-            </Link>
-          </div>
-        </div>
-
-        <div className="container" id="team-member">
-          <Slider {...settings}>
+      {/* <Slider {...settings}>
             {TeamData.map((item, i) => (
               <div key={i} className="card slick-card" style="width: 18rem;">
-                <img src={GetImageUrl(item.image)} className="card-img-top" alt="Interior" />
+                <img
+                  src={GetImageUrl(item.image)}
+                  className="card-img-top"
+                  alt="Interior"
+                />
                 <div className="team-detail rounded-4 text-light py-2">
                   <h4 className="fs-4 fw-bold mb-0">{item.name}</h4>
                   <p className="py-0 mb-0">{item.post}</p>
                 </div>
               </div>
             ))}
-          </Slider>
+          </Slider> */}
+
+      <section className="section">
+        <div className="row  d-flex justify-content-between align-items-start">
+          <div className="col-5 p-0 right-container position-relative team-left">
+            <img
+              src={GetImageUrl("images/haresh.png")}
+              alt="Property"
+              className="img-fluid mt-0 dream-right-img"
+            />
+          </div>
+          <div className="col-6 left-container">
+            <h2 className="section-title">
+              Future homeowners, your dream starts here
+            </h2>
+            <p className="section-description">
+              <div className="team-quote-icon ">❝</div>
+              White Oceans Property understands that for millennials, owning a
+              home is more than a purchase—it's a lifelong dream. That’s why we
+              offer luxurious yet homely properties in Ahmedabad-West, blending
+              modern design with traditional charm.
+              <br />
+              Whether you're searching online or visiting in person, we’re here
+              to guide you—from property selection to home loans and
+              paperwork—making your journey smooth and joyful. A home is built
+              on memories, milestones, and meaningful moments, and we’re proud
+              to help create that foundation. With over 10 years of experience,
+              we’ve helped countless families find their “Sapno Ka Ghar,” and
+              we’re just getting started.
+              <div className="team-quote-icon float-right mt-4">❞</div>
+            </p>
+          </div>
         </div>
       </section>
     </>

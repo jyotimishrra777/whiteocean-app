@@ -55,16 +55,9 @@ const DreamProperty = () => {
               <img
                 src={GetImageUrl("images/arrow1.png")}
                 alt="img"
-                // className="dealer1-arrow1"
+                className="dream-explore-btn"
               />
             </div>
-            {/* <div className="arrow-icon">
-              <img
-                src="{GetImageUrl("images/arrow1.png"
-                alt="img"
-                // className="dealer1-arrow1"
-              /> 
-            </div> */}
           </div>
         </div>
       </div>

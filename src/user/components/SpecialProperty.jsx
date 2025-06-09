@@ -19,7 +19,7 @@ const SpecialProperty = () => {
               team ensures you receive the most accurate, up-to-date guidance at
               every step.
             </p>
-            <Link to="#" className="explore-link">
+            <Link to="/properties" className="explore-link">
               Explore More <span>↗</span>
             </Link>
           </div>
@@ -43,7 +43,7 @@ const SpecialProperty = () => {
               calls—just helpful insights via email, blogs, and expert-led
               consultations focused on your goals, not pressure.
             </p>
-            <Link to="#" className="explore-link">
+            <Link to="/properties" className="explore-link">
               Explore More <span>↗</span>
             </Link>
           </div>
@@ -68,7 +68,7 @@ const SpecialProperty = () => {
               relationships reflect our credibility—ensuring you're in reliable
               hands throughout your property journey.
             </p>
-            <Link to="#" className="explore-link">
+            <Link to="/properties" className="explore-link">
               Explore More <span>↗</span>
             </Link>
           </div>
@@ -92,7 +92,7 @@ const SpecialProperty = () => {
               trusted developers — never compromising on standards, integrity,
               or transparency.
             </p>
-            <Link to="#" className="explore-link">
+            <Link to="/properties" className="explore-link">
               Explore More <span>↗</span>
             </Link>
           </div>

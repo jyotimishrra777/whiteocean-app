@@ -15,7 +15,7 @@
     "name":"Navratna Ahmedabad",
     "image":"/images/p2.png",
     "location":"Ahmedabad",
-    "type":"Residencial",
+    "type":"Residential",
     "size":"2000 sqft",
     "price":"50 lacs",
     "furnished":"Yes"
@@ -37,7 +37,7 @@
     "name":"Nakshtra Ahmedabad",
     "image":"/images/p4.png",
     "location":"Geeta Mandir Ahmedabad",
-    "type":"Commercial",
+    "type":"Agriculture",
     "size":"3500 sqft",
     "price":"45lacs",
     "furnished":"No"
@@ -47,7 +47,7 @@
     "name":"Acropolis Ahmedabad",
     "image":"/images/p5.png",
     "location":"Thaltej Ahmedabad",
-    "type":"Residencial",
+    "type":"Industrial",
     "size":"4000 sqft",
     "price":"40lacs",
     "furnished":"No"

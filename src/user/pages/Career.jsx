@@ -22,7 +22,7 @@ const Property = () => {
                 individuals to grow, lead, and make a lasting impact in the
                 world of real estate.
               </p>
-              <Link to="#" className="explore-btn  px-5">
+              <Link to="/career" className="explore-btn  px-5">
                 See all open positions
               </Link>
             </div>
@@ -42,7 +42,7 @@ const Property = () => {
             <h2 className="col-6 px-0">
               Why white ocean properties is a great place to work
             </h2>
-            <Link to="#" className="explore-btn px-4">
+            <Link to="/about" className="explore-btn px-4">
               About Us
             </Link>
           </div>

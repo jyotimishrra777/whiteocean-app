@@ -1,73 +1,75 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import img1 from "/images/h1.jpg";
 import img2 from "/images/h2.jpg";
 import img3 from "/images/h3.jpg";
-import { GetImageUrl } from "../../utils/GetImageURL";
+import { TfiLayoutLineSolid } from "react-icons/tfi";
 
 const SpecializationSection = () => {
   return (
-    <div className="specialization-section container py-5">
-      <div className="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-3">
-        <div>
-          <p className="section-label">Our specialization</p>
-          <h2 className="fw-bold">
-            Whether buying or investing, we’ll <br />
-            help you find the right property
-          </h2>
+    <section className="section">
+      <div className="container">
+        <h6 className="dealer-choose">
+          {" "}
+          <span>
+            <TfiLayoutLineSolid />
+          </span>{" "}
+          Our process
+        </h6>
+        <div className="dealer">
+          <div className="dealer1 mb-5 col-12 px-0">
+            <h2 className="col-6 px-0 ">
+              Customer satisfication is our key of Motivation.
+            </h2>
+            <Link to="/contact" className="explore-btn px-4">
+              Connect with us
+            </Link>
+          </div>
         </div>
-        <button className="btn category-btn">View popular categories</button>
+
+        <div className="row gy-4">
+          <div className="col-md-4">
+            <div className="card border-0   specialization-card special-card1">
+              <img
+                src={img1}
+                className="card-img-top "
+                alt="Commercial properties"
+              />
+              <div className="card-body px-3">
+                <div className="d-flex justify-content-between align-items-center mt-2">
+                  <p className="mb-0 fs-5 fw-medium">Commercial properties</p>
+                  <span className="mb-0 fs-4 fw-bold">↗</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="col-md-4">
+            <div className="card border-0   specialization-card special-card2">
+              <img src={img2} className="card-img-top " alt="Smart Homes" />
+              <div className="card-body px-3">
+                <div className="d-flex justify-content-between align-items-center mt-2">
+                  <p className="mb-0 fs-5 fw-medium">Smart Homes</p>
+                  <span className="mb-0 fs-4 fw-bold">↗</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="col-md-4">
+            <div className="card border-0   specialization-card special-card3">
+              <img src={img3} className="card-img-top " alt="Penthouses" />
+              <div className="card-body px-3">
+                <div className="d-flex justify-content-between align-items-center mt-2">
+                  <p className="mb-0 fs-5 fw-medium">Penthouses</p>
+                  <span className="mb-0 fs-4 fw-bold">↗</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-
-      <div className="row gy-4">
-        <div className="col-md-4">
-          <div className="card border-0 shadow-sm specialization-card">
-            <img
-              src={img1}
-              className="card-img-top rounded-4"
-              alt="Commercial properties"
-            />
-            <div className="card-body px-0">
-              <div className="d-flex justify-content-between align-items-center mt-2">
-                <p className="mb-0 fw-medium">Commercial properties</p>
-                <span className="arrow-icon">↗</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="col-md-4">
-          <div className="card border-0 shadow-sm specialization-card">
-            <img
-              src={img2}
-              className="card-img-top rounded-4"
-              alt="Smart Homes"
-            />
-            <div className="card-body px-0">
-              <div className="d-flex justify-content-between align-items-center mt-2">
-                <p className="mb-0 fw-medium">Smart Homes</p>
-                <span className="arrow-icon">↗</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="col-md-4">
-          <div className="card border-0 shadow-sm specialization-card">
-            <img
-              src={img3}
-              className="card-img-top rounded-4"
-              alt="Penthouses"
-            />
-            <div className="card-body px-0">
-              <div className="d-flex justify-content-between align-items-center mt-2">
-                <p className="mb-0 fw-medium">Penthouses</p>
-                <span className="arrow-icon">↗</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    </section>
   );
 };
 

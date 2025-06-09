@@ -28,7 +28,7 @@ const TeamGallery = () => {
           <h2 className="col-6 px-0">
             Get a sneek peek of our memorable moments
           </h2>
-          <Link to="#" className="explore-btn px-4">
+          <Link to="/properties" className="explore-btn px-4">
             Explore more
           </Link>
         </div>
