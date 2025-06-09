@@ -161,7 +161,7 @@ const Home = () => {
                 className="rounded-5"
               />
               <img
-                src="../../public/images/arrow1.png"
+                src={GetImageUrl("/images/arrow1.png")}
                 alt="img"
                 className="dealer1-arrow1"
               />
@@ -203,7 +203,12 @@ const Home = () => {
           </div>
         </div>
         <div className="number-data">
-          <img src="/public/images/a1.png" alt="" height="50" width="400" />
+          <img
+            src={GetImageUrl("/images/a1.png")}
+            alt=""
+            height="50"
+            width="400"
+          />
         </div>
       </section>
 
