@@ -22,7 +22,7 @@ const SpecializationSection = () => {
         <div className="col-md-4">
           <div className="card border-0 shadow-sm specialization-card">
             <img
-              src={GetImageUrl(img1)}
+              src={img1}
               className="card-img-top rounded-4"
               alt="Commercial properties"
             />
@@ -38,7 +38,7 @@ const SpecializationSection = () => {
         <div className="col-md-4">
           <div className="card border-0 shadow-sm specialization-card">
             <img
-              src={GetImageUrl(img2)}
+              src={img2}
               className="card-img-top rounded-4"
               alt="Smart Homes"
             />
@@ -54,7 +54,7 @@ const SpecializationSection = () => {
         <div className="col-md-4">
           <div className="card border-0 shadow-sm specialization-card">
             <img
-              src={GetImageUrl(img3)}
+              src={img3}
               className="card-img-top rounded-4"
               alt="Penthouses"
             />
