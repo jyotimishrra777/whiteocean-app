@@ -1,15 +1,16 @@
 {
-  "homepage": "https://jyotimishrra777.github.io/whiteocean",
-  "name": "whiteocean",
+  "homepage": "https://github.com/jyotimishrra777/whiteocean-app.git",
+  "name": "whiteocean-app",
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "lint": "eslint .",
-    "preview": "vite preview"
-  },
+  "dev": "vite",
+  "build": "vite build",
+  "preview": "vite preview",
+  "deploy": "gh-pages -d dist"
+},
   "dependencies": {
     "bootstrap": "^5.3.6",
     "bootstrap-icons": "^1.13.1",

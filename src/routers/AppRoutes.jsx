@@ -16,7 +16,7 @@ import AdminDashboard from "../admin/pages/AdminDashboard";
 import Property from "../user/pages/Property";
 
 const AppRoutes = () => (
-  <Router>
+  <Router basename="/whiteocean-app">
     <Routes>
       {/* User routes */}
 
