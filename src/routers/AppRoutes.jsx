@@ -14,6 +14,7 @@ import AdminView from "../admin/pages/AdminView";
 import AddProperty from "../admin/pages/AddProperty";
 import AdminDashboard from "../admin/pages/AdminDashboard";
 import Property from "../user/pages/Property";
+import Contact from "../user/pages/Contact";
 
 const AppRoutes = () => (
   <Router basename="/whiteocean-app">
@@ -25,6 +26,7 @@ const AppRoutes = () => (
         <Route path="about" element={<About />} />
         <Route path="properties" element={<Property />} />
         <Route path="career" element={<Career />} />
+        <Route path="contact" element={<Contact />} />
       </Route>
 
       {/* Admin routes */}
