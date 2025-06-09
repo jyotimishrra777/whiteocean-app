@@ -7,7 +7,6 @@ const Header = () => {
     <header className="header">
       <Link to="/" className="logo">
         <img src={GetImageUrl("images/logo.png")} alt="Logo" />
-
         {/* <img src="/images/logo.png" alt="Logo" width="275.55px" height="75px" /> */}
       </Link>
 

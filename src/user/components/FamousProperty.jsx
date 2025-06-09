@@ -5,6 +5,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { GrLocation } from "react-icons/gr";
 import { MdCurrencyRupee } from "react-icons/md";
+import { GetImageUrl } from "../../utils/GetImageURL";
 const Property = [
   {
     id: "1",
@@ -108,7 +109,11 @@ const FamousProperty = () => {
         <Slider {...settings}>
           {Property.map((item, i) => (
             <div key={i} className="card slick-card">
-              <img src={item.img} className="card-img-top" alt="Interior" />
+              <img
+                src={GetImageUrl(item.img)}
+                className="card-img-top"
+                alt="Interior"
+              />
               <div className="card-body ">
                 <p className="card-text d-flex gap-3 mb-1">
                   <span>

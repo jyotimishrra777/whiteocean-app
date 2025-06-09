@@ -1,4 +1,5 @@
 import React from "react";
+import { GetImageUrl } from "../../utils/GetImageURL";
 
 const DreamProperty = () => {
   return (
@@ -43,7 +44,7 @@ const DreamProperty = () => {
           {/* Right Container */}
           <div className="col-md-5 right-container position-relative dream-right">
             <img
-              src="/images/h1.jpg"
+              src={GetImageUrl("images/h1.jpg")}
               alt="Property"
               className="img-fluid  mb-3 dream-right-img"
             />
@@ -52,14 +53,14 @@ const DreamProperty = () => {
                 Every home tells a different story
               </h3>
               <img
-                src="/images/arrow1.png"
+                src={GetImageUrl("images/arrow1.png")}
                 alt="img"
                 // className="dealer1-arrow1"
               />
             </div>
             {/* <div className="arrow-icon">
               <img
-                src="/images/arrow1.png"
+                src="{GetImageUrl("images/arrow1.png"
                 alt="img"
                 // className="dealer1-arrow1"
               /> 
