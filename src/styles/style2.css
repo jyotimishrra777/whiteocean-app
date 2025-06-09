@@ -1,0 +1,30 @@
+.admin-header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background-color: #ffffff;
+  z-index: 1000;
+  border-bottom: 1px solid #dee2e6;
+}
+.admin-sidebar {
+  width: 250px;
+  height: 100vh;
+  background-color: #f8f9fa;
+  position: fixed;
+  top: 56px; /* height of header */
+  left: 0;
+  overflow-y: auto;
+  transition: transform 0.3s ease-in-out;
+  border-right: 1px solid #dee2e6;
+  z-index: 999;
+}
+
+.admin-sidebar:not(.open) {
+  transform: translateX(-100%);
+}
+
+@media (min-width: 768px) {
+  .admin-sidebar {
+    transform: translateX(0);
+  }
+}

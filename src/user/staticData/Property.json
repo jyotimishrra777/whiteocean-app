@@ -1,0 +1,133 @@
+ [
+  {
+    "id": 1,
+    "name":"Iscon Ahmedabad",
+    "image":"/images/p1.png",
+    "location":"Ahmedabad",
+    "type":"Commercial",
+    "size":"4000 sqft",
+    "price":"60lacs",
+    "furnished":"Yes"
+    
+  },
+  {
+    "id": 2,
+    "name":"Navratna Ahmedabad",
+    "image":"/images/p2.png",
+    "location":"Ahmedabad",
+    "type":"Residencial",
+    "size":"2000 sqft",
+    "price":"50 lacs",
+    "furnished":"Yes"
+    
+  },
+  {
+    "id": 3,
+    "name":"Baxter Ahmedabad",
+    "image":"/images/p3.png",
+    "location":"Ahmedabad",
+    "type":"Commercial",
+    "size":"5000 sqft",
+    "price":"1 Cr.",
+    "furnished":"Yes"
+    
+  },
+  {
+    "id": 4,
+    "name":"Nakshtra Ahmedabad",
+    "image":"/images/p4.png",
+    "location":"Geeta Mandir Ahmedabad",
+    "type":"Commercial",
+    "size":"3500 sqft",
+    "price":"45lacs",
+    "furnished":"No"
+  },
+  {
+    "id": 5,
+    "name":"Acropolis Ahmedabad",
+    "image":"/images/p5.png",
+    "location":"Thaltej Ahmedabad",
+    "type":"Residencial",
+    "size":"4000 sqft",
+    "price":"40lacs",
+    "furnished":"No"
+    
+  },
+  {
+    "id": 6,
+    "name":"Nakshtra Ahmedabad",
+    "image":"/images/p6.png",
+    "location":"Geeta Mandir Ahmedabad",
+    "type":"Commercial",
+    "size":"3500 sqft",
+    "price":"45lacs",
+    "furnished":"No"
+  },
+  {
+    "id": 7,
+    "name":"Baxter Ahmedabad",
+    "image":"/images/p7.png",
+    "location":"Ahmedabad",
+    "type":"Commercial",
+    "size":"5000 sqft",
+    "price":"1 Cr.",
+    "furnished":"Yes"
+    
+  },
+  {
+    "id": 8,
+    "name":"Acropolis Ahmedabad",
+    "image":"/images/p8.png",
+    "location":"Thaltej Ahmedabad",
+    "type":"Residencial",
+    "size":"4000 sqft",
+    "price":"40lacs",
+    "furnished":"No"
+    
+  },
+  {
+    "id": 9,
+    "name":"Navratna Ahmedabad",
+    "image":"/images/p9.png",
+    "location":"Ahmedabad",
+    "type":"Residencial",
+    "size":"2000 sqft",
+    "price":"50 lacs",
+    "furnished":"Yes"
+    
+  },
+  {
+    "id": 10,
+    "name":"Baxter Ahmedabad",
+    "image":"/images/p10.png",
+    "location":"Ahmedabad",
+    "type":"Commercial",
+    "size":"5000 sqft",
+    "price":"1 Cr.",
+    "furnished":"Yes"
+    
+  },
+  {
+    "id": 11,
+    "name":"Acropolis Ahmedabad",
+    "image":"/images/p11.png",
+    "location":"Thaltej Ahmedabad",
+    "type":"Residencial",
+    "size":"4000 sqft",
+    "price":"40lacs",
+    "furnished":"No"
+    
+  },
+  {
+    "id": 12,
+    "name":"Navratna Ahmedabad",
+    "image":"/images/p12.png",
+    "location":"Ahmedabad",
+    "type":"Residencial",
+    "size":"2000 sqft",
+    "price":"50 lacs",
+    "furnished":"Yes"
+    
+  }
+]
+
