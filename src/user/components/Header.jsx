@@ -1,14 +1,12 @@
 import React from "react";
+import { GetImageUrl } from "../../utils/GetImageURL";
 import { Link, NavLink } from "react-router-dom";
 
 const Header = () => {
   return (
     <header className="header">
       <Link to="/" className="logo">
-        <img
-          src={`${import.meta.env.VITE_APP_URL}images/logo.png`}
-          alt="Logo"
-        />
+        <img src={GetImageUrl("images/logo.png")} alt="Logo" />
 
         {/* <img src="/images/logo.png" alt="Logo" width="275.55px" height="75px" /> */}
       </Link>
