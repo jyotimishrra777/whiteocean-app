@@ -4,6 +4,7 @@ import { GrLocation } from "react-icons/gr";
 import { MdOutlineBed } from "react-icons/md";
 import { FaRegHeart } from "react-icons/fa6";
 import { TbRotateRectangle } from "react-icons/tb";
+import { GetImageUrl } from "../../utils/GetImageURL";
 
 import Property from "../staticData/Property.json";
 
@@ -20,7 +21,7 @@ const PropertyListing = () => {
                   <span>{item.name}</span>
                   <span>
                     <img
-                      src="/images/whatsapp.png"
+                      src={GetImageUrl("/images/whatsapp.png")}
                       alt="img err"
                       style={{ width: "25px", height: "25px" }}
                     />

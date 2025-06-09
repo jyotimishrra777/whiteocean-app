@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { TfiLayoutLineSolid } from "react-icons/tfi";
 import ContactForm from "../components/ContactForm";
 import TeamGallery from "../components/TeamGallery";
+import { GetImageUrl } from "../../utils/GetImageURL";
 
 const Property = () => {
   return (
@@ -11,7 +12,8 @@ const Property = () => {
         <div className="row">
           <div className="container text-light d-flex justify-content-between align-items-start about-section-content">
             <h2 className="col-6  fw-bolder">
-              We are hiring <img src="/images/star.png" alt="img err" />
+              We are hiring{" "}
+              <img src={GetImageUrl("images/star.png")} alt="img err" />
             </h2>
             <div className="col-6">
               <p>
@@ -49,7 +51,7 @@ const Property = () => {
         <div className="row">
           <di className="container d-flex flex-wrap justify-content-between">
             <div className="card property-card career-card">
-              <img src="/images/h1.jpg" alt="Interior" />
+              <img src={GetImageUrl("images/h1.jpg")} alt="Interior" />
               <div className="card-body ">
                 <h5 className="card-title d-flex justify-content-between align-items-center mb-2 fs-5 fw-bold">
                   Growth-Driven Culture
@@ -61,7 +63,7 @@ const Property = () => {
               </div>
             </div>
             <div className="card property-card career-card">
-              <img src="/images/h1.jpg" alt="Interior" />
+              <img src={GetImageUrl("images/h1.jpg")} alt="Interior" />
               <div className="card-body ">
                 <h5 className="card-title d-flex justify-content-between align-items-center mb-2 fs-5 fw-bold">
                   Impactful Work
@@ -73,7 +75,7 @@ const Property = () => {
               </div>
             </div>
             <div className="card property-card career-card">
-              <img src="/images/h1.jpg" alt="Interior" />
+              <img src={GetImageUrl("images/h1.jpg")} alt="Interior" />
               <div className="card-body ">
                 <h5 className="card-title d-flex justify-content-between align-items-center mb-2 fs-5 fw-bold">
                   Supportive environment

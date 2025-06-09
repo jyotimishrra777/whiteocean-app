@@ -4,6 +4,7 @@ import { FaArrowRightLong } from "react-icons/fa6";
 import SpecializationSection from "../components/SpecializeCard";
 import { Link } from "react-router-dom";
 import DreamProperty from "../components/DreamProperty";
+import { GetImageUrl } from "../../utils/GetImageURL";
 
 const About = () => {
   return (
@@ -12,7 +13,8 @@ const About = () => {
         <div className="row">
           <div className="container text-light d-flex justify-content-between align-items-start about-section-content">
             <h2 className="col-6  fw-bolder">
-              Get your <img src="/images/star.png" alt="img err" />
+              Get your{" "}
+              <img src={GetImageUrl("images/star.png")} alt="img err" />
               <br />
               Sapno Ka Ghar
             </h2>

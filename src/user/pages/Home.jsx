@@ -10,6 +10,7 @@ import Testimonial from "../components/Testimonial";
 import Team from "../components/Team";
 import SpecialProperty from "../components/SpecialProperty";
 import FamousProperty from "../components/FamousProperty";
+import { GetImageUrl } from "../../utils/GetImageURL";
 
 const Dealer = [
   {
@@ -109,13 +110,13 @@ const Home = () => {
           <div className="hero-images">
             <img
               // src={`${import.meta.env.VITE_APP_URL}images/h3.jpg`}
-              src="/images/h3.jpg"
+              src={GetImageUrl("/images/h3.jpg")}
               alt="Main Property"
               className="main-img"
             />
             <div className="thumbs">
-              <img src="/images/h1.jpg" alt="Interior" />
-              <img src="/images/h2.jpg" alt="Interior" />
+              <img src={GetImageUrl("/images/h1.jpg")} alt="Interior" />
+              <img src={GetImageUrl("/images/h2.jpg")} alt="Interior" />
             </div>
             <div className="badge">
               <img
@@ -154,7 +155,11 @@ const Home = () => {
 
           <div className="dealer2 ">
             <div className="dealer-explore">
-              <img src="/images/kitchen.png" alt="img" className="rounded-5" />
+              <img
+                src={GetImageUrl("/images/kitchen.png")}
+                alt="img"
+                className="rounded-5"
+              />
               <img
                 src="../../public/images/arrow1.png"
                 alt="img"
@@ -298,7 +303,7 @@ const Home = () => {
               <div className="card services-card rounded-5 p-2">
                 <div className="card-img">
                   <img
-                    src="/images/service1.png"
+                    src={GetImageUrl("/images/service1.png")}
                     className="card-img-top"
                     alt="Interior"
                   />
@@ -319,7 +324,7 @@ const Home = () => {
               <div className="card services-card rounded-5 p-2">
                 <div className="card-img">
                   <img
-                    src="/images/service2.png"
+                    src={GetImageUrl("/images/service2.png")}
                     className="card-img-top"
                     alt="Interior"
                   />
@@ -340,7 +345,7 @@ const Home = () => {
               <div className="card services-card rounded-5 p-2">
                 <div className="card-img">
                   <img
-                    src="/images/service3.png"
+                    src={GetImageUrl("/images/service3.png")}
                     className="card-img-top"
                     alt="Interior"
                   />

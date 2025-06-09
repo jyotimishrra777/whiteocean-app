@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { GetImageUrl } from "../../utils/GetImageURL";
 
 const SpecialProperty = () => {
   return (
@@ -8,7 +9,7 @@ const SpecialProperty = () => {
         <div className="row g-5 align-items-center mb-5 ">
           <div className="col-lg-6">
             <div className="icon mb-3">
-              <img src="/images/explore1.png" alt="Img" />
+              <img src={GetImageUrl("images/explore1.png")} alt="Img" />
             </div>
             <h3 className="title">Experienced & Trained Team</h3>
             <p className="description">
@@ -24,7 +25,7 @@ const SpecialProperty = () => {
           </div>
           <div className="col-lg-6">
             <img
-              src="/images/Group1.png"
+              src={GetImageUrl("images/Group1.png")}
               alt="Interior"
               className="explore-img rounded-4"
             />
@@ -34,7 +35,7 @@ const SpecialProperty = () => {
         <div className="row g-5 align-items-center flex-lg-row-reverse mb-5 mt-5">
           <div className="col-lg-6">
             <div className="icon mb-3">
-              <img src="/images/explore2.png" alt="Img" />
+              <img src={GetImageUrl("images/explore2.png")} alt="Img" />
             </div>
             <h3 className="title">Personalized Consultation</h3>
             <p className="description">
@@ -48,7 +49,7 @@ const SpecialProperty = () => {
           </div>
           <div className="col-lg-6">
             <img
-              src="/images/Group2.png"
+              src={GetImageUrl("images/Group2.png")}
               alt="Interior"
               className="explore-img rounded-4"
             />
@@ -58,7 +59,7 @@ const SpecialProperty = () => {
         <div className="row g-5 align-items-center mb-5 mt-5">
           <div className="col-lg-6">
             <div className="icon mb-3">
-              <img src="/images/explore3.png" alt="Img" />
+              <img src={GetImageUrl("images/explore3.png")} alt="Img" />
             </div>
             <h3 className="title">Partnerships with Top Builders</h3>
             <p className="description">
@@ -73,7 +74,7 @@ const SpecialProperty = () => {
           </div>
           <div className="col-lg-6">
             <img
-              src="/images/Group3.png"
+              src={GetImageUrl("images/Group3.png")}
               alt="Interior"
               className="explore-img rounded-4"
             />
@@ -83,7 +84,7 @@ const SpecialProperty = () => {
         <div className="row g-5 align-items-center flex-lg-row-reverse  mt-5 ">
           <div className="col-lg-6">
             <div className="icon mb-3">
-              <img src="/images/explore4.png" alt="Img" />
+              <img src={GetImageUrl("images/explore4.png")} alt="Img" />
             </div>
             <h3 className="title">Quality assuarance</h3>
             <p className="description">
@@ -97,7 +98,7 @@ const SpecialProperty = () => {
           </div>
           <div className="col-lg-6">
             <img
-              src="/images/Group4.png"
+              src={GetImageUrl("images/Group4.png")}
               alt="Interior"
               className="explore-img rounded-4"
             />

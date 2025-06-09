@@ -6,6 +6,7 @@ import "slick-carousel/slick/slick-theme.css";
 import { TfiLayoutLineSolid } from "react-icons/tfi";
 import { GrLocation } from "react-icons/gr";
 import { MdCurrencyRupee } from "react-icons/md";
+import { GetImageUrl } from "../../utils/GetImageURL";
 
 const TeamData = [
   {
@@ -95,7 +96,7 @@ const Team = () => {
           <Slider {...settings}>
             {TeamData.map((item, i) => (
               <div key={i} className="card slick-card" style="width: 18rem;">
-                <img src={item.image} className="card-img-top" alt="Interior" />
+                <img src={GetImageUrl(item.image)} className="card-img-top" alt="Interior" />
                 <div className="team-detail rounded-4 text-light py-2">
                   <h4 className="fs-4 fw-bold mb-0">{item.name}</h4>
                   <p className="py-0 mb-0">{item.post}</p>

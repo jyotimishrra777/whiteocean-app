@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { IoIosArrowRoundUp } from "react-icons/io";
 import { PiCopyright } from "react-icons/pi";
 import { FaArrowRightLong } from "react-icons/fa6";
+import { GetImageUrl } from "../../utils/GetImageURL";
 
 const Footer = () => {
   return (
@@ -146,7 +147,11 @@ const Footer = () => {
                 </div>
 
                 <div className="col-4 text-right">
-                  <img src="/images/logo.jpg" alt="error" className="pb-3" />
+                  <img
+                    src={GetImageUrl("/images/logo.jpg")}
+                    alt="error"
+                    className="pb-3"
+                  />
                   <hr className="my-3 border-1 w-100 " />
                   <div id="footer-contact-detail">
                     <h5 className="text-muted">+91-7600033211</h5>

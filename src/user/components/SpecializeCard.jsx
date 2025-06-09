@@ -2,6 +2,7 @@ import React from "react";
 import img1 from "/images/h1.jpg";
 import img2 from "/images/h2.jpg";
 import img3 from "/images/h3.jpg";
+import { GetImageUrl } from "../../utils/GetImageURL";
 
 const SpecializationSection = () => {
   return (
@@ -21,7 +22,7 @@ const SpecializationSection = () => {
         <div className="col-md-4">
           <div className="card border-0 shadow-sm specialization-card">
             <img
-              src={img1}
+              src={GetImageUrl(img1)}
               className="card-img-top rounded-4"
               alt="Commercial properties"
             />
@@ -37,7 +38,7 @@ const SpecializationSection = () => {
         <div className="col-md-4">
           <div className="card border-0 shadow-sm specialization-card">
             <img
-              src={img2}
+              src={GetImageUrl(img2)}
               className="card-img-top rounded-4"
               alt="Smart Homes"
             />
@@ -53,7 +54,7 @@ const SpecializationSection = () => {
         <div className="col-md-4">
           <div className="card border-0 shadow-sm specialization-card">
             <img
-              src={img3}
+              src={GetImageUrl(img3)}
               className="card-img-top rounded-4"
               alt="Penthouses"
             />

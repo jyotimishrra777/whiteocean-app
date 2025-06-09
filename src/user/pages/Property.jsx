@@ -2,6 +2,7 @@ import React from "react";
 import { Link, NavLink } from "react-router-dom";
 import PropertyListing from "../components/PropertyListing";
 import { FiSearch } from "react-icons/fi";
+import { GetImageUrl } from "../../utils/GetImageURL";
 
 const Property = () => {
   return (
@@ -10,7 +11,7 @@ const Property = () => {
         <div className="row">
           <div className="container text-light d-flex justify-content-between align-items-start about-section-content">
             <h2 className="col-6  fw-bolder">
-              Premium properties <img src="/images/star.png" alt="img err" />
+              Premium properties <img src={GetImageUrl("/images/star.png")} alt="img err" />
               <br />
               just curated for you
             </h2>
