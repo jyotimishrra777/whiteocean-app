@@ -15,6 +15,9 @@ const Property = () => {
   }, [searchInput]);
 
   const handleSearch = () => {
+    console.log(
+      "Search by clicking on the icon either hit the enter button to search"
+    );
     if (searchInput.trim() !== "") {
       setIsSearching(searchInput.trim());
     }
