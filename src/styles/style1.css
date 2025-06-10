@@ -3,8 +3,10 @@
   margin: 0;
 }
 
+,
+a,
 a:hover {
-  text-decoration: none;
+  text-decoration: none !important;
 }
 
 .section {
@@ -213,7 +215,7 @@ a:hover {
   bottom: -40px;
   right: -12px;
   background: white;
-  padding: 14px 20px;
+  /* padding: 14px 20px; */
   border-radius: 50%;
   text-align: center;
 }
@@ -1130,6 +1132,39 @@ p {
 }
 
 /* ContactForm  */
+
+.image-wrapper {
+  animation: bubbleFloat 4s ease-in-out infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fade-in-image {
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+@keyframes bubbleFloat {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.submit-btn :hover {
+  background: #234e6f !important;
+  color: white !important;
+  box-shadow: 0px 0px 3px 2px #234e6f !important;
+}
+
+/*  */
 
 .career-card {
   box-shadow: 0px 4px 2px #f4875a !important;

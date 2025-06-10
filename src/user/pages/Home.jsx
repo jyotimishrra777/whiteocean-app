@@ -120,8 +120,8 @@ const Home = () => {
             </div>
             <div className="badge">
               <img
-                src="images/bestproperty.png"
-                alt=""
+                src={GetImageUrl("images/bestproperty.png")}
+                alt="badge"
                 width="100"
                 height="100"
               />
