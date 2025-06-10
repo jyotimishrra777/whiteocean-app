@@ -1,6 +1,7 @@
+// ContactSection.jsx
 import React, { useState } from "react";
-import { GetImageUrl } from "../../utils/GetImageURL";
 import * as Yup from "yup";
+import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope } from "react-icons/fa";
 
 const Contact = () => {
   const validationSchema = Yup.object().shape({
@@ -12,8 +13,9 @@ const Contact = () => {
 
   const [formValues, setFormValues] = useState({
     fullName: "",
-    email: "",
     mobile: "",
+    email: "",
+    file: "",
     message: "",
   });
 
@@ -38,8 +40,9 @@ const Contact = () => {
       console.log("Submitted Data:", formValues);
       setFormValues({
         fullName: "",
-        email: "",
         mobile: "",
+        email: "",
+        file: "",
         message: "",
       });
     } catch (validationError) {
@@ -52,26 +55,54 @@ const Contact = () => {
   };
 
   return (
-    <section className="section">
-      <div className="container  contact-form">
-        <div className="row align-items-center">
-          <div className="col-md-6 mb-4 text-center image-wrapper">
-            <img
-              src={GetImageUrl("images/contact.jpg")}
-              alt="Contact Illustration"
-              className="img-fluid fade-in-image"
-            />
+    <div className="contact-section ">
+      <div className="container ">
+        <h4 className="text-white text-center mb-3 fs-2 fw-bolder">
+          Contact Us
+        </h4>
+        <p className="text-white text-center mb-5 px-5">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam.
+        </p>
+
+        <div className="row d-flex align-items-center">
+          <div className="col-6 text-white mb-4 ">
+            <div className="contact-info mb-4">
+              <FaMapMarkerAlt className="icon" />
+              <div>
+                <h6>Address</h6>
+                <p>
+                  504, Shivalik Satyamev, Near Vakil Saheb Bridge,
+                  <br /> South Bopal, Ahmedabad, 380058
+                </p>
+              </div>
+            </div>
+            <div className="contact-info mb-4">
+              <FaPhoneAlt className="icon" />
+              <div>
+                <h6>Phone</h6>
+                <p>+91-760-0033-211</p>
+              </div>
+            </div>
+            <div className="contact-info">
+              <FaEnvelope className="icon" />
+              <div>
+                <h6>Email</h6>
+                <p>Haresh@whiteoceanprop.com</p>
+              </div>
+            </div>
           </div>
 
-          <div className="col-md-6 application-form">
-            <h5 className="fs-4 fw-bolder">Contact Info</h5>
-            <hr />
-
+          {/* Contact Form */}
+          <div className="col-6 contact-form-sec">
             <form onSubmit={handleSubmit}>
+              {" "}
               <div className="mb-3">
-                <label className="form-label fs-6 fw-bold">
-                  Full Name <span className="text-danger">*</span>
-                </label>
+                {" "}
+                <label className="form-label fs-6 fw-bold mb-0">
+                  Full Name <span className="text-danger">*</span>{" "}
+                </label>{" "}
                 <input
                   type="text"
                   name="fullName"
@@ -86,9 +117,8 @@ const Contact = () => {
                   <div className="invalid-feedback">{errors.fullName}</div>
                 )}
               </div>
-
               <div className="mb-3">
-                <label className="form-label fs-6 fw-bold">
+                <label className="form-label fs-6 fw-bold mb-0">
                   Phone <span className="text-danger">*</span>
                 </label>
                 <input
@@ -105,9 +135,8 @@ const Contact = () => {
                   <div className="invalid-feedback">{errors.mobile}</div>
                 )}
               </div>
-
               <div className="mb-3">
-                <label className="form-label fs-6 fw-bold">
+                <label className="form-label fs-6 fw-bold mb-0">
                   Email <span className="text-danger"></span>
                 </label>
                 <input
@@ -119,19 +148,31 @@ const Contact = () => {
                   placeholder="example@example.com"
                 />
               </div>
-
               <div className="mb-3">
-                <label className="form-label fs-6 fw-bold">Your Message</label>
+                <label className="form-label fs-6 fw-bold mb-0">
+                  Upload Resume{" "}
+                </label>
+                <input
+                  type="file"
+                  name="file"
+                  value={formValues.file}
+                  onChange={handleChange}
+                  className="form-control "
+                />
+              </div>
+              <div className="mb-3">
+                <label className="form-label fs-6 fw-bold mb-0">
+                  Your Message
+                </label>
                 <textarea
                   className="form-control"
-                  rows="5"
+                  rows="2"
                   type="text"
                   name="message"
                   value={formValues.message}
                   onChange={handleChange}
                 ></textarea>
               </div>
-
               <button
                 type="submit"
                 className="explore-btn submit-btn outline-none border-0  px-5"
@@ -142,7 +183,7 @@ const Contact = () => {
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 

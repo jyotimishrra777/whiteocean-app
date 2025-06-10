@@ -46,10 +46,10 @@ const Header = () => {
       </nav>
 
       <div className="auth">
-        <NavLink to="/login" className="login">
+        {/* <NavLink to="/login" className="login">
           Login
-        </NavLink>
-        <NavLink to="/contact" className="contact-btn">
+        </NavLink> */}
+        <NavLink to="/contact" className="explore-btn">
           Contact Us
         </NavLink>
       </div>

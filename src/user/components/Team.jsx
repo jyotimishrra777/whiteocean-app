@@ -91,7 +91,7 @@ const Team = () => {
 
       <section className="section">
         <div className="row  ">
-          <div className="container d-flex justify-content-between align-items-start">
+          <div className="container d-flex justify-content-between align-items-center">
             <div className="col-5 p-0 right-container position-relative team-left">
               <img
                 src={GetImageUrl("images/haresh.png")}
@@ -99,7 +99,7 @@ const Team = () => {
                 className="img-fluid mt-0 dream-right-img"
               />
             </div>
-            <div className="col-6 left-container">
+            <div className="col-7 left-container">
               <h2 className="section-title">
                 Future homeowners, your dream starts here
               </h2>

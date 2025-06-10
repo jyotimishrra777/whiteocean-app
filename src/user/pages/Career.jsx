@@ -90,7 +90,7 @@ const Property = () => {
           </di>
         </div>
       </section>
-      <TeamGallery />
+      {/* <TeamGallery /> */}
       <ContactForm />
     </>
   );

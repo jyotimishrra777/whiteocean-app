@@ -14,9 +14,6 @@ a:hover {
   margin: 0 auto;
   padding: 80px 60px;
 }
-.testomonial-section {
-  background: #eeecec;
-}
 
 .header {
   max-width: 1800px;
@@ -45,7 +42,7 @@ a:hover {
   align-items: center;
   padding: 10px 20px;
   gap: 10px;
-  border: 1px solid black;
+  /* border: 1px solid black; */
   border-radius: 30px;
 }
 
@@ -177,6 +174,11 @@ a:hover {
   border-radius: 100px;
   text-decoration: none;
   font-weight: 600;
+}
+.explore-btn:hover {
+  background: #e8642d;
+  color: white;
+  text-decoration: none;
 }
 
 .hero-images {
@@ -348,7 +350,11 @@ p {
 
 .explore-link {
   color: #f26332;
-  font-weight: 500;
+  font-weight: 600;
+  text-decoration: none;
+}
+.explore-link:hover {
+  color: #f26332;
   text-decoration: none;
 }
 
@@ -368,6 +374,14 @@ p {
   border: 1px solid #234e6f;
   color: white;
   background: #234e6f;
+}
+.flat-btn.active:hover {
+  color: white;
+  text-decoration: none;
+}
+.flat-btn:hover {
+  color: #234e6f;
+  text-decoration: none;
 }
 .flat-arr1 {
   background: #f4875a;
@@ -417,6 +431,11 @@ p {
   padding: 8px 20px;
   border-radius: 100px;
   font-size: 18px;
+}
+.view-deatil-btn:hover {
+  text-decoration: none;
+  color: white;
+  background: #f27456;
 }
 .card {
   --bs-card-border-width: 0 !important;
@@ -568,6 +587,46 @@ p {
   color: #000;
 }
 
+/* Career form  */
+.contact-section {
+  background: url("../../public/images/contactbg.jpg") no-repeat center
+    center/cover;
+  padding: 80px 0;
+  position: relative;
+}
+.contact-form-sec {
+  background: white;
+  padding: 50px 50px;
+  border-radius: 20px;
+}
+
+.contact-info {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.contact-info .icon {
+  font-size: 50px;
+  background: black;
+  color: white;
+  padding: 10px;
+  border-radius: 50%;
+}
+
+.form-box {
+  background-color: #fff;
+}
+
+.contact-section h6 {
+  margin: 0;
+  font-weight: bold;
+  font-size: 30px;
+}
+.contact-section p {
+  font-size: 20px;
+}
+
 /* Footer component */
 
 .footer-section {
@@ -578,20 +637,20 @@ p {
 }
 .footer-arrow {
   font-size: 50px;
-  border: 1px solid #898b8d;
+  border: 1px solid #fff;
   border-radius: 100%;
   display: flex;
   width: 40px;
   height: 40px;
   justify-content: center;
   align-items: center;
-  color: #898b8d !important;
+  color: #fff !important;
 }
 .footer-link {
   width: max-content;
 }
 .copy-right {
-  color: #898b8d;
+  color: #fff;
 }
 .copy-right-sec {
   background: #234e6f;
@@ -905,19 +964,32 @@ p {
   font-size: 18px;
   font-weight: 600;
 }
+.filterTag.active {
+  text-decoration: none;
+  font-weight: bold;
+  background: #008080;
+  color: #fff;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  width: max-content;
+}
 
 /* Team */
 
 .team-left {
-  width: 450px;
-  height: 400px;
-  border-radius: 100%;
+  width: 500px;
+  height: 470px;
 }
 .team-left img {
   background: #1c4861;
   width: 100%;
   height: 100%;
-  border-radius: 100%;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
   box-shadow: 0px 0px 11px #a4e5e7;
 }
 .team-quote-icon {
@@ -971,10 +1043,6 @@ p {
 
 /* Testomonial */
 
-.testimonial-wrapper {
-  /* background-color: #f3f3f3; */
-}
-
 .section-title {
   font-size: 28px;
   font-weight: 700;
@@ -998,6 +1066,9 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.testomonial-section {
+  background: #eeecec;
 }
 
 .testimonial-card {
@@ -1042,6 +1113,7 @@ p {
 }
 
 .testimonial-arr {
+  cursor: pointer;
   background: #1c4861 !important;
   color: white !important;
 }
@@ -1072,63 +1144,6 @@ p {
 }
 .active-link:hover {
   color: #fff;
-}
-
-/* Team Gallery */
-.team-gallery-section {
-  background: #eeecec;
-}
-.team-gallery-container {
-  display: flex;
-  gap: 16px;
-  padding: 40px;
-
-  flex-wrap: wrap;
-}
-
-.left-column {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  flex: 1;
-  min-width: 260px;
-}
-
-.left-column img {
-  width: 100%;
-  border-radius: 12px;
-  object-fit: cover;
-  height: 50%;
-  max-height: 360px;
-}
-
-.right-column {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  flex: 1.3;
-  min-width: 300px;
-}
-
-.right-top,
-.right-bottom {
-  display: flex;
-  gap: 16px;
-}
-
-.right-top img,
-.right-bottom img {
-  flex: 1;
-  border-radius: 12px;
-  object-fit: cover;
-  height: 140px;
-}
-
-.right-middle img {
-  width: 100%;
-  height: 250px;
-  object-fit: cover;
-  border-radius: 12px;
 }
 
 /* Optional Responsive Tweaks */

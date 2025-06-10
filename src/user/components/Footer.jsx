@@ -7,6 +7,7 @@ import { FaArrowRightLong } from "react-icons/fa6";
 import { GetImageUrl } from "../../utils/GetImageURL";
 
 const Footer = () => {
+  const currentYear = new Date().getFullYear();
   return (
     <>
       <section id="footer-sec">
@@ -169,8 +170,8 @@ const Footer = () => {
         <div className="d-flex justify-content-between align-items-center py-3 mt-4  px-5 border-top copy-right-sec">
           <div className="copy-right">
             <p className="mb-0">
-              {<PiCopyright />} 2024-25 Copyright White Ocean Properties. All
-              Rights Reserved.
+              {<PiCopyright />} {currentYear} - {currentYear + 1} Copyright
+              White Ocean Properties. All Rights Reserved.
             </p>
             <p className="mb-0">Designed & Developed By Ecode Dash</p>
           </div>
