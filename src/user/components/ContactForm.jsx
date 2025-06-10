@@ -79,7 +79,7 @@ const ContactForm = () => {
             <form onSubmit={handleSubmit} noValidate>
               <div className="row mb-3">
                 <div className="col-md-6 mb-3">
-                  <label className="form-label fs-5 fw-bold">Full name *</label>
+                  <label className="form-label fs-6 fw-bold">Full name *</label>
                   <input
                     type="text"
                     name="fullName"
@@ -95,7 +95,7 @@ const ContactForm = () => {
                   )}
                 </div>
                 <div className="col-md-6 mb-3">
-                  <label className="form-label fs-5 fw-bold">
+                  <label className="form-label fs-6 fw-bold">
                     Email address *
                   </label>
                   <input
@@ -116,7 +116,7 @@ const ContactForm = () => {
 
               <div className="row mb-3">
                 <div className="col-md-6 mb-3">
-                  <label className="form-label fs-5 fw-bold">
+                  <label className="form-label fs-6 fw-bold">
                     Mobile number *
                   </label>
                   <input
@@ -134,7 +134,7 @@ const ContactForm = () => {
                   )}
                 </div>
                 <div className="col-md-6 mb-3">
-                  <label className="form-label fs-5 fw-bold">
+                  <label className="form-label fs-6 fw-bold">
                     Alternate Mobile number *
                   </label>
                   <input
@@ -157,7 +157,7 @@ const ContactForm = () => {
 
               <div className="row mb-4">
                 <div className="col-md-6 mb-3">
-                  <label className="form-label fs-5 fw-bold">
+                  <label className="form-label fs-6 fw-bold">
                     Total experience
                   </label>
                   <input
@@ -175,7 +175,7 @@ const ContactForm = () => {
                   )}
                 </div>
                 <div className="col-md-6 mb-3">
-                  <label className="form-label fs-5 fw-bold">
+                  <label className="form-label fs-6 fw-bold">
                     Additional details
                   </label>
                   <input

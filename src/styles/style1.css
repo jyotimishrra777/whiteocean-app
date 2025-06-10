@@ -321,6 +321,13 @@ p {
   background-color: #f5f5f5;
   /* padding: 60px 0 100px 0; */
 }
+.founder-name {
+  color: #234e6f;
+}
+.founder-text {
+  color: #234e6f;
+  font-weight: 600;
+}
 
 .icon i {
   color: #f26332;
@@ -1170,7 +1177,8 @@ p {
   box-shadow: 0px 4px 2px #f4875a !important;
 }
 
-.application-form input {
+.application-form input,
+textarea {
   padding: 22px 20px;
   box-shadow: 0px 0px 5px #afb8b3;
   border: none;

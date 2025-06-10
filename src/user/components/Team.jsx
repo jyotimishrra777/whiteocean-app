@@ -90,34 +90,40 @@ const Team = () => {
           </Slider> */}
 
       <section className="section">
-        <div className="row  d-flex justify-content-between align-items-start">
-          <div className="col-5 p-0 right-container position-relative team-left">
-            <img
-              src={GetImageUrl("images/haresh.png")}
-              alt="Property"
-              className="img-fluid mt-0 dream-right-img"
-            />
-          </div>
-          <div className="col-6 left-container">
-            <h2 className="section-title">
-              Future homeowners, your dream starts here
-            </h2>
-            <p className="section-description">
-              <div className="team-quote-icon ">❝</div>
-              White Oceans Property understands that for millennials, owning a
-              home is more than a purchase—it's a lifelong dream. That’s why we
-              offer luxurious yet homely properties in Ahmedabad-West, blending
-              modern design with traditional charm.
-              <br />
-              Whether you're searching online or visiting in person, we’re here
-              to guide you—from property selection to home loans and
-              paperwork—making your journey smooth and joyful. A home is built
-              on memories, milestones, and meaningful moments, and we’re proud
-              to help create that foundation. With over 10 years of experience,
-              we’ve helped countless families find their “Sapno Ka Ghar,” and
-              we’re just getting started.
-              <div className="team-quote-icon float-right mt-4">❞</div>
-            </p>
+        <div className="row  ">
+          <div className="container d-flex justify-content-between align-items-start">
+            <div className="col-5 p-0 right-container position-relative team-left">
+              <img
+                src={GetImageUrl("images/haresh.png")}
+                alt="Property"
+                className="img-fluid mt-0 dream-right-img"
+              />
+            </div>
+            <div className="col-6 left-container">
+              <h2 className="section-title">
+                Future homeowners, your dream starts here
+              </h2>
+              <p className="section-description">
+                <div className="team-quote-icon ">❝</div>
+                White Oceans Property understands that for millennials, owning a
+                home is more than a purchase—it's a lifelong dream. That’s why
+                we offer luxurious yet homely properties in Ahmedabad-West,
+                blending modern design with traditional charm.
+                <br />
+                Whether you're searching online or visiting in person, we’re
+                here to guide you—from property selection to home loans and
+                paperwork—making your journey smooth and joyful. A home is built
+                on memories, milestones, and meaningful moments, and we’re proud
+                to help create that foundation. With over 10 years of
+                experience, we’ve helped countless families find their “Sapno Ka
+                Ghar,” and we’re just getting started.
+                <div className="team-quote-icon float-right mt-4">❞</div>
+                <h5 className="fs-4 fw-bold mt-4 mb-1 founder-name">
+                  Haresh Vaja
+                </h5>
+                <p color="founder-text">Founder & CEO</p>
+              </p>
+            </div>
           </div>
         </div>
       </section>

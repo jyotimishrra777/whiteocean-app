@@ -63,13 +63,13 @@ const Contact = () => {
             />
           </div>
 
-          <div className="col-md-6">
-            <h5 className="fs-5 fw-bolder">Contact Info</h5>
+          <div className="col-md-6 application-form">
+            <h5 className="fs-4 fw-bolder">Contact Info</h5>
             <hr />
 
             <form onSubmit={handleSubmit}>
               <div className="mb-3">
-                <label className="form-label">
+                <label className="form-label fs-6 fw-bold">
                   Full Name <span className="text-danger">*</span>
                 </label>
                 <input
@@ -88,7 +88,7 @@ const Contact = () => {
               </div>
 
               <div className="mb-3">
-                <label className="form-label">
+                <label className="form-label fs-6 fw-bold">
                   Phone <span className="text-danger">*</span>
                 </label>
                 <input
@@ -107,7 +107,7 @@ const Contact = () => {
               </div>
 
               <div className="mb-3">
-                <label className="form-label">
+                <label className="form-label fs-6 fw-bold">
                   Email <span className="text-danger"></span>
                 </label>
                 <input
@@ -121,7 +121,7 @@ const Contact = () => {
               </div>
 
               <div className="mb-3">
-                <label className="form-label">Your Message</label>
+                <label className="form-label fs-6 fw-bold">Your Message</label>
                 <textarea
                   className="form-control"
                   rows="5"
