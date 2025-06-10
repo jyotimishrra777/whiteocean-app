@@ -150,18 +150,6 @@ const Contact = () => {
               </div>
               <div className="mb-3">
                 <label className="form-label fs-6 fw-bold mb-0">
-                  Upload Resume{" "}
-                </label>
-                <input
-                  type="file"
-                  name="file"
-                  value={formValues.file}
-                  onChange={handleChange}
-                  className="form-control "
-                />
-              </div>
-              <div className="mb-3">
-                <label className="form-label fs-6 fw-bold mb-0">
                   Your Message
                 </label>
                 <textarea
