@@ -13,7 +13,7 @@ const Footer = () => {
       <section id="footer-sec">
         <div className="number-data-section">
           <div className="number-data col-6 text-start">
-            <h2>Let's Make Your Real Estate Goals Happen .</h2>
+            <h2>Let's Make Your Real Estate Goals Happen </h2>
           </div>
 
           <div className="number-data">
