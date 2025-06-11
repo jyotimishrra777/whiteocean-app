@@ -37,7 +37,7 @@ const Footer = () => {
                     <ul className="nav flex-column">
                       <li className=" nav-item mb-2 mx-0">
                         <Link
-                          to="#"
+                          to="/about"
                           className="footer-link nav-link p-0 text-muted"
                         >
                           About us
