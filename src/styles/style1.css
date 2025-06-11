@@ -307,6 +307,7 @@ p {
   font-size: 3rem;
 }
 .number-data-arrow {
+  color: #fff;
   height: 100px;
   width: 100px;
   font-size: 50px;
@@ -315,6 +316,9 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.number-data-arrow:hover {
+  color: #fff;
 }
 
 /* Team section(3) */

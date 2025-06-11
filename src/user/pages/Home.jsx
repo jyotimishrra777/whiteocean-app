@@ -11,6 +11,7 @@ import Team from "../components/Team";
 import SpecialProperty from "../components/SpecialProperty";
 import FamousProperty from "../components/FamousProperty";
 import { GetImageUrl } from "../../utils/GetImageURL";
+import NumberDataSection from "../components/NumberCounterSection";
 
 const Dealer = [
   {
@@ -57,6 +58,7 @@ const Home = () => {
   return (
     <>
       {/* first section */}
+
       <section className="section hero-section">
         <div className="hero">
           <div className="hero-content">
@@ -190,33 +192,8 @@ const Home = () => {
       </section>
 
       {/* third section */}
-      <section className="number-data-section">
-        <div className="number-data">
-          <h2>2000 +</h2>
-          <p>Happy Customers</p>
-        </div>
-        <div className="number-data">
-          <h2>283 +</h2>
-          <p>New Projects</p>
-        </div>
-        <div className="number-data">
-          <h2>12 +</h2>
-          <p>Unit sold</p>
-        </div>
-        <div className="number-data">
-          <div className="number-data-arrow">
-            <FaArrowRightLong />
-          </div>
-        </div>
-        <div className="number-data">
-          <img
-            src={GetImageUrl("/images/a1.png")}
-            alt=""
-            height="50"
-            width="400"
-          />
-        </div>
-      </section>
+
+      <NumberDataSection />
 
       {/* fourth section */}
       <section className="section explore-section">
