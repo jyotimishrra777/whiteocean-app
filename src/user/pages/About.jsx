@@ -57,7 +57,7 @@ const About = () => {
             <div className="card about-card rounded-5 p-2">
               <div className="card-img">
                 <img
-                  src={GetImageUrl("images/mission.jpg")}
+                  src={GetImageUrl("images/mission.png")}
                   className="card-img-top"
                   alt="Interior"
                 />
