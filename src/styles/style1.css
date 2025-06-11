@@ -471,25 +471,25 @@ p {
 /* About page */
 
 .pages-section {
-  background-image: url("/images/h1.jpg");
+  background-image: url("/images/bg4.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
-  min-height: 90vh;
+  min-height: 70vh;
 }
 .about-section-content {
   padding: 0px 60px;
   position: absolute;
-  bottom: 10%;
+  bottom: 25%;
 }
 .about-section-content h2 {
-  font-family: cursive;
+  /* font-family: cursive; */
   font-size: 3.9rem;
 }
 .about-section-content p {
   font-size: 1.3rem;
-  font-family: cursive;
+  /* font-family: cursive; */
 }
 
 .about-card-section {

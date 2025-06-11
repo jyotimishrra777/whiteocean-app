@@ -35,6 +35,13 @@ const About = () => {
         <div className="container">
           <div className="col-12 d-flex gap-5">
             <div className="card about-card rounded-5 p-2">
+              <div className="card-img">
+                <img
+                  src={GetImageUrl("images/vision.jpg")}
+                  className="card-img-top"
+                  alt="Interior"
+                />
+              </div>
               <div className="card-body">
                 <h5 className="card-title fw-bold mb-3">Vision</h5>
                 <p className="card-text">
@@ -48,6 +55,13 @@ const About = () => {
               </div>
             </div>
             <div className="card about-card rounded-5 p-2">
+              <div className="card-img">
+                <img
+                  src={GetImageUrl("images/mission.jpg")}
+                  className="card-img-top"
+                  alt="Interior"
+                />
+              </div>
               <div className="card-body">
                 <h5 className="card-title fw-bold mb-3">Our Mission</h5>
                 <p className="card-text">
@@ -59,6 +73,13 @@ const About = () => {
               </div>
             </div>
             <div className="card about-card rounded-5 p-2">
+              <div className="card-img">
+                <img
+                  src={GetImageUrl("images/value.jpg")}
+                  className="card-img-top"
+                  alt="Interior"
+                />
+              </div>
               <div className="card-body">
                 <h5 className="card-title fw-bold mb-3">Our Values</h5>
                 <p className="card-text">
