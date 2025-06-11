@@ -68,9 +68,7 @@ const PropertyListing = ({ searchQuery = "", selectedType = "" }) => {
                         </div>
                       </div>
                       <div className="text-md-end mt-2 mt-md-0">
-                        <h6 className="property-developer mb-1">
-                          Swati Procon
-                        </h6>
+                        <h6 className="property-developer mb-1">Haresh Vaja</h6>
                         <div className="text-muted  prorety-location">
                           📅 Possession : June 2026
                         </div>
