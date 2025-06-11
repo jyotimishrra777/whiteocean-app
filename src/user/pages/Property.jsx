@@ -15,16 +15,18 @@ const Property = () => {
   }, [searchInput]);
 
   const handleSearch = () => {
-    console.log(
-      "Search by clicking on the icon either hit the enter button to search"
-    );
     if (searchInput.trim() !== "") {
       setIsSearching(searchInput.trim());
     }
   };
 
   const handleTypeFilter = (type) => {
-    setSelectedType(type.toLowerCase());
+    // setSelectedType(type.toLowerCase());
+    if (type.toLowerCase() === "all") {
+      setSelectedType("");
+    } else {
+      setSelectedType(type.toLowerCase());
+    }
   };
 
   return (
@@ -55,19 +57,23 @@ const Property = () => {
       <section className="property-listing-page section">
         <div className="container property-tab-header">
           <div id="property-tab">
-            {["Residential", "Commercial", "Industrial", "Agriculture"].map(
-              (type) => (
-                <button
-                  key={type}
-                  className={`filterTag ${
-                    selectedType === type.toLowerCase() ? "active" : ""
-                  }`}
-                  onClick={() => handleTypeFilter(type)}
-                >
-                  {type} property
-                </button>
-              )
-            )}
+            {[
+              "All",
+              "Residential",
+              "Commercial",
+              "Industrial",
+              "Agriculture",
+            ].map((type) => (
+              <button
+                key={type}
+                className={`filterTag ${
+                  selectedType === type.toLowerCase() ? "active" : ""
+                }`}
+                onClick={() => handleTypeFilter(type)}
+              >
+                {type} property
+              </button>
+            ))}
           </div>
 
           <div className="searchbar">
