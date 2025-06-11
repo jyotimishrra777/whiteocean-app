@@ -320,6 +320,9 @@ p {
 .number-data-arrow:hover {
   color: #fff;
 }
+.odometer-wrapper {
+  display: inline-block;
+}
 
 /* Team section(3) */
 
