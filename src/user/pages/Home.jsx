@@ -66,8 +66,8 @@ const Home = () => {
               Solutions. Real Results.
             </h1>
             <p>
-              "Your trusted partner in every stage of real estate whether you're
-              buying, selling, or renting."
+              Your trusted partner in every stage of real estate whether you're
+              buying, selling, or renting
             </p>
 
             <div className="search-box">
