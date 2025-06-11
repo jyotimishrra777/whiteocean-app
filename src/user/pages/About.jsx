@@ -37,7 +37,7 @@ const About = () => {
             <div className="card about-card rounded-5 p-2">
               <div className="card-img">
                 <img
-                  src={GetImageUrl("images/vision.jpg")}
+                  src={GetImageUrl("images/vision.png")}
                   className="card-img-top"
                   alt="Interior"
                 />
@@ -75,7 +75,7 @@ const About = () => {
             <div className="card about-card rounded-5 p-2">
               <div className="card-img">
                 <img
-                  src={GetImageUrl("images/value.jpg")}
+                  src={GetImageUrl("images/value.png")}
                   className="card-img-top"
                   alt="Interior"
                 />

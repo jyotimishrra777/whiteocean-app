@@ -9,7 +9,7 @@ const NumberDataSection = () => {
     <section className="number-data-section">
       <div className="number-data">
         <h2>
-          <NumberCounter target={1500} />+
+          <NumberCounter target={2000} />+
         </h2>
         <p>Happy Customers</p>
       </div>

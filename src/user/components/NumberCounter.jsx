@@ -20,7 +20,7 @@ const NumberCounter = ({ target, duration = 1000 }) => {
     return () => clearInterval(timer);
   }, [target, duration]);
 
-  return <span>{count.toLocaleString()}</span>;
+  return <span>{count}</span>;
 };
 
 export default NumberCounter;
