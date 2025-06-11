@@ -60,19 +60,22 @@ const Property = () => {
             {[
               "All",
               "Residential",
-              "Commercial",
+              "Commertial",
               "Industrial",
               "Agriculture",
             ].map((type) => (
-              <button
+              <div
                 key={type}
                 className={`filterTag ${
-                  selectedType === type.toLowerCase() ? "active" : ""
+                  (selectedType === "" && type.toLowerCase() === "all") ||
+                  selectedType === type.toLowerCase()
+                    ? "active"
+                    : ""
                 }`}
                 onClick={() => handleTypeFilter(type)}
               >
-                {type} property
-              </button>
+                {type}
+              </div>
             ))}
           </div>
 

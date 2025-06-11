@@ -854,7 +854,7 @@ p {
 .property-tab-header {
   margin: 0px 50px 60px 50px;
   display: flex;
-  gap: 170px;
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -958,6 +958,8 @@ p {
   transform: translateX(-50%);
 }
 .filterTag {
+  cursor: pointer;
+  width: max-content;
   border: none;
   background: none;
   outline: none;
