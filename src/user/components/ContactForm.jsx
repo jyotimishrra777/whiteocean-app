@@ -60,24 +60,13 @@ const ContactForm = () => {
   return (
     <>
       <section className="section">
-        <h6 className="dealer-choose">
-          {" "}
-          <span>
-            <TfiLayoutLineSolid />
-          </span>{" "}
-          Application form
-        </h6>
-        <div className="dealer">
-          <div className="dealer1 mb-5 col-12 px-0">
-            <h2 className="col-6 px-0">
-              Apply and be a crucial part of white ocean properties
-            </h2>
-          </div>
-        </div>
         <div className="row">
-          <div className="container pt-5 application-form">
+          <div className="container  application-form">
+            <h4 className=" text-center mb-5 fs-2 fw-bolder">
+              Explore Job Opportunities with us{" "}
+            </h4>
             <form onSubmit={handleSubmit} noValidate>
-              <div className="row mb-3">
+              <div className="row mb-3 mt-5">
                 <div className="col-md-6 mb-3">
                   <label className="form-label fs-6 fw-bold">Full name *</label>
                   <input

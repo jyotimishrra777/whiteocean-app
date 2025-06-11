@@ -60,7 +60,7 @@ const Property = () => {
             {[
               "All",
               "Residential",
-              "Commertial",
+              "Commercial",
               "Industrial",
               "Agriculture",
             ].map((type) => (
