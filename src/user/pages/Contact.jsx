@@ -1,10 +1,8 @@
-// ContactSection.jsx
 import React, { useState } from "react";
 import * as Yup from "yup";
 import { FaMapMarkerAlt } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { BiSolidPhoneCall } from "react-icons/bi";
-import PropertyCard from "../components/PropertyCard";
 
 const Contact = () => {
   const validationSchema = Yup.object().shape({
@@ -177,7 +175,6 @@ const Contact = () => {
           </div>
         </div>
       </div>
-      <PropertyCard />
     </>
   );
 };

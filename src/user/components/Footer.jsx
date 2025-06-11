@@ -1,5 +1,4 @@
-import React from "react";
-// import "./Footer.css";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { IoIosArrowRoundUp } from "react-icons/io";
 import { PiCopyright } from "react-icons/pi";
@@ -7,7 +6,32 @@ import { FaArrowRightLong } from "react-icons/fa6";
 import { GetImageUrl } from "../../utils/GetImageURL";
 
 const Footer = () => {
+  const [shouldShowArrow, setShouldShowArrow] = useState(false);
+
+  useEffect(() => {
+    const checkArrowVisibility = () => {
+      const screenHeight = window.innerHeight;
+      const contentHeight = document.body.scrollHeight;
+      const hasScrolled = window.scrollY > 100;
+
+      setShouldShowArrow(contentHeight > screenHeight && hasScrolled);
+    };
+
+    checkArrowVisibility();
+    window.addEventListener("resize", checkArrowVisibility);
+    window.addEventListener("scroll", checkArrowVisibility);
+
+    return () => {
+      window.removeEventListener("resize", checkArrowVisibility);
+      window.removeEventListener("scroll", checkArrowVisibility);
+    };
+  }, []);
+
   const currentYear = new Date().getFullYear();
+  const handleScrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
     <>
       <section id="footer-sec">
@@ -123,28 +147,6 @@ const Footer = () => {
                       </li>
                     </ul>
                   </div>
-
-                  <div className="col-2">
-                    <h5 className="fw-bold fs-6 mb-4">COMPANY</h5>
-                    <ul className="nav flex-column">
-                      <li className="nav-item mb-2 mx-0">
-                        <Link
-                          to="#"
-                          className="footer-link nav-link p-0 text-muted"
-                        >
-                          Terms & Conditions
-                        </Link>
-                      </li>
-                      <li className="nav-item mb-2 mx-0">
-                        <Link
-                          to="#"
-                          className="footer-link nav-link p-0 text-muted"
-                        >
-                          Privacy policy
-                        </Link>
-                      </li>
-                    </ul>
-                  </div>
                 </div>
 
                 <div className="col-4 text-right">
@@ -175,10 +177,11 @@ const Footer = () => {
             </p>
             <p className="mb-0">Designed & Developed By Ecode Dash</p>
           </div>
-
-          <Link className="footer-arrow " to="#">
-            <IoIosArrowRoundUp />
-          </Link>
+          {shouldShowArrow && (
+            <div className="footer-arrow " onClick={handleScrollToTop}>
+              <IoIosArrowRoundUp />
+            </div>
+          )}
         </div>
       </section>
     </>

@@ -1,22 +1,14 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import { TfiLayoutLineSolid } from "react-icons/tfi";
 import * as Yup from "yup";
 
+// Yup schema for required fields only
 const validationSchema = Yup.object().shape({
   fullName: Yup.string().required("Full name is required"),
   email: Yup.string().email("Invalid email").required("Email is required"),
   mobile: Yup.string()
     .matches(/^[0-9]{10}$/, "Must be exactly 10 digits")
     .required("Mobile number is required"),
-  alternateMobile: Yup.string()
-    .matches(/^[0-9]{10}$/, "Must be exactly 10 digits")
-    .required("Alternate mobile number is required"),
-  experience: Yup.number()
-    .typeError("Experience must be a number")
-    .min(0, "Experience can't be negative")
-    .nullable(),
-  details: Yup.string().nullable(),
+  file: Yup.mixed().required("Resume is required"),
 });
 
 const ContactForm = () => {
@@ -27,18 +19,37 @@ const ContactForm = () => {
     alternateMobile: "",
     experience: "",
     details: "",
+    file: null,
   });
 
   const [errors, setErrors] = useState({});
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    const digitOnlyFields = ["mobile", "alternateMobile"];
-    const filteredValue = digitOnlyFields.includes(name)
-      ? value.replace(/\D/g, "")
-      : value;
+  // Validate specific field on change
+  const validateField = async (fieldName, value) => {
+    try {
+      await Yup.reach(validationSchema, fieldName).validate(value);
+      setErrors((prev) => ({ ...prev, [fieldName]: "" }));
+    } catch (err) {
+      setErrors((prev) => ({ ...prev, [fieldName]: err.message }));
+    }
+  };
 
-    setFormValues({ ...formValues, [name]: filteredValue });
+  const handleChange = (e) => {
+    const { name, value, files } = e.target;
+    const digitOnlyFields = ["mobile", "alternateMobile"];
+    const filteredValue =
+      name === "file"
+        ? files[0]
+        : digitOnlyFields.includes(name)
+        ? value.replace(/\D/g, "")
+        : value;
+
+    setFormValues((prev) => ({ ...prev, [name]: filteredValue }));
+
+    // Only validate the fields mentioned in the schema
+    if (["fullName", "email", "mobile", "file"].includes(name)) {
+      validateField(name, name === "file" ? files[0] : filteredValue);
+    }
   };
 
   const handleSubmit = async (e) => {
@@ -46,172 +57,144 @@ const ContactForm = () => {
     try {
       await validationSchema.validate(formValues, { abortEarly: false });
       setErrors({});
-      alert("Application submitted successfully!");
-      console.log("Submitted Data:", formValues);
-    } catch (validationError) {
-      const formattedErrors = {};
-      validationError.inner.forEach((err) => {
-        formattedErrors[err.path] = err.message;
+      alert("Form submitted successfully!");
+      console.log("Submitted data:", formValues);
+    } catch (err) {
+      const validationErrors = {};
+      err.inner.forEach((error) => {
+        validationErrors[error.path] = error.message;
       });
-      setErrors(formattedErrors);
+      setErrors(validationErrors);
     }
   };
 
   return (
-    <>
-      <section className="section">
-        <div className="row">
-          <div className="container  application-form">
-            <h4 className=" text-center mb-5 fs-2 fw-bolder">
-              Explore Job Opportunities with us{" "}
-            </h4>
-            <form onSubmit={handleSubmit} noValidate>
-              <div className="row mb-3 mt-5">
-                <div className="col-md-6 mb-3">
-                  <label className="form-label fs-6 fw-bold">Full name *</label>
-                  <input
-                    type="text"
-                    name="fullName"
-                    className={`form-control ${
-                      errors.fullName ? "is-invalid" : ""
-                    }`}
-                    value={formValues.fullName}
-                    onChange={handleChange}
-                    placeholder="Enter your full name"
-                  />
-                  {errors.fullName && (
-                    <div className="invalid-feedback">{errors.fullName}</div>
-                  )}
-                </div>
-                <div className="col-md-6 mb-3">
-                  <label className="form-label fs-6 fw-bold">
-                    Email address *
-                  </label>
-                  <input
-                    type="email"
-                    name="email"
-                    className={`form-control ${
-                      errors.email ? "is-invalid" : ""
-                    }`}
-                    value={formValues.email}
-                    onChange={handleChange}
-                    placeholder="Enter your email"
-                  />
-                  {errors.email && (
-                    <div className="invalid-feedback">{errors.email}</div>
-                  )}
-                </div>
-              </div>
+    <section className="section">
+      <div className="container application-form">
+        <h4 className="text-center mb-5 fs-2 fw-bold">
+          Explore Job Opportunities with us
+        </h4>
+        <form onSubmit={handleSubmit} noValidate>
+          <div className="row mb-3">
+            <div className="col-md-6 mb-3">
+              <label className="form-label fw-bold">
+                Full Name <span className="text-danger">*</span>
+              </label>
+              <input
+                type="text"
+                name="fullName"
+                className={`form-control ${
+                  errors.fullName ? "is-invalid" : ""
+                }`}
+                value={formValues.fullName}
+                onChange={handleChange}
+                placeholder="Enter your full name"
+              />
+              {errors.fullName && (
+                <div className="invalid-feedback">{errors.fullName}</div>
+              )}
+            </div>
 
-              <div className="row mb-3">
-                <div className="col-md-6 mb-3">
-                  <label className="form-label fs-6 fw-bold">
-                    Mobile number *
-                  </label>
-                  <input
-                    type="text"
-                    name="mobile"
-                    className={`form-control ${
-                      errors.mobile ? "is-invalid" : ""
-                    }`}
-                    value={formValues.mobile}
-                    onChange={handleChange}
-                    placeholder="Enter your mobile number"
-                  />
-                  {errors.mobile && (
-                    <div className="invalid-feedback">{errors.mobile}</div>
-                  )}
-                </div>
-                <div className="col-md-6 mb-3">
-                  <label className="form-label fs-6 fw-bold">
-                    Alternate Mobile number *
-                  </label>
-                  <input
-                    type="text"
-                    name="alternateMobile"
-                    className={`form-control ${
-                      errors.alternateMobile ? "is-invalid" : ""
-                    }`}
-                    value={formValues.alternateMobile}
-                    onChange={handleChange}
-                    placeholder="Enter alternate mobile number"
-                  />
-                  {errors.alternateMobile && (
-                    <div className="invalid-feedback">
-                      {errors.alternateMobile}
-                    </div>
-                  )}
-                </div>
-              </div>
-
-              <div className="row mb-4">
-                <div className="col-md-6 mb-3">
-                  <label className="form-label fs-6 fw-bold">
-                    Total experience
-                  </label>
-                  <input
-                    type="text"
-                    name="experience"
-                    className={`form-control ${
-                      errors.experience ? "is-invalid" : ""
-                    }`}
-                    value={formValues.experience}
-                    onChange={handleChange}
-                    placeholder="Enter total experience"
-                  />
-                  {errors.experience && (
-                    <div className="invalid-feedback">{errors.experience}</div>
-                  )}
-                </div>
-                <div className="col-md-6 mb-3">
-                  <label className="form-label fs-6 fw-bold ">
-                    Upload Resume{" "}
-                  </label>
-                  <input
-                    type="file"
-                    name="file"
-                    value={formValues.file}
-                    onChange={handleChange}
-                    className="form-control "
-                  />
-                </div>
-                <div className="col-md-12 mb-3">
-                  <label className="form-label fs-6 fw-bold">
-                    Additional details
-                  </label>
-                  <textarea
-                    role={5}
-                    type="text"
-                    name="details"
-                    className={`form-control ${
-                      errors.details ? "is-invalid" : ""
-                    }`}
-                    value={formValues.details}
-                    onChange={handleChange}
-                    placeholder="Addition Delaits"
-                  />
-                  {errors.details && (
-                    <div className="invalid-feedback">{errors.details}</div>
-                  )}
-                </div>
-              </div>
-
-              <button
-                type="submit"
-                className="explore-btn outline-none border-0  px-5"
-              >
-                Send application
-              </button>
-
-              <p className="form-disclaimer text-muted mt-3">
-                By clicking Send application, you agree to our User Agreement,
-                Privacy Policy, and Cookies Policy.
-              </p>
-            </form>
+            <div className="col-md-6 mb-3">
+              <label className="form-label fw-bold">
+                Email Address <span className="text-danger">*</span>
+              </label>
+              <input
+                type="email"
+                name="email"
+                className={`form-control ${errors.email ? "is-invalid" : ""}`}
+                value={formValues.email}
+                onChange={handleChange}
+                placeholder="Enter your email"
+              />
+              {errors.email && (
+                <div className="invalid-feedback">{errors.email}</div>
+              )}
+            </div>
           </div>
-        </div>
-      </section>
-    </>
+
+          <div className="row mb-3">
+            <div className="col-md-6 mb-3">
+              <label className="form-label fw-bold">
+                Mobile Number <span className="text-danger">*</span>
+              </label>
+              <input
+                type="text"
+                name="mobile"
+                className={`form-control ${errors.mobile ? "is-invalid" : ""}`}
+                value={formValues.mobile}
+                onChange={handleChange}
+                placeholder="Enter your mobile number"
+              />
+              {errors.mobile && (
+                <div className="invalid-feedback">{errors.mobile}</div>
+              )}
+            </div>
+            <div className="col-md-6 mb-3">
+              <label className="form-label fw-bold">
+                Total Experience (in years)
+              </label>
+              <input
+                type="text"
+                name="experience"
+                className="form-control"
+                value={formValues.experience}
+                onChange={handleChange}
+                placeholder="Experience"
+              />
+            </div>
+          </div>
+
+          <div className="row mb-3">
+            <div className="col-md-6 mb-3">
+              <label className="form-label fw-bold">
+                Upload Resume <span className="text-danger">*</span>
+              </label>
+
+              <div
+                className={`custom-file-upload ${
+                  errors.file ? "is-invalid" : ""
+                }`}
+              >
+                <label htmlFor="fileUpload" className="upload-label">
+                  {formValues.file ? formValues.file.name : "Choose File"}
+                </label>
+                <input
+                  type="file"
+                  id="fileUpload"
+                  name="file"
+                  // accept=".pdf,.doc,.docx"
+                  onChange={handleChange}
+                />
+              </div>
+
+              {errors.file && (
+                <div className="text-danger mt-1">{errors.file}</div>
+              )}
+            </div>
+            <div className="col-md-6 mb-3">
+              <label className="form-label fw-bold">Additional Details</label>
+              <textarea
+                name="details"
+                className="form-control detail-textarea"
+                value={formValues.details}
+                onChange={handleChange}
+                placeholder="Write more about you..."
+              />
+            </div>
+          </div>
+
+          <button type="submit" className="explore-btn px-5 border-0">
+            Send Application
+          </button>
+
+          <p className="form-disclaimer text-muted mt-3">
+            By clicking Send application, you agree to our User Agreement,
+            Privacy Policy, and Cookies Policy.
+          </p>
+        </form>
+      </div>
+    </section>
   );
 };
 

@@ -643,6 +643,11 @@ p {
   text-align: right !important;
 }
 .footer-arrow {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  z-index: 9;
+  background: #f4875a;
   font-size: 50px;
   border: 1px solid #fff;
   border-radius: 100%;
@@ -1338,14 +1343,46 @@ p {
   box-shadow: 0px 4px 2px #f4875a !important;
 }
 
+.custom-file-upload {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.upload-label {
+  margin: 0px;
+  display: block;
+  box-shadow: 0px 0px 5px #afb8b3;
+  padding: 10px 15px;
+  text-align: start;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+}
+.detail-textarea {
+  height: 46px !important;
+}
+
+.custom-file-upload input[type="file"] {
+  display: none;
+}
+
+.custom-file-upload.is-invalid .upload-label {
+  border: 1px solid red;
+}
+
 .application-form input,
 textarea {
   padding: 22px 20px;
   box-shadow: 0px 0px 5px #afb8b3;
-  border: none;
+  /* border: none; */
 }
 
 .form-disclaimer {
   font-size: 15px;
   line-height: 1.5;
+}
+
+.upload-resume {
+  height: 61.1px;
 }
