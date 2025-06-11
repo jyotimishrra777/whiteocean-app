@@ -159,7 +159,7 @@ const Footer = () => {
                     <p className="text-muted mb-0">haresh@whiteoceanprop.com</p>
                     <p className="text-muted mb-0">504, Shivalik Satyamev,</p>
                     <p className="text-muted mb-0">Near Vakil Saheb Bridge,</p>
-                    <p className="text-muted ">South Bopal, Ahmedabad,</p>
+                    <p className="text-muted mb-0">South Bopal, Ahmedabad,</p>
                     <p className="text-muted">380058</p>
                   </div>
                 </div>

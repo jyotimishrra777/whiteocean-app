@@ -5,6 +5,10 @@ import { MdOutlineBed } from "react-icons/md";
 import { FaRegHeart } from "react-icons/fa6";
 import { TbRotateRectangle } from "react-icons/tb";
 import { GetImageUrl } from "../../utils/GetImageURL";
+
+import { Button } from "react-bootstrap";
+import { FaMapMarkerAlt, FaWhatsapp, FaPhoneAlt } from "react-icons/fa";
+
 import Property from "../staticData/Property.json";
 
 const PropertyListing = ({ searchQuery = "", selectedType = "" }) => {
@@ -33,53 +37,80 @@ const PropertyListing = ({ searchQuery = "", selectedType = "" }) => {
 
   return (
     <section>
-      <div className="container property-container mb-5">
+      <div className="container  mb-5">
         {visibleProperties.length > 0 ? (
           visibleProperties.map((item, index) => (
-            <div className="card property-card" key={index}>
-              <img src={GetImageUrl(item.image)} alt="Interior" />
-              <div className="card-body">
-                <h5 className="card-title d-flex justify-content-between align-items-center mb-2 fs-5 fw-bold">
-                  <span>{item.name}</span>
-                  <span>
+            <div key={index} className="property-cards  rounded mb-4">
+              <div className="row g-0">
+                <div className="col-md-4 position-relative">
+                  <div className="image-wrapper position-relative">
                     <img
-                      src={GetImageUrl("/images/whatsapp.png")}
-                      alt="img err"
-                      style={{ width: "25px", height: "25px" }}
+                      src={GetImageUrl(item.image)}
+                      alt="Property"
+                      className="img-fluid "
                     />
-                  </span>
-                </h5>
-                <p className="card-text d-flex gap-3 mb-1">
-                  <span>
-                    <GrLocation /> {item.location}
-                  </span>
-                </p>
-                <hr />
-                <div className="propertylisting-container">
-                  <div className="propertylisting-card">
-                    <MdOutlineBed style={{ color: "red", fontSize: "20px" }} />
-                    <p className="mb-0">4 bhk</p>
-                  </div>
-                  <div className="propertylisting-card">
-                    <TbRotateRectangle
-                      style={{ color: "red", fontSize: "20px" }}
-                    />
-                    <p className="mb-0">{item.size}</p>
-                  </div>
-                  <div className="propertylisting-card">
-                    <MdOutlineBed style={{ color: "red", fontSize: "20px" }} />
-                    <p className="mb-0">
-                      Furnished : <span>{item.furnished}</span>
-                    </p>
+
+                    {/* Top Badges just like sample-label */}
+                    <div className="top-badges"></div>
+
+                    <div className="sample-label">{item.name}</div>
                   </div>
                 </div>
-                <div className="property-like">
-                  <span className="like-icon">
-                    <FaRegHeart />
-                  </span>
-                  <Link to="#" className="view-deatil-btn">
-                    view details
-                  </Link>
+
+                {/* Details Section */}
+                <div className="col-md-8 d-flex flex-column p-3">
+                  <div>
+                    <div className="d-flex flex-column flex-md-row justify-content-between">
+                      <div>
+                        <h6 className="property-title mb-1">{item.name}</h6>
+                        <div className="text-muted prorety-location">
+                          <FaMapMarkerAlt /> {item.location}
+                        </div>
+                      </div>
+                      <div className="text-md-end mt-2 mt-md-0">
+                        <h6 className="property-developer mb-1">
+                          Swati Procon
+                        </h6>
+                        <div className="text-muted  prorety-location">
+                          📅 Possession : June 2026
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="d-flex flex-wrap  mt-3 mb-3 property-specs">
+                      <div>
+                        <strong>5-BHK</strong>
+                      </div>
+                      <div className="d-flex flex-column text-black-50 ">
+                        <p className="mb-0">
+                          <strong>7838-9903 Sq-ft</strong>
+                        </p>
+                        <p className="mb-0">(Super Built-up Area)</p>
+                      </div>
+                      <div className="text-black-50">
+                        <strong>₹7.99 Cr - 10.1 Cr</strong>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Bottom right-aligned button group */}
+                  <div className="mt-auto d-flex flex-column align-items-end">
+                    <div className="d-flex gap-2 flex-wrap justify-content-end mb-2">
+                      <Button
+                        variant="outline-success"
+                        className="d-flex align-items-center gap-1"
+                      >
+                        <FaWhatsapp />
+                      </Button>
+
+                      <button className="text-white px-3 brochure-btn">
+                        Brochure
+                      </button>
+                      <button className="bg-dark text-white px-3 view-details-btn">
+                        View Details
+                      </button>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
