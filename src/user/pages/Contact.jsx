@@ -89,7 +89,7 @@ const Contact = () => {
               <FaEnvelope className="icon" />
               <div>
                 <h6>Email</h6>
-                <p>Haresh@whiteoceanprop.com</p>
+                <p>haresh@whiteoceanprop.com</p>
               </div>
             </div>
           </div>

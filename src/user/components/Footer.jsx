@@ -156,7 +156,7 @@ const Footer = () => {
                   <hr className="my-3 border-1 w-100 " />
                   <div id="footer-contact-detail">
                     <h5 className="text-muted">+91-7600033211</h5>
-                    <p className="text-muted mb-0">Haresh@whiteoceanprop.com</p>
+                    <p className="text-muted mb-0">haresh@whiteoceanprop.com</p>
                     <p className="text-muted mb-0">504, Shivalik Satyamev,</p>
                     <p className="text-muted mb-0">Near Vakil Saheb Bridge,</p>
                     <p className="text-muted ">South Bopal, Ahmedabad,</p>
