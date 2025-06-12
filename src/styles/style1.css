@@ -636,6 +636,10 @@ p {
 
 /* Footer component */
 
+.footer-left-content {
+  gap: 100px;
+}
+
 .footer-section {
   padding: 60px 0px 30px 0px;
 }
@@ -1091,6 +1095,22 @@ p {
   border-radius: 20px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
   position: relative;
+  height: 100%;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  opacity: 1;
+}
+.testimonial-card.fade-out {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.testimonial-card.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+.testimonial-card-wrapper {
+  min-height: 320px;
+  position: relative;
 }
 
 .quote-icon {
@@ -1359,9 +1379,6 @@ p {
   cursor: pointer;
   transition: border-color 0.3s ease;
 }
-.detail-textarea {
-  height: 46px !important;
-}
 
 .custom-file-upload input[type="file"] {
   display: none;
@@ -1369,6 +1386,14 @@ p {
 
 .custom-file-upload.is-invalid .upload-label {
   border: 1px solid red;
+}
+.custom-file-upload .error-icon {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  font-size: 1.2rem;
+  pointer-events: none;
 }
 
 .application-form input,

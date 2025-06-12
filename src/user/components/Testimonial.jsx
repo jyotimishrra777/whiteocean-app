@@ -136,17 +136,26 @@ const testimonials = [
     `,
   },
 ];
-
 const Testimonial = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isTransitioning, setIsTransitioning] = useState(false);
+
   const total = testimonials.length;
 
   const handlePrev = () => {
-    setCurrentIndex((prev) => (prev === 0 ? total - 1 : prev - 1));
+    setIsTransitioning(true);
+    setTimeout(() => {
+      setCurrentIndex((prev) => (prev === 0 ? total - 1 : prev - 1));
+      setIsTransitioning(false);
+    }, 300); // Match transition duration
   };
 
   const handleNext = () => {
-    setCurrentIndex((prev) => (prev === total - 1 ? 0 : prev + 1));
+    setIsTransitioning(true);
+    setTimeout(() => {
+      setCurrentIndex((prev) => (prev === total - 1 ? 0 : prev + 1));
+      setIsTransitioning(false);
+    }, 300);
   };
 
   const testimonial = testimonials[currentIndex];
@@ -186,33 +195,41 @@ const Testimonial = () => {
             </Col>
 
             <Col md={7}>
-              <div className="testimonial-card">
-                <div className="quote-icon">❝</div>
-                <p className="testimonial-text">{testimonial.text}</p>
+              <div className="testimonial-card-wrapper">
+                <div
+                  className={`testimonial-card ${
+                    isTransitioning ? "fade-out" : "fade-in"
+                  }`}
+                >
+                  <div className="quote-icon">❝</div>
+                  <p className="testimonial-text">{testimonial.text}</p>
 
-                <hr className="border-2 rounded-2" />
+                  <hr className="border-2 rounded-2" />
 
-                <div className="d-flex align-items-center gap-3">
-                  <img
-                    src={GetImageUrl(testimonial.image)}
-                    alt={testimonial.name}
-                    className="profile-img"
-                  />
-                  <div>
-                    <h6 className="mb-0">{testimonial.name}</h6>
-                    <small className="text-muted">{testimonial.location}</small>
-                  </div>
-                  <div className="ms-auto d-flex gap-1">
-                    {[...Array(5)].map((_, i) => (
-                      <span
-                        key={i}
-                        className={`star ${
-                          i < testimonial.rating ? "filled" : ""
-                        }`}
-                      >
-                        ★
-                      </span>
-                    ))}
+                  <div className="d-flex align-items-center gap-3">
+                    <img
+                      src={GetImageUrl(testimonial.image)}
+                      alt={testimonial.name}
+                      className="profile-img"
+                    />
+                    <div>
+                      <h6 className="mb-0">{testimonial.name}</h6>
+                      <small className="text-muted">
+                        {testimonial.location}
+                      </small>
+                    </div>
+                    <div className="ms-auto d-flex gap-1">
+                      {[...Array(5)].map((_, i) => (
+                        <span
+                          key={i}
+                          className={`star ${
+                            i < testimonial.rating ? "filled" : ""
+                          }`}
+                        >
+                          ★
+                        </span>
+                      ))}
+                    </div>
                   </div>
                 </div>
               </div>

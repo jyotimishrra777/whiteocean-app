@@ -55,7 +55,7 @@ const Footer = () => {
           <div className="container">
             <footer>
               <div className="row d-flex justify-content-between">
-                <div className="col-6 d-flex justify-content-between">
+                <div className="col-6 d-flex footer-left-content">
                   <div className="col-2">
                     <h5 className="fw-bold fs-6 mb-4">INFO</h5>
                     <ul className="nav flex-column">

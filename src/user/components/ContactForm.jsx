@@ -76,7 +76,7 @@ const ContactForm = () => {
         </h4>
         <form onSubmit={handleSubmit} noValidate>
           <div className="row mb-3">
-            <div className="col-md-6 mb-3">
+            <div className="col-md-4 mb-3">
               <label className="form-label fw-bold">
                 Full Name <span className="text-danger">*</span>
               </label>
@@ -95,7 +95,7 @@ const ContactForm = () => {
               )}
             </div>
 
-            <div className="col-md-6 mb-3">
+            <div className="col-md-4 mb-3">
               <label className="form-label fw-bold">
                 Email Address <span className="text-danger">*</span>
               </label>
@@ -111,10 +111,7 @@ const ContactForm = () => {
                 <div className="invalid-feedback">{errors.email}</div>
               )}
             </div>
-          </div>
-
-          <div className="row mb-3">
-            <div className="col-md-6 mb-3">
+            <div className="col-md-4 mb-3">
               <label className="form-label fw-bold">
                 Mobile Number <span className="text-danger">*</span>
               </label>
@@ -130,23 +127,10 @@ const ContactForm = () => {
                 <div className="invalid-feedback">{errors.mobile}</div>
               )}
             </div>
-            <div className="col-md-6 mb-3">
-              <label className="form-label fw-bold">
-                Total Experience (in years)
-              </label>
-              <input
-                type="text"
-                name="experience"
-                className="form-control"
-                value={formValues.experience}
-                onChange={handleChange}
-                placeholder="Experience"
-              />
-            </div>
           </div>
 
           <div className="row mb-3">
-            <div className="col-md-6 mb-3">
+            <div className="col-md-6 mb-3 position-relative">
               <label className="form-label fw-bold">
                 Upload Resume <span className="text-danger">*</span>
               </label>
@@ -163,18 +147,41 @@ const ContactForm = () => {
                   type="file"
                   id="fileUpload"
                   name="file"
-                  // accept=".pdf,.doc,.docx"
                   onChange={handleChange}
                 />
+
+                {errors.file && (
+                  <span className="error-icon">
+                    <i className="bi bi-exclamation-circle text-danger"></i>
+                  </span>
+                )}
               </div>
 
               {errors.file && (
                 <div className="text-danger mt-1">{errors.file}</div>
               )}
             </div>
+
             <div className="col-md-6 mb-3">
+              <label className="form-label fw-bold">
+                Total Experience (in years)
+              </label>
+              <input
+                type="text"
+                name="experience"
+                className="form-control"
+                value={formValues.experience}
+                onChange={handleChange}
+                placeholder="Experience"
+              />
+            </div>
+          </div>
+
+          <div className="row mb-3">
+            <div className="col-md-12 mb-3">
               <label className="form-label fw-bold">Additional Details</label>
               <textarea
+                rows={5}
                 name="details"
                 className="form-control detail-textarea"
                 value={formValues.details}
