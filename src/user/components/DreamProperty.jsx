@@ -3,7 +3,7 @@ import { GetImageUrl } from "../../utils/GetImageURL";
 
 const DreamProperty = () => {
   return (
-    <section className="split-section py-5">
+    <section className="section">
       <div className="container">
         <div className="row d-flex justify-content-between align-items-start">
           {/* Left Container */}
@@ -27,16 +27,16 @@ const DreamProperty = () => {
             </p>
             <div className="d-flex gap-5 mt-5">
               <div>
-                <h4 className="fs-5 fw-bold">10+ years</h4>
-                <p>of experience </p>
+                <h4 className="fs-4 fw-bolder mb-0">10+ years</h4>
+                <p className="fs-6">of experience </p>
               </div>
               <div>
-                <h4 className="fs-5 fw-bold">50+</h4>
-                <p>projects delivered </p>
+                <h4 className="fs-4 fw-bolder mb-0">50+</h4>
+                <p className="fs-6">projects delivered </p>
               </div>
               <div>
-                <h4 className="fs-5 fw-bold">24/7</h4>
-                <p>Online & Offline Assistance </p>
+                <h4 className="fs-4 fw-bolder mb-0">24/7</h4>
+                <p className="fs-6">Online & Offline Assistance </p>
               </div>
             </div>
           </div>
