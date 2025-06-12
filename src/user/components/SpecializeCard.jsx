@@ -18,7 +18,7 @@ const SpecializationSection = () => {
         </h6>
         <div className="dealer">
           <div className="dealer1 mb-5 col-12 px-0">
-            <h2 className="col-6 px-0 ">
+            <h2 className="col-md-6 col-sm-12 px-0 ">
               Customer satisfication is our key of Motivation.
             </h2>
             <Link to="/contact" className="explore-btn px-4">
@@ -28,7 +28,7 @@ const SpecializationSection = () => {
         </div>
 
         <div className="row gy-4">
-          <div className="col-md-4">
+          <div className="col-md-4 sp-card">
             <div className="card border-0   specialization-card special-card1">
               <img
                 src={img1}
@@ -44,7 +44,7 @@ const SpecializationSection = () => {
             </div>
           </div>
 
-          <div className="col-md-4">
+          <div className="col-md-4 sp-card">
             <div className="card border-0   specialization-card special-card2">
               <img src={img2} className="card-img-top " alt="Smart Homes" />
               <div className="card-body px-3">
@@ -56,7 +56,7 @@ const SpecializationSection = () => {
             </div>
           </div>
 
-          <div className="col-md-4">
+          <div className="col-md-4 sp-card">
             <div className="card border-0   specialization-card special-card3">
               <img src={img3} className="card-img-top " alt="Penthouses" />
               <div className="card-body px-3">

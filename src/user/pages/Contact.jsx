@@ -6,7 +6,9 @@ import { BiSolidPhoneCall } from "react-icons/bi";
 
 const Contact = () => {
   const validationSchema = Yup.object().shape({
-    fullName: Yup.string().required("Full name is required"),
+    fullName: Yup.string()
+      .matches(/^[a-zA-Z\s]*$/, "Only alphabets are allowed")
+      .required("Full name is required"),
     mobile: Yup.string()
       .matches(/^[0-9]{10}$/, "Must be exactly 10 digits")
       .required("Mobile number is required"),
@@ -127,6 +129,7 @@ const Contact = () => {
                   <input
                     type="mobile"
                     name="mobile"
+                    maxLength={10}
                     className={`form-control ${
                       errors.mobile ? "is-invalid" : ""
                     }`}

@@ -3,12 +3,15 @@ import * as Yup from "yup";
 
 // Yup schema for required fields only
 const validationSchema = Yup.object().shape({
-  fullName: Yup.string().required("Full name is required"),
+  fullName: Yup.string()
+    .matches(/^[a-zA-Z\s]*$/, "Only alphabets are allowed")
+    .required("Full name is required"),
   email: Yup.string().email("Invalid email").required("Email is required"),
   mobile: Yup.string()
     .matches(/^[0-9]{10}$/, "Must be exactly 10 digits")
     .required("Mobile number is required"),
   file: Yup.mixed().required("Resume is required"),
+  experience: Yup.string().required("Experience is required"),
 });
 
 const ContactForm = () => {
@@ -24,7 +27,6 @@ const ContactForm = () => {
 
   const [errors, setErrors] = useState({});
 
-  // Validate specific field on change
   const validateField = async (fieldName, value) => {
     try {
       await Yup.reach(validationSchema, fieldName).validate(value);
@@ -36,19 +38,21 @@ const ContactForm = () => {
 
   const handleChange = (e) => {
     const { name, value, files } = e.target;
-    const digitOnlyFields = ["mobile", "alternateMobile"];
-    const filteredValue =
-      name === "file"
-        ? files[0]
-        : digitOnlyFields.includes(name)
-        ? value.replace(/\D/g, "")
-        : value;
+
+    let filteredValue = value;
+
+    if (name === "file") {
+      filteredValue = files[0];
+    } else if (name === "mobile" || name === "alternateMobile") {
+      filteredValue = value.replace(/\D/g, "");
+    } else if (name === "fullName") {
+      filteredValue = value.replace(/[^a-zA-Z\s]/g, "");
+    }
 
     setFormValues((prev) => ({ ...prev, [name]: filteredValue }));
 
-    // Only validate the fields mentioned in the schema
-    if (["fullName", "email", "mobile", "file"].includes(name)) {
-      validateField(name, name === "file" ? files[0] : filteredValue);
+    if (["fullName", "email", "mobile", "file", "experience"].includes(name)) {
+      validateField(name, filteredValue);
     }
   };
 
@@ -118,6 +122,7 @@ const ContactForm = () => {
               <input
                 type="text"
                 name="mobile"
+                maxLength={10}
                 className={`form-control ${errors.mobile ? "is-invalid" : ""}`}
                 value={formValues.mobile}
                 onChange={handleChange}
@@ -164,16 +169,29 @@ const ContactForm = () => {
 
             <div className="col-md-6 mb-3">
               <label className="form-label fw-bold">
-                Total Experience (in years)
+                Total Experience (in years){" "}
+                <span className="text-danger">*</span>
               </label>
-              <input
-                type="text"
+              <select
                 name="experience"
-                className="form-control"
+                className={`total-experience form-control ${
+                  errors.experience ? "is-invalid" : ""
+                }`}
                 value={formValues.experience}
                 onChange={handleChange}
-                placeholder="Experience"
-              />
+              >
+                <option value="">Select experience</option>
+                <option value="0-1 Years">Fresher</option>
+                <option value="0-1 Years">0-1 Years</option>
+                <option value="1-3 Years">1-3 Years</option>
+                <option value="3-5 Years">3-5 Years</option>
+                <option value="5+ Years">5-7 Years</option>
+                <option value="5+ Years">7-9 Years</option>
+                <option value="5+ Years">10+ Years</option>
+              </select>
+              {errors.experience && (
+                <div className="invalid-feedback">{errors.experience}</div>
+              )}
             </div>
           </div>
 
@@ -194,11 +212,6 @@ const ContactForm = () => {
           <button type="submit" className="explore-btn px-5 border-0">
             Send Application
           </button>
-
-          <p className="form-disclaimer text-muted mt-3">
-            By clicking Send application, you agree to our User Agreement,
-            Privacy Policy, and Cookies Policy.
-          </p>
         </form>
       </div>
     </section>

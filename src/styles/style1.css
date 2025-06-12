@@ -624,6 +624,9 @@ p {
 .form-box {
   background-color: #fff;
 }
+.total-experience {
+  height: 45px;
+}
 
 .contact-section h6 {
   margin: 0;
@@ -1408,7 +1411,8 @@ p {
 }
 
 .application-form input,
-textarea {
+textarea,
+select {
   padding: 22px 20px;
   box-shadow: 0px 0px 5px #afb8b3;
   /* border: none; */
@@ -1421,4 +1425,193 @@ textarea {
 
 .upload-resume {
   height: 61.1px;
+}
+
+/* Responsive Design */
+
+@media (max-width: 576px) {
+  /* number data section  */
+  .section {
+    padding: 40px 15px !important;
+  }
+  .career-card {
+    width: 100% !important;
+  }
+  .career-card-container {
+    display: flex;
+    gap: 30px !important;
+    flex-direction: columns;
+  }
+  .number-data-section {
+    padding: 20px 20px;
+    min-height: 20vh;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 20px;
+  }
+  .number-data h2 {
+    letter-spacing: 0rem;
+    font-weight: 600;
+    font-size: 1rem;
+  }
+  .number-data-arrow {
+    color: #fff;
+    height: 60px;
+    width: 60px;
+    font-size: 30px;
+  }
+
+  .number-data {
+    padding: 0;
+  }
+
+  /* Footer */
+
+  .footer-section {
+    padding: 20px;
+  }
+
+  #footer-contact-detail p,
+  #footer-contact-detail h5 {
+    text-align: left !important;
+    font-size: 14px;
+  }
+
+  .footer-arrow {
+    font-size: 35px;
+    width: 35px;
+    height: 35px;
+    bottom: 15px;
+    right: 15px;
+  }
+
+  .copy-right {
+    text-align: center;
+  }
+
+  .copy-right-sec {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px 15px;
+  }
+
+  .copy-right p {
+    font-size: 13px;
+  }
+  .footer-row1 {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+  .footer-logo img {
+    display: none;
+  }
+
+  /* about-section */
+  .pages-section {
+    min-height: 100vh;
+  }
+
+  .about-section-content {
+    position: absolute;
+    top: 20%;
+    padding: 0 auto;
+    flex-direction: column !important;
+  }
+  .about-card-section .container {
+    padding: 0;
+  }
+  .about-card-container {
+    padding: 0;
+    flex-direction: column;
+  }
+  .sp-card {
+    padding: 0;
+  }
+  .special-card1 {
+    height: auto;
+    box-shadow: 2px 2px 4px #234e6f;
+  }
+  .special-card2 {
+    height: auto;
+    box-shadow: 2px 2px 4px #234e6f;
+  }
+  .special-card3 {
+    height: auto;
+    box-shadow: 2px 2px 4px #234e6f;
+  }
+  .specialization-card {
+    border-radius: 20px;
+  }
+  .specialization-card img {
+    height: 80%;
+    object-fit: cover;
+  }
+
+  /* Properties */
+
+  .top-badges {
+    border-radius: 10px 10px 0 0;
+  }
+  .sample-label {
+    border-radius: 0 0 10px 10px;
+    font-size: 18px;
+  }
+  .property-cards-img {
+    border-radius: 10px;
+  }
+  .property-specs > div {
+    flex: 1;
+    display: flex;
+    justify-content: start;
+    flex-direction: column !important;
+  }
+  .property-specs {
+    justify-content: start;
+    flex-direction: column !important;
+    gap: 10px;
+  }
+  .brochure-viewdetail {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .property-tab-header {
+    display: none;
+  }
+  .property-main-container {
+    padding: 0;
+  }
+}
+@media (min-width: 577px) and (max-width: 767px) {
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .section {
+    padding: 50px 30px !important;
+  }
+  .search-items {
+    padding: 10px 10px;
+  }
+  .search-fields {
+    gap: 0;
+    padding: 10px 20px;
+  }
+  .search-items input {
+    padding: 8px 5px;
+  }
+  .search-btn {
+    padding: 0px 5px;
+  }
+}
+@media (max-width: 1024px) {
+  .header .explore-btn {
+    display: none;
+  }
+  .navbar {
+    display: none !important;
+  }
+  .hero-images {
+    display: none;
+  }
 }

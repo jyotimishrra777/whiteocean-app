@@ -54,8 +54,8 @@ const Footer = () => {
         <div className="footer-section d-flex">
           <div className="container">
             <footer>
-              <div className="row d-flex justify-content-between">
-                <div className="col-6 d-flex footer-left-content">
+              <div className="row footer-row1 d-flex justify-content-between">
+                <div className="col-md-6 col-sm-12 d-flex footer-left-content">
                   <div className="col-2">
                     <h5 className="fw-bold fs-6 mb-4">INFO</h5>
                     <ul className="nav flex-column">
@@ -149,7 +149,7 @@ const Footer = () => {
                   </div>
                 </div>
 
-                <div className="col-4 text-right">
+                <div className="col-md-4 col-sm-12 text-right footer-logo">
                   <img
                     src={GetImageUrl("/images/logo.jpg")}
                     alt="error"
@@ -175,7 +175,16 @@ const Footer = () => {
               {<PiCopyright />} {currentYear} - {currentYear + 1} Copyright
               White Ocean Properties. All Rights Reserved.
             </p>
-            <p className="mb-0">Designed & Developed By Ecode Dash</p>
+            <p className="mb-0">
+              Designed & Developed By
+              <Link
+                to="https://www.ecodedash.com/"
+                target="blank"
+                className="text-white ml-2 text-decoration-none"
+              >
+                Ecode Dash
+              </Link>
+            </p>
           </div>
           {shouldShowArrow && (
             <div className="footer-arrow " onClick={handleScrollToTop}>

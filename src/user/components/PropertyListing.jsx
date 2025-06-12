@@ -37,7 +37,7 @@ const PropertyListing = ({ searchQuery = "", selectedType = "" }) => {
 
   return (
     <section>
-      <div className="container  mb-5">
+      <div className="container  mb-5 property-main-container">
         {visibleProperties.length > 0 ? (
           visibleProperties.map((item, index) => (
             <div key={index} className="property-cards   mb-4">
@@ -91,8 +91,8 @@ const PropertyListing = ({ searchQuery = "", selectedType = "" }) => {
                   </div>
 
                   {/* Bottom right-aligned button group */}
-                  <div className="mt-auto d-flex flex-column align-items-end">
-                    <div className="d-flex gap-2 flex-wrap justify-content-end mb-2">
+                  <div className="mt-auto d-flex flex-column align-items-md-end">
+                    <div className="d-flex gap-2 flex-md-wrap justify-content-md-end mb-2 brochure-viewdetail">
                       <Button
                         variant="outline-success"
                         className="d-flex align-items-center gap-1"

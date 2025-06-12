@@ -6,6 +6,7 @@ import "bootstrap-icons/font/bootstrap-icons.css";
 import "odometer/themes/odometer-theme-default.css";
 
 import "./styles/style1.css";
+import "./styles/style2.css";
 import "./styles/index.css";
 
 createRoot(document.getElementById("root")).render(

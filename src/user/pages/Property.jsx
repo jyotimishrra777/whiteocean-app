@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { FiSearch } from "react-icons/fi";
 import PropertyListing from "../components/PropertyListing";
 import { GetImageUrl } from "../../utils/GetImageURL";
@@ -33,28 +34,28 @@ const Property = () => {
     <>
       <section className="pages-section">
         <div className="row">
-          <div className="container text-light d-flex justify-content-between align-items-start about-section-content">
-            <h2 className="col-6 fw-bolder">
+          <div className="container text-light d-flex  justify-content-md-between align-items-start about-section-content">
+            <h2 className="col-md-6 col-sm-12  fw-bolder">
               Premium properties{" "}
               <img src={GetImageUrl("/images/star.png")} alt="img err" />
               <br />
               just curated for you
             </h2>
-            <div className="col-6">
+            <div className="col-md-6 col-sm-12">
               <p>
                 Discover Spaces That Reflect Your Dreams — From Modern
                 Apartments to Luxurious Villas, We Bring You Homes That Match
-                Your Lifestyle, Aspirations, and Every Chapter of Life.
+                Your Lifestyle, Aspirations, and Every Chapter of Life
               </p>
-              <a href="#" className="explore-btn px-5">
+              <Link to="/properties" className="explore-btn  px-5">
                 Explore Properties
-              </a>
+              </Link>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="property-listing-page section">
+      <section className="property-listing-page section mb-5">
         <div className="container property-tab-header">
           <div id="property-tab">
             {[
