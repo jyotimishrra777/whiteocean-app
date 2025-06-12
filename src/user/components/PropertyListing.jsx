@@ -40,19 +40,18 @@ const PropertyListing = ({ searchQuery = "", selectedType = "" }) => {
       <div className="container  mb-5">
         {visibleProperties.length > 0 ? (
           visibleProperties.map((item, index) => (
-            <div key={index} className="property-cards  rounded mb-4">
+            <div key={index} className="property-cards   mb-4">
               <div className="row g-0">
                 <div className="col-md-4 position-relative">
                   <div className="image-wrapper position-relative">
                     <img
                       src={GetImageUrl(item.image)}
                       alt="Property"
-                      className="img-fluid "
+                      className="img-fluid property-cards-img"
                     />
 
                     {/* Top Badges just like sample-label */}
                     <div className="top-badges"></div>
-
                     <div className="sample-label">{item.name}</div>
                   </div>
                 </div>
@@ -104,7 +103,7 @@ const PropertyListing = ({ searchQuery = "", selectedType = "" }) => {
                       <button className="text-white px-3 brochure-btn">
                         Brochure
                       </button>
-                      <button className="bg-dark text-white px-3 view-details-btn">
+                      <button className=" text-white px-3 view-details-btn">
                         View Details
                       </button>
                     </div>

@@ -470,7 +470,7 @@ p {
 }
 
 .services-card {
-  box-shadow: 0px 2px 2px 0px #234e6f;
+  box-shadow: 0px 3px 2px 0px #234e6f;
 }
 
 /* Pages style */
@@ -610,7 +610,7 @@ p {
 .contact-info {
   display: flex;
   gap: 15px;
-  align-items: center;
+  /* align-items: center; */
 }
 
 .contact-info .icon {
@@ -1202,10 +1202,13 @@ p {
 }
 .property-cards {
   background: #fff;
+  border-radius: 10px;
 }
-
 .property-cards:hover {
-  box-shadow: 0px 0px 6px #aac4c1;
+  box-shadow: 0px 0px 6px 1px #234e6f;
+}
+.property-cards-img {
+  border-radius: 10px 0 0 10px;
 }
 
 .property-card {
@@ -1228,6 +1231,7 @@ p {
   display: flex;
   gap: 12px;
   z-index: 2;
+  border-radius: 10px 0 0 0;
 }
 .top-badges-icon {
   font-size: 22px;
@@ -1278,6 +1282,7 @@ p {
   color: white;
   font-size: 16px;
   padding: 5px 10px;
+  border-radius: 0 0 0 10px;
 }
 
 .favorite-icon {
@@ -1307,6 +1312,12 @@ p {
   padding: 6px 20px;
 }
 .brochure-btn {
+  background: #f4875a;
+}
+.view-details-btn {
+  background: #234e6f;
+}
+.brochure-btn:hover {
   background: #f4875a;
 }
 
@@ -1360,7 +1371,7 @@ p {
 /*  */
 
 .career-card {
-  box-shadow: 0px 4px 2px #f4875a !important;
+  box-shadow: 0px 3px 2px 0px #234e6f;
 }
 
 .custom-file-upload {

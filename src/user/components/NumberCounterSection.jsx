@@ -11,19 +11,19 @@ const NumberDataSection = () => {
         <h2>
           <NumberCounter target={2000} />+
         </h2>
-        <p>Happy Customers</p>
+        <p className="fs-5">Happy Customers</p>
       </div>
       <div className="number-data">
         <h2>
-          <NumberCounter target={250} /> +
+          <NumberCounter target={250} />+
         </h2>
-        <p>New Projects</p>
+        <p className="fs-5">New Projects</p>
       </div>
       <div className="number-data">
         <h2>
-          <NumberCounter target={50} />+
+          <NumberCounter target={100} />+
         </h2>
-        <p>Unit sold</p>
+        <p className="fs-5">Unit sold</p>
       </div>
       <div className="number-data">
         <Link className="number-data-arrow">
