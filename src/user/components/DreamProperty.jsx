@@ -31,7 +31,7 @@ const DreamProperty = () => {
                 <p className="fs-6">of experience </p>
               </div>
               <div>
-                <h4 className="fs-4 fw-bolder mb-0">50+</h4>
+                <h4 className="fs-4 fw-bolder mb-0">100+</h4>
                 <p className="fs-6">projects delivered </p>
               </div>
               <div>
