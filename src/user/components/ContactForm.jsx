@@ -181,13 +181,13 @@ const ContactForm = () => {
                 onChange={handleChange}
               >
                 <option value="">Select experience</option>
-                <option value="0-1 Years">Fresher</option>
+                <option value="Fresher">Fresher</option>
                 <option value="0-1 Years">0-1 Years</option>
                 <option value="1-3 Years">1-3 Years</option>
                 <option value="3-5 Years">3-5 Years</option>
-                <option value="5+ Years">5-7 Years</option>
-                <option value="5+ Years">7-9 Years</option>
-                <option value="5+ Years">10+ Years</option>
+                <option value="5-7 Years">5-7 Years</option>
+                <option value="7-9 Years">7-9 Years</option>
+                <option value="10+ Years">10+ Years</option>
               </select>
               {errors.experience && (
                 <div className="invalid-feedback">{errors.experience}</div>
