@@ -39,7 +39,7 @@ const Footer = () => {
           <div className="number-data col-6 text-start">
             <h2>Let's Make Your Real Estate Goals Happen </h2>
           </div>
-
+          {/* <div className="mobile-number-data"> */}
           <div className="number-data">
             <div className="number-data-arrow">
               <FaArrowRightLong />
@@ -51,14 +51,15 @@ const Footer = () => {
             </Link>
           </div>
         </div>
+        {/* </div> */}
         <div className="footer-section d-flex">
           <div className="container">
             <footer>
               <div className="row footer-row1 d-flex justify-content-between">
                 <div className="col-md-6 col-sm-12 d-flex footer-left-content">
                   <div className="col-2">
-                    <h5 className="fw-bold fs-6 mb-4">INFO</h5>
-                    <ul className="nav flex-column">
+                    <h5 className="fw-bolder  mb-4">INFO</h5>
+                    <ul className="nav flex-column footer-nav">
                       <li className=" nav-item mb-2 mx-0">
                         <Link
                           to="/about"
@@ -87,8 +88,8 @@ const Footer = () => {
                   </div>
 
                   <div className="col-2">
-                    <h5 className="fw-bold fs-6 mb-4">PROPERTY</h5>
-                    <ul className="nav flex-column">
+                    <h5 className="fw-bolder  mb-4">PROPERTY</h5>
+                    <ul className="nav flex-column footer-nav">
                       <li className="nav-item mb-2 mx-0">
                         <Link
                           to="#"

@@ -10,7 +10,7 @@ const CommonSection = () => {
           <div className="container text-light d-flex  justify-content-md-between align-items-start about-section-content">
             <h2 className="col-md-6 col-sm-12  fw-bolder">
               We are hiring{" "}
-              <img src={GetImageUrl("images/star.png")} alt="img err" />
+              {/* <img src={GetImageUrl("images/star.png")} alt="img err" /> */}
             </h2>
             <div className="col-md-6 col-sm-12">
               <p>

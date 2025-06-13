@@ -134,7 +134,7 @@ const Home = () => {
 
       {/* second section */}
       <section className="section">
-        <div className="container">
+        <div className="container second-section">
           <h6 className="dealer-choose">
             {" "}
             <span>
@@ -161,7 +161,7 @@ const Home = () => {
                 <img
                   src={GetImageUrl("/images/kitchen.png")}
                   alt="img"
-                  className="rounded-5"
+                  className="rounded-5 dealer-img1"
                 />
                 <img
                   src={GetImageUrl("/images/arrow1.png")}
@@ -207,7 +207,7 @@ const Home = () => {
           </h6>
           <div className="dealer">
             <div className="dealer1 mb-5 col-12 px-0">
-              <h2 className="col-6 px-0">
+              <h2 className="col-md-6 col-sm-12 px-0">
                 Whether buying or investing, we’ll help you find the right
                 property
               </h2>
@@ -223,7 +223,7 @@ const Home = () => {
       {/* fivth section */}
 
       <section className="number-data-section">
-        <div className="number-data">
+        <div className="number-data help-data">
           <h2>Looking for a dream Home ?</h2>
           <p>We can help you realize your dream of a new home</p>
         </div>
@@ -246,7 +246,7 @@ const Home = () => {
       <section className="section property-section">
         <div className="dealer">
           <div className="dealer1 mb-5 col-12">
-            <h2 className="col-6">
+            <h2 className="col-md-6 col-sm-12">
               The most famous rent properties across ahmedabad
             </h2>
             <div className="d-flex gap-3">
@@ -268,7 +268,7 @@ const Home = () => {
       {/* seven section */}
 
       <section className="section service-section">
-        <div className="container">
+        <div className="container ">
           <h6 className="dealer-choose">
             {" "}
             <span>
@@ -278,7 +278,7 @@ const Home = () => {
           </h6>
           <div className="dealer">
             <div className="dealer1 mb-5 col-12 px-0">
-              <h2 className="col-6 px-0">
+              <h2 className="col-md-6 col-sm-12 px-0">
                 Whether buying or investing, we’ll help you find the right
                 property
               </h2>
@@ -290,8 +290,8 @@ const Home = () => {
         </div>
 
         <div>
-          <div className="container">
-            <div className="col-12 d-flex gap-5">
+          <div className="container services-container">
+            <div className="col-12 d-flex gap-5 services-inner-container">
               <div className="card services-card rounded-5 p-2">
                 <div className="card-img">
                   <img
@@ -373,7 +373,7 @@ const Home = () => {
           </h6>
           <div className="dealer">
             <div className="dealer1 mb-5 col-12 px-0">
-              <h2 className="col-6 px-0 ">
+              <h2 className="col-md-6 col-sm-12 px-0 ">
                 Customer satisfication is our key of Motivation.
               </h2>
               <Link to="/contact" className="explore-btn px-4">

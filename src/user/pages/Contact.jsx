@@ -64,15 +64,15 @@ const Contact = () => {
           <h4 className="text-white text-center mb-3 fs-2 fw-bolder">
             Contact Us
           </h4>
-          <p className="text-white text-center mb-5 px-5">
+          <p className="text-white text-center mb-5 ">
             Our dedicated support team is always ready to assist, ensuring you
             receive prompt, reliable solutions tailored to your needs. Whether
             it's inquiries, feedback, or troubleshooting, count on us for swift
             and effective assistance
           </p>
 
-          <div className="row d-flex align-items-center">
-            <div className="col-6 text-white mb-4 ">
+          <div className="row d-flex align-items-center mobile-contact">
+            <div className="col-md-6 col-sm-12 text-white mb-4 ">
               <div className="contact-info mb-4">
                 <FaMapMarkerAlt className="icon" />
                 <div>
@@ -105,7 +105,7 @@ const Contact = () => {
                 {" "}
                 <div className="mb-3">
                   {" "}
-                  <label className="form-label fs-6 fw-bold mb-0">
+                  <label className="form-label fs-6 fw-bolder mb-0">
                     Full Name <span className="text-danger">*</span>{" "}
                   </label>{" "}
                   <input

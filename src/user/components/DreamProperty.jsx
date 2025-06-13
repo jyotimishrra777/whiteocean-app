@@ -25,18 +25,18 @@ const DreamProperty = () => {
               we’ve helped countless families find their “Sapno Ka Ghar,” and
               we’re just getting started.
             </p>
-            <div className="d-flex gap-5 mt-5">
+            <div className="d-flex  mt-5">
               <div>
                 <h4 className="fs-4 fw-bolder mb-0">10+ years</h4>
-                <p className="fs-6">of experience </p>
+                <p className="fs-6 lh-sm">of experience </p>
               </div>
               <div>
                 <h4 className="fs-4 fw-bolder mb-0">100+</h4>
-                <p className="fs-6">projects delivered </p>
+                <p className="fs-6 lh-sm">projects delivered </p>
               </div>
               <div>
                 <h4 className="fs-4 fw-bolder mb-0">24/7</h4>
-                <p className="fs-6">Online & Offline Assistance </p>
+                <p className="fs-6 lh-sm">Online & Offline Assistance </p>
               </div>
             </div>
           </div>

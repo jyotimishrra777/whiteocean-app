@@ -23,6 +23,12 @@ a:hover {
   align-items: center;
   padding: 12px 60px;
   border-bottom: 1px solid #f0f0f0;
+  position: sticky;
+  background-color: #ffffff;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
 }
 
 .logo {
@@ -42,7 +48,6 @@ a:hover {
   align-items: center;
   padding: 10px 20px;
   gap: 10px;
-  /* border: 1px solid black; */
   border-radius: 30px;
 }
 
@@ -63,6 +68,47 @@ a:hover {
   padding: 10px 20px;
   border-radius: 20px;
 }
+
+/* Mobile navigation */
+
+.mobile-nav {
+  position: absolute;
+  top: 69px;
+  left: 0;
+  right: 0;
+  background: #234e6f;
+  display: flex;
+  flex-direction: column;
+  z-index: 999;
+  overflow: hidden;
+  max-height: 0;
+  padding-bottom: 0;
+  transition: max-height 1s ease, padding-bottom 1s ease;
+}
+
+.mobile-nav.open {
+  max-height: 500px;
+  padding-bottom: 50px;
+}
+
+.mobile-link {
+  font-size: 20px;
+  text-decoration: none;
+  color: white;
+  font-weight: 700;
+  width: 80%;
+  border-bottom: 1px solid #f0f1f3;
+  margin: 0 auto;
+  padding: 15px 0 15px 15px;
+  text-decoration: none;
+}
+.mobile-link:hover {
+  color: white;
+  text-decoration: none;
+}
+
+/* Hero section */
+
 .hero-section {
   background: #eeecec;
 }
@@ -479,7 +525,7 @@ p {
 
 .pages-section {
   background-image: url("/images/bg4.jpg");
-  background-position: center center;
+  /* background-position: center center; */
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
@@ -488,7 +534,8 @@ p {
 .about-section-content {
   padding: 0px 60px;
   position: absolute;
-  bottom: 25%;
+  margin-top: 100px;
+  /* bottom: 25%; */
 }
 .about-section-content h2 {
   /* font-family: cursive; */
@@ -664,6 +711,10 @@ p {
   justify-content: center;
   align-items: center;
   color: #fff !important;
+}
+.footer-nav li {
+  padding: 0;
+  margin: 0;
 }
 .footer-link {
   width: max-content;
@@ -1369,6 +1420,13 @@ p {
   .favorite-icon {
     font-size: 16px;
   }
+  /* contact */
+
+  .mobile-contact {
+    flex-direction: column-reverse;
+    gap: 40px;
+    padding: 0 10px;
+  }
 }
 
 /*  */
@@ -1430,6 +1488,41 @@ select {
 /* Responsive Design */
 
 @media (max-width: 576px) {
+  /* Home */
+  .second-section {
+    padding: 0;
+  }
+  .search-box {
+    display: none;
+  }
+  .hero {
+    flex-direction: column;
+  }
+  .dealer1,
+  .dealer2 {
+    flex-direction: column;
+  }
+  .dealer-img1 {
+    width: 100%;
+  }
+  .card-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 10px;
+    margin-top: 100px;
+  }
+  .dealer1-arrow1 {
+    position: absolute;
+    left: 50%;
+    top: 80%;
+    transform: translateX(-50%);
+    width: 200px;
+  }
+  .dealer-card {
+    box-shadow: 0px 2px 4px #234e6f;
+  }
+
   /* number data section  */
   .section {
     padding: 40px 15px !important;
@@ -1444,26 +1537,82 @@ select {
   }
   .number-data-section {
     padding: 20px 20px;
-    min-height: 20vh;
+    min-height: 18vh;
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     align-items: start;
     gap: 20px;
   }
   .number-data h2 {
     letter-spacing: 0rem;
     font-weight: 600;
-    font-size: 1rem;
+    font-size: 1.5rem;
+    min-width: 100px;
+    margin: 0;
+  }
+  .number-data-section {
+    gap: 0;
+    display: flex;
+    flex-direction: column;
   }
   .number-data-arrow {
     color: #fff;
     height: 60px;
     width: 60px;
     font-size: 30px;
+    margin-bottom: 20px;
   }
 
   .number-data {
     padding: 0;
+    display: flex;
+    flex-direction: row;
+  }
+  .number-data img {
+    width: 350px;
+  }
+
+  /* Fivth */
+
+  .help-data {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .help-data h2 {
+    text-align: left;
+  }
+
+  /* Services */
+
+  .services-container {
+    padding: 0;
+  }
+  .services-inner-container {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+  }
+
+  /* about section */
+
+  .about-section-content h2 {
+    font-size: 2rem;
+  }
+  /* Contact */
+
+  .contact-info .icon {
+    padding: 10px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+  }
+  .contact-section h6 {
+    font-size: 25px;
+  }
+  .contact-form-sec {
+    padding: 50px 30px;
   }
 
   /* Footer */
@@ -1471,11 +1620,15 @@ select {
   .footer-section {
     padding: 20px;
   }
+  .footer-left-content h5 {
+    font-weight: 900;
+  }
 
   #footer-contact-detail p,
   #footer-contact-detail h5 {
     text-align: left !important;
-    font-size: 14px;
+    font-size: 18px;
+    font-weight: 900;
   }
 
   .footer-arrow {
@@ -1508,15 +1661,22 @@ select {
   }
 
   /* about-section */
-  .pages-section {
-    min-height: 100vh;
-  }
 
   .about-section-content {
+    margin: 0 auto;
     position: absolute;
     top: 20%;
-    padding: 0 auto;
+    bottom: 25%;
     flex-direction: column !important;
+    width: 100% !important;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    padding: 0px 20px;
+  }
+
+  .about-section-content p {
+    line-height: 1.5rem;
   }
   .about-card-section .container {
     padding: 0;
@@ -1577,10 +1737,41 @@ select {
     align-items: center;
   }
   .property-tab-header {
-    display: none;
+    display: flex;
+    flex-direction: column;
+    margin: 20px auto;
+    gap: 30px;
+    padding: 0;
   }
   .property-main-container {
     padding: 0;
+  }
+  #property-tab {
+    flex-wrap: wrap;
+    background: none;
+    box-shadow: none;
+    gap: 10px;
+    row-gap: 20px;
+    padding: 10px 0;
+  }
+  .filterTag.active {
+    padding: 4px 10px;
+  }
+  .searchbar {
+    width: 100%;
+  }
+  .filterTag {
+    border: 1px solid #d5dce0;
+    padding: 4px 10px;
+    border-radius: 20px;
+    background: white;
+  }
+
+  /* Contact section */
+
+  .contact-form-sec {
+    background: white;
+    width: 100%;
   }
 }
 @media (min-width: 577px) and (max-width: 767px) {
@@ -1602,16 +1793,5 @@ select {
   }
   .search-btn {
     padding: 0px 5px;
-  }
-}
-@media (max-width: 1024px) {
-  .header .explore-btn {
-    display: none;
-  }
-  .navbar {
-    display: none !important;
-  }
-  .hero-images {
-    display: none;
   }
 }
