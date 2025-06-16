@@ -534,8 +534,7 @@ p {
 .about-section-content {
   padding: 0px 60px;
   position: absolute;
-  margin-top: 100px;
-  /* bottom: 25%; */
+  margin-top: 150px;
 }
 .about-section-content h2 {
   /* font-family: cursive; */
