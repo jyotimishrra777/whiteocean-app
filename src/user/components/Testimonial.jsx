@@ -165,7 +165,7 @@ const Testimonial = () => {
       <div className="testimonial-wrapper">
         <Container>
           <Row className="align-items-center">
-            <Col md={5}>
+            <Col md={5} className="testomonial-container">
               <div className="left-content">
                 <h2 className="section-title">
                   See Why Customers Love <br /> White Ocean Properties
@@ -194,7 +194,7 @@ const Testimonial = () => {
               </div>
             </Col>
 
-            <Col md={7}>
+            <Col md={7} className="testomonial-container">
               <div className="testimonial-card-wrapper">
                 <div
                   className={`testimonial-card ${

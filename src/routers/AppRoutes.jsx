@@ -15,9 +15,12 @@ import AddProperty from "../admin/pages/AddProperty";
 import AdminDashboard from "../admin/pages/AdminDashboard";
 import Property from "../user/pages/Property";
 import Contact from "../user/pages/Contact";
+import usePageTitle from "../user/customHooks/usePageTitle";
 
-const AppRoutes = () => (
-  <Router basename="/whiteocean-app">
+const AppRoutes = () => {
+  usePageTitle();
+  return (
+    // <Router basename="/whiteocean-app">
     <Routes>
       {/* User routes */}
 
@@ -38,7 +41,8 @@ const AppRoutes = () => (
         <Route path="add-property" element={<AddProperty />} />
       </Route>
     </Routes>
-  </Router>
-);
+    // </Router>
+  );
+};
 
 export default AppRoutes;

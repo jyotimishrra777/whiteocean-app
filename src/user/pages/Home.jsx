@@ -65,7 +65,7 @@ const Home = () => {
             <h1>
               Smart Property
               <br />
-              Solutions. Real Results.
+              Solutions. Real Results
             </h1>
             <p>
               Your trusted partner in every stage of real estate whether you're

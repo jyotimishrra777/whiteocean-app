@@ -36,7 +36,7 @@ const Footer = () => {
     <>
       <section id="footer-sec">
         <div className="number-data-section">
-          <div className="number-data col-6 text-start">
+          <div className="number-data col-md-6 col-sm-12 text-start">
             <h2>Let's Make Your Real Estate Goals Happen </h2>
           </div>
           {/* <div className="mobile-number-data"> */}

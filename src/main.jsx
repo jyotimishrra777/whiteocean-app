@@ -8,9 +8,14 @@ import "odometer/themes/odometer-theme-default.css";
 import "./styles/style1.css";
 import "./styles/style2.css";
 import "./styles/index.css";
+import { BrowserRouter } from "react-router-dom";
+import ScrollToTop from "./user/customHooks/ScrollToTop.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <App />
+    <BrowserRouter basename="/whiteocean-app">
+      <ScrollToTop />
+      <App />
+    </BrowserRouter>
   </StrictMode>
 );

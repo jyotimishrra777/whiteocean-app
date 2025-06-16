@@ -97,7 +97,7 @@ a:hover {
   color: white;
   font-weight: 700;
   width: 80%;
-  border-bottom: 1px solid #f0f1f3;
+  border-bottom: 1px solid #646d71;
   margin: 0 auto;
   padding: 15px 0 15px 15px;
   text-decoration: none;
@@ -841,7 +841,7 @@ p {
   margin-bottom: 0;
   min-height: 130px;
   max-width: 150px;
-  /* width: 230px; */
+  width: 230px;
   text-align: start;
   word-break: normal;
   overflow-wrap: break-word;
@@ -1488,6 +1488,13 @@ select {
 
 @media (max-width: 576px) {
   /* Home */
+  .section {
+    padding: 50px 10px !important;
+  }
+  .section-title {
+    font-size: 24px;
+    text-align: center;
+  }
   .second-section {
     padding: 0;
   }
@@ -1496,6 +1503,19 @@ select {
   }
   .hero {
     flex-direction: column;
+  }
+  .hero-content {
+    text-align: center;
+  }
+  .hero-content h1 {
+    width: 100%;
+    font-size: 25px;
+    margin-bottom: 15px;
+  }
+  .hero-content p {
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
   }
   .dealer1,
   .dealer2 {
@@ -1514,18 +1534,37 @@ select {
   .dealer1-arrow1 {
     position: absolute;
     left: 50%;
-    top: 80%;
+    top: 85%;
     transform: translateX(-50%);
-    width: 200px;
+    width: 150px;
   }
   .dealer-card {
     box-shadow: 0px 2px 4px #234e6f;
   }
-
-  /* number data section  */
-  .section {
-    padding: 40px 15px !important;
+  .dealer-card .card-body,
+  .dealer-card .card-body .card-text {
+    text-align: center;
   }
+
+  .right-container .image-description {
+    font-size: 18px;
+    text-align: center;
+  }
+  .dream-explore-btn {
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    bottom: -75px;
+  }
+
+  .about-card .card-img {
+    text-align: center;
+  }
+  .about-card .card-body h5 {
+    text-align: center;
+  }
+  /* number data section  */
+
   .career-card {
     width: 100% !important;
   }
@@ -1533,6 +1572,9 @@ select {
     display: flex;
     gap: 30px !important;
     flex-direction: columns;
+  }
+  .number-data {
+    width: 100% !important;
   }
   .number-data-section {
     padding: 20px 20px;
@@ -1548,6 +1590,8 @@ select {
     font-size: 1.5rem;
     min-width: 100px;
     margin: 0;
+    display: flex;
+    justify-content: flex-start;
   }
   .number-data-section {
     gap: 0;
@@ -1559,7 +1603,7 @@ select {
     height: 60px;
     width: 60px;
     font-size: 30px;
-    margin-bottom: 20px;
+    margin: 20px 0;
   }
 
   .number-data {
@@ -1567,10 +1611,19 @@ select {
     display: flex;
     flex-direction: row;
   }
-  .number-data img {
-    width: 350px;
+  /* Testomonial */
+
+  .testimonial-card {
+    padding: 30px 15px;
+  }
+  .testomonial-container {
+    padding: 0;
   }
 
+  .nav-buttons {
+    justify-content: space-around;
+    margin-bottom: 30px;
+  }
   /* Fivth */
 
   .help-data {
@@ -1614,6 +1667,17 @@ select {
     padding: 50px 30px;
   }
 
+  /* Team */
+
+  .team-container {
+    gap: 50px;
+  }
+
+  .team-left {
+    width: 100%;
+    height: 300px;
+  }
+
   /* Footer */
 
   .footer-section {
@@ -1626,8 +1690,8 @@ select {
   #footer-contact-detail p,
   #footer-contact-detail h5 {
     text-align: left !important;
-    font-size: 18px;
-    font-weight: 900;
+    font-size: 15px;
+    font-weight: 500;
   }
 
   .footer-arrow {
@@ -1636,6 +1700,12 @@ select {
     height: 35px;
     bottom: 15px;
     right: 15px;
+  }
+  .footer-link {
+    font-size: 16px;
+  }
+  #footer-sec .number-data {
+    text-align: start;
   }
 
   .copy-right {
@@ -1764,6 +1834,12 @@ select {
     padding: 4px 10px;
     border-radius: 20px;
     background: white;
+  }
+  .view-details-btn {
+    font-size: 15px;
+  }
+  .brochure-btn {
+    font-size: 15px;
   }
 
   /* Contact section */
