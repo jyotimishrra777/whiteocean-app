@@ -4,6 +4,9 @@ import { IoIosArrowRoundUp } from "react-icons/io";
 import { PiCopyright } from "react-icons/pi";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { GetImageUrl } from "../../utils/GetImageURL";
+import { MdAddCall } from "react-icons/md";
+import { MdOutlineMail } from "react-icons/md";
+import { GoLocation } from "react-icons/go";
 
 const Footer = () => {
   const [shouldShowArrow, setShouldShowArrow] = useState(false);
@@ -58,7 +61,7 @@ const Footer = () => {
               <div className="row footer-row1 d-flex justify-content-between">
                 <div className="col-md-6 col-sm-12 d-flex footer-left-content">
                   <div className="col-2">
-                    <h5 className="fw-bolder  mb-4">INFO</h5>
+                    <h5 className="fw-bolder  mb-md-4">Info</h5>
                     <ul className="nav flex-column footer-nav">
                       <li className=" nav-item mb-2 mx-0">
                         <Link
@@ -88,7 +91,7 @@ const Footer = () => {
                   </div>
 
                   <div className="col-2">
-                    <h5 className="fw-bolder  mb-4">PROPERTY</h5>
+                    <h5 className="fw-bolder  mb-md-4">Property</h5>
                     <ul className="nav flex-column footer-nav">
                       <li className="nav-item mb-2 mx-0">
                         <Link
@@ -148,19 +151,46 @@ const Footer = () => {
                       </li>
                     </ul>
                   </div>
+                  <div className="col-2">
+                    <h5 className="fw-bolder  mb-md-4">Partners</h5>
+                    <ul className="nav flex-column footer-nav">
+                      <li className="nav-item mb-2 mx-0">
+                        <img
+                          src={GetImageUrl("images/footer1.png")}
+                          alt="error"
+                        />
+                      </li>
+                      <li className="nav-item mb-2 mx-0">
+                        <img
+                          src={GetImageUrl("images/footer2.png")}
+                          alt="error"
+                        />
+                      </li>
+                    </ul>
+                  </div>
                 </div>
 
                 <div className="col-md-4 col-sm-12 text-right footer-logo">
                   <img
-                    src={GetImageUrl("/images/logo.jpg")}
+                    src={GetImageUrl("images/logo.jpg")}
                     alt="error"
                     className="pb-3"
                   />
                   <hr className="my-3 border-1 w-100 " />
                   <div id="footer-contact-detail">
-                    <h5 className="text-muted">+91-7600033211</h5>
-                    <p className="text-muted mb-0">haresh@whiteoceanprop.com</p>
-                    <p className="text-muted mb-0">504, Shivalik Satyamev,</p>
+                    <h5 className="text-muted">
+                      {" "}
+                      <span>{<MdAddCall />}</span>
+                      {"  "}+91-7600033211
+                    </h5>
+                    <p className="text-muted mb-0">
+                      <span>{<MdOutlineMail />}</span>
+                      {"  "} haresh@whiteoceanprop.com
+                    </p>
+                    <p className="text-muted mb-0">
+                      <span>{<GoLocation />}</span>
+                      {"  "}504, Shivalik Satyamev,
+                    </p>
                     <p className="text-muted mb-0">Near Vakil Saheb Bridge,</p>
                     <p className="text-muted mb-0">South Bopal, Ahmedabad,</p>
                     <p className="text-muted">380058</p>

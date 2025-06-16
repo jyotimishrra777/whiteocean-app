@@ -116,9 +116,8 @@ a:hover {
 .hero {
   display: flex;
   justify-content: space-between;
-  /* padding: 80px 60px; */
+  align-items: center;
   gap: 60px;
-  /* background: #eeecec; */
 }
 
 .hero-content {
@@ -925,6 +924,7 @@ p {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-direction: column;
 }
 
 .property-listing-page {
@@ -951,8 +951,31 @@ p {
   border-radius: 10px;
   cursor: pointer;
 }
+.property-tab-filter {
+  width: 100%;
+}
+.property-tab-select {
+  font-size: 16px;
+  font-weight: 900;
+  flex: 1;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  padding: 15px 20px !important;
+  box-shadow: 0px 0px 2px #afb8b3;
+}
+.price-selector {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.price-selector input {
+  width: 300px;
+}
 
 .searchbar {
+  height: 50px;
+  width: 100%;
   background: #fff;
   display: flex;
   align-items: center;
@@ -963,6 +986,7 @@ p {
   box-shadow: 0px 0px 2px #dbcebe;
 }
 .searchbar input {
+  width: 100%;
   text-decoration: none;
   font-weight: bold;
   padding: 8px 20px;
@@ -1611,6 +1635,16 @@ select {
     display: flex;
     flex-direction: row;
   }
+
+  /* Property */
+
+  .property-tab-header {
+    gap: 10px !important;
+  }
+  .price-range-container {
+    display: flex;
+    flex-direction: column;
+  }
   /* Testomonial */
 
   .testimonial-card {
@@ -1682,6 +1716,10 @@ select {
 
   .footer-section {
     padding: 20px;
+  }
+  .footer-left-content {
+    gap: 20px;
+    flex-direction: column;
   }
   .footer-left-content h5 {
     font-weight: 900;
