@@ -44,7 +44,7 @@ const About = () => {
                 />
               </div>
               <div className="card-body">
-                <h5 className="card-title fw-bold mb-3">Vision</h5>
+                <h5 className="card-title fw-bold mb-3">Our Vision</h5>
                 <p className="card-text">
                   Make an opportunity for buying a community, a lifestyle,
                   security, and a like-minded society. Not just a piece of land,

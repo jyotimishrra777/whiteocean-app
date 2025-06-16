@@ -53,8 +53,6 @@ const Dealer = [
 ];
 
 const Home = () => {
-  console.log("APP_URL:", import.meta.env.VITE_APP_URL);
-
   return (
     <>
       {/* first section */}
@@ -72,7 +70,7 @@ const Home = () => {
               buying, selling, or renting
             </p>
 
-            <div className="search-box">
+            {/* <div className="search-box">
               <div className="tabs">
                 <button className="active">Rent</button>
                 <button>Buy</button>
@@ -81,9 +79,8 @@ const Home = () => {
               <div className="search-fields">
                 <div className="search-items">
                   <h5 className="search-items-heading">Location</h5>
-                  {/* <select> */}
+
                   <input placeholder="Select your city"></input>
-                  {/* </select> */}
                 </div>
                 <div className="search-items">
                   <h6 className="search-items-heading">Property Type</h6>
@@ -102,7 +99,7 @@ const Home = () => {
                   <FiSearch />
                 </button>
               </div>
-            </div>
+            </div> */}
 
             <Link to="/properties" className="explore-btn px-4">
               Explore All Properties

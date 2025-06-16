@@ -7,8 +7,8 @@
     "type":"Commercial",
     "size":"4000 sqft",
     "price":"60lacs",
-    "furnished":"Yes"
-    
+    "furnished":"Yes",
+    "bhk":"1"
   },
   {
     "id": 2,
@@ -18,7 +18,8 @@
     "type":"Residential",
     "size":"2000 sqft",
     "price":"50 lacs",
-    "furnished":"Yes"
+    "furnished":"Yes",
+    "bhk":"2"
     
   },
   {
@@ -29,7 +30,8 @@
     "type":"Commercial",
     "size":"5000 sqft",
     "price":"1 Cr.",
-    "furnished":"Yes"
+    "furnished":"Yes",
+    "bhk":"1"
     
   },
   {
@@ -40,7 +42,8 @@
     "type":"Agriculture",
     "size":"3500 sqft",
     "price":"45lacs",
-    "furnished":"No"
+    "furnished":"No",
+    "bhk":"4"
   },
   {
     "id": 5,
@@ -50,7 +53,9 @@
     "type":"Industrial",
     "size":"4000 sqft",
     "price":"40lacs",
-    "furnished":"No"
+    "furnished":"No",
+    "bhk":"3"
+
     
   },
   {
@@ -60,8 +65,10 @@
     "location":"Geeta Mandir Ahmedabad",
     "type":"Commercial",
     "size":"3500 sqft",
-    "price":"45lacs",
-    "furnished":"No"
+    "price":"4.5cr",
+    "furnished":"No",
+    "bhk":"5"
+
   },
   {
     "id": 7,
@@ -71,7 +78,8 @@
     "type":"Commercial",
     "size":"5000 sqft",
     "price":"1 Cr.",
-    "furnished":"Yes"
+    "furnished":"Yes",
+    "bhk":"2"
     
   },
   {
@@ -81,8 +89,9 @@
     "location":"Thaltej Ahmedabad",
     "type":"Residencial",
     "size":"4000 sqft",
-    "price":"40lacs",
-    "furnished":"No"
+    "price":"40cr",
+    "furnished":"No",
+    "bhk":"4"
     
   },
   {
@@ -93,7 +102,8 @@
     "type":"Residencial",
     "size":"2000 sqft",
     "price":"50 lacs",
-    "furnished":"Yes"
+    "furnished":"Yes",
+    "bhk":"1"
     
   },
   {
@@ -104,7 +114,8 @@
     "type":"Commercial",
     "size":"5000 sqft",
     "price":"1 Cr.",
-    "furnished":"Yes"
+    "furnished":"Yes",
+    "bhk":"3"
     
   },
   {
@@ -115,7 +126,8 @@
     "type":"Residencial",
     "size":"4000 sqft",
     "price":"40lacs",
-    "furnished":"No"
+    "furnished":"No",
+    "bhk":"1"
     
   },
   {
@@ -126,7 +138,8 @@
     "type":"Residencial",
     "size":"2000 sqft",
     "price":"50 lacs",
-    "furnished":"Yes"
+    "furnished":"Yes",
+    "bhk":"2"
     
   }
 ]
