@@ -63,6 +63,15 @@ const ContactForm = () => {
       setErrors({});
       alert("Form submitted successfully!");
       console.log("Submitted data:", formValues);
+      setFormValues({
+        fullName: "",
+        email: "",
+        mobile: "",
+        alternateMobile: "",
+        experience: "",
+        details: "",
+        file: null,
+      });
     } catch (err) {
       const validationErrors = {};
       err.inner.forEach((error) => {
@@ -152,6 +161,7 @@ const ContactForm = () => {
                   type="file"
                   id="fileUpload"
                   name="file"
+                  accept=".pdf,.doc,.docx"
                   onChange={handleChange}
                 />
 
