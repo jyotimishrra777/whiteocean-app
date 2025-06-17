@@ -911,7 +911,7 @@ p {
 }
 
 /* Responsive */
-/* @media (max-width: 768px) {
+@media (max-width: 768px) {
   .timeline-wrapper {
     height: auto;
   }
@@ -930,7 +930,7 @@ p {
   .triangle-down {
     display: none;
   }
-} */
+}
 
 /* PropertyListing */
 
