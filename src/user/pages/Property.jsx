@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { FiSearch } from "react-icons/fi";
 import PropertyListing from "../components/PropertyListing";
@@ -10,20 +10,28 @@ const Property = () => {
   const [selectedBedroom, setSelectedBedroom] = useState("");
   const [selectedLocation, setSelectedLocation] = useState("");
   const [budgetRange, setBudgetRange] = useState({ min: 0, max: 100000000 });
-  const [tempRange, setTempRange] = useState([0, 100000000]);
+  // const [tempRange, setTempRange] = useState([0, 100000000]);
 
-  useEffect(() => {
-    setBudgetRange({ min: tempRange[0], max: tempRange[1] });
-  }, [tempRange]);
+  // useEffect(() => {
+  //   setBudgetRange({ min: tempRange[0], max: tempRange[1] });
+  // }, [tempRange]);
 
-  const handleMinChange = (e) => {
-    const newMin = Math.min(+e.target.value, tempRange[1] - 5000);
-    setTempRange([newMin, tempRange[1]]);
-  };
+  // const handleMinChange = (e) => {
+  //   const newMin = Math.min(+e.target.value, tempRange[1] - 5000);
+  //   setTempRange([newMin, tempRange[1]]);
+  // };
 
-  const handleMaxChange = (e) => {
-    const newMax = Math.max(+e.target.value, tempRange[0] + 5000);
-    setTempRange([tempRange[0], newMax]);
+  // const handleMaxChange = (e) => {
+  //   const newMax = Math.max(+e.target.value, tempRange[0] + 5000);
+  //   setTempRange([tempRange[0], newMax]);
+  // };
+
+  const handleCrealAll = () => {
+    setSearchInput("");
+    setBudgetRange({ min: 0, max: 100000000 });
+    setSelectedBedroom("");
+    setSelectedLocation("");
+    setSelectedType("");
   };
 
   return (
@@ -50,7 +58,7 @@ const Property = () => {
 
       <section className="property-listing-page section mb-5">
         <div className="container property-tab-header">
-          <div className="property-tab-filter d-flex flex-wrap gap-3 mb-3">
+          <div className="property-tab-filter d-flex flex-wrap gap-1 mb-3">
             <select
               className="property-tab-select"
               onChange={(e) => setSelectedType(e.target.value)}
@@ -88,45 +96,23 @@ const Property = () => {
               <option value="Delhi">Delhi</option>
               <option value="Banglore">Bangalore</option>
             </select>
-          </div>
 
-          <div className="col-md-12 d-flex justify-content-between align-items-center px-0 price-range-container ">
-            <div className="col-md-6 col-sm-12">
-              <label className="fw-bold d-block mb-1">Price Range:</label>
-              <div
-                className="position-relative w-100 dual-slider-wrapper"
-                style={{ padding: "10px 0" }}
-              >
-                <input
-                  type="range"
-                  min="0"
-                  max="100000000"
-                  step="5000"
-                  value={tempRange[0]}
-                  onChange={handleMinChange}
-                  className="form-range"
-                />
-                <input
-                  type="range"
-                  min="0"
-                  max="100000000"
-                  step="5000"
-                  value={tempRange[1]}
-                  onChange={handleMaxChange}
-                  className="form-range"
-                />
-                <div className="d-flex justify-content-between  px-1">
-                  <span className="fw-bold">
-                    Rs {tempRange[0].toLocaleString()}
-                  </span>
-                  <span className="fw-bold">
-                    Rs {tempRange[1].toLocaleString()}
-                  </span>
-                </div>
-              </div>
-            </div>
+            <select
+              className="property-tab-select"
+              onChange={(e) => {
+                const [min, max] = e.target.value.split("-").map(Number);
+                setBudgetRange({ min, max });
+              }}
+            >
+              <option value="0-100000000">Price Range</option>
+              <option value="0-1000000">Below ₹10 Lacs</option>
+              <option value="1000000-3000000">₹10 Lacs - ₹30 Lacs</option>
+              <option value="3000000-5000000">₹30 Lacs - ₹50 Lacs</option>
+              <option value="5000000-10000000">₹50 Lacs - ₹1 Cr</option>
+              <option value="10000000-99999999">Above ₹1 Cr</option>
+            </select>
 
-            <div className="searchbar col-md-6 col-sm-12">
+            <div className="searchbar col-md-3 col-sm-8">
               <span className="searchIcon">
                 <FiSearch />
               </span>
@@ -136,6 +122,12 @@ const Property = () => {
                 value={searchInput}
                 onChange={(e) => setSearchInput(e.target.value)}
               />
+            </div>
+
+            <div className=" reset-filter ">
+              <button className="reset-btn" onClick={handleCrealAll}>
+                Clear All
+              </button>
             </div>
           </div>
         </div>

@@ -108,8 +108,9 @@ const PropertyListing = ({
                     </div>
 
                     <div className="d-flex flex-wrap mt-3 mb-3 property-specs">
-                      <div>
+                      <div className="d-flex flex-column">
                         <strong>{item.bhk}-BHK</strong>
+                        <p className="mb-0 fw-bold">{item.type}</p>
                       </div>
                       <div className="d-flex flex-column text-black-50">
                         <p className="mb-0">

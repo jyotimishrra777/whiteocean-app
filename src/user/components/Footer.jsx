@@ -154,13 +154,14 @@ const Footer = () => {
                   <div className="col-2">
                     <h5 className="fw-bolder  mb-md-4">Partners</h5>
                     <ul className="nav flex-column footer-nav">
-                      <li className="nav-item mb-2 mx-0">
+                      <li className="nav-item mb-2  ">
                         <img
                           src={GetImageUrl("images/footer1.png")}
                           alt="error"
+                          className="footer-partner-img1"
                         />
                       </li>
-                      <li className="nav-item mb-2 mx-0">
+                      <li className="nav-item mb-2 ">
                         <img
                           src={GetImageUrl("images/footer2.png")}
                           alt="error"
@@ -178,22 +179,26 @@ const Footer = () => {
                   />
                   <hr className="my-3 border-1 w-100 " />
                   <div id="footer-contact-detail">
-                    <h5 className="text-muted">
+                    <h5 className="text-muted mb-0 footer-contact-line">
                       {" "}
-                      <span>{<MdAddCall />}</span>
+                      <span className="fs-5">{<MdAddCall />}</span>
                       {"  "}+91-7600033211
                     </h5>
-                    <p className="text-muted mb-0">
-                      <span>{<MdOutlineMail />}</span>
+                    <p className="text-muted mb-0 footer-contact-line">
+                      <span className="fs-5">{<MdOutlineMail />}</span>
                       {"  "} haresh@whiteoceanprop.com
                     </p>
-                    <p className="text-muted mb-0">
-                      <span>{<GoLocation />}</span>
+                    <p className="text-muted mb-0 footer-contact-line">
+                      <span className="fs-5">{<GoLocation />}</span>
                       {"  "}504, Shivalik Satyamev,
                     </p>
-                    <p className="text-muted mb-0">Near Vakil Saheb Bridge,</p>
-                    <p className="text-muted mb-0">South Bopal, Ahmedabad,</p>
-                    <p className="text-muted">380058</p>
+                    <p className="text-muted mb-0 footer-location-line">
+                      Near Vakil Saheb Bridge,
+                    </p>
+                    <p className="text-muted mb-0 footer-location-line">
+                      South Bopal, Ahmedabad,
+                    </p>
+                    <p className="text-muted footer-location-line">380058</p>
                   </div>
                 </div>
               </div>
@@ -211,9 +216,9 @@ const Footer = () => {
               <Link
                 to="https://www.ecodedash.com/"
                 target="blank"
-                className="text-white ml-2 text-decoration-none"
+                className="ecode-dash-link ml-2 text-decoration-none"
               >
-                Ecode Dash
+                Ecode Dash Pvt Ltd
               </Link>
             </p>
           </div>
