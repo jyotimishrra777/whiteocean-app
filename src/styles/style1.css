@@ -3,7 +3,6 @@
   margin: 0;
 }
 
-,
 a,
 a:hover {
   text-decoration: none !important;
@@ -1460,17 +1459,13 @@ p {
 }
 
 @media (max-width: 768px) {
-  .property-specs > div {
+  /* .property-specs > div {
     border-right: none;
     padding: 0;
     width: 100%;
-  }
+  } */
 
   .image-wrapper .badges {
-    font-size: 10px;
-  }
-
-  .sample-label {
     font-size: 10px;
   }
 
@@ -2055,9 +2050,11 @@ select {
   .number-data-section {
     display: flex;
     flex-wrap: wrap;
+    padding: 40px 20px;
   }
   .number-data h2 {
     text-align: start;
+    font-size: 2rem;
   }
   .team-container {
     display: flex;
@@ -2079,22 +2076,52 @@ select {
     display: flex;
     flex-direction: column;
   }
+  .about-card {
+    text-align: center;
+  }
+  .about-section-content h2 {
+    font-size: 2rem;
+    line-height: 2.2rem;
+  }
+  .about-section-content p {
+    font-size: 1.3rem;
+    line-height: 1.5rem;
+  }
   .penta-card {
     display: flex;
   }
+  .property-cards-img {
+    border-radius: 10px 10px 0 0;
+  }
+  .sample-label {
+    font-size: 18px;
+  }
+  .property-specs > div {
+    border-right: none;
+    padding: 0px 10px;
+    width: max-content;
+    flex: initial;
+  }
+  .property-tab-header {
+    margin: 0;
+  }
   .footer-logo {
     display: flex;
-    flex-direction: column;
+    align-items: start;
   }
   .copy-right-sec {
     flex-direction: column;
     text-align: center;
     padding: 20px 15px;
   }
+
   .copy-right {
+    color: #fff;
     display: flex;
-    flex-direction: column;
-    text-align: center;
+    flex-wrap: wrap;
+  }
+  .bottom-step {
+    max-width: 100%;
   }
 }
 

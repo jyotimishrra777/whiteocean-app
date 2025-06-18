@@ -100,7 +100,7 @@ const Contact = () => {
             </div>
 
             {/* Contact Form */}
-            <div className="col-6 contact-form-sec">
+            <div className="col-md-6 contact-form-sec">
               <form onSubmit={handleSubmit}>
                 {" "}
                 <div className="mb-3">
