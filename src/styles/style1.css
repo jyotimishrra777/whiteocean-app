@@ -459,6 +459,7 @@ p {
 .property-section {
   background: #fff;
 }
+
 .service-section {
   background: #eeecec;
 }
@@ -977,7 +978,7 @@ p {
   font-weight: 900;
   border: none;
   outline: none;
-  background: white;
+
   padding: 5px 10px;
   border-radius: 10px;
   box-shadow: 0px 0px 2px #afb8b3;
@@ -1687,6 +1688,19 @@ select {
     height: 35px;
     padding: 5px 10px;
   }
+  .property-slider {
+    width: 90%;
+  }
+  .slick-dots {
+    position: relative;
+  }
+  .badge {
+    position: absolute;
+    bottom: -40px;
+    border-radius: 50%;
+    transform: translateX(-100%);
+    /* left: 50%; */
+  }
   /* Testomonial */
 
   .testimonial-card {
@@ -2015,9 +2029,6 @@ select {
     padding: 8px 10px;
   }
   .number-data-section {
-    /* flex-direction: column;
-    gap: 20px;
-    align-items: flex-start; */
     display: flex;
     flex-wrap: wrap;
   }
@@ -2034,11 +2045,6 @@ select {
     justify-content: space-around;
     margin-bottom: 30px;
   }
-  /* .timeline-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  } */
 
   .about-section-content {
     display: flex;
@@ -2084,5 +2090,81 @@ select {
   }
   .search-btn {
     padding: 0px 5px;
+  }
+  .team-container {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 16px;
+    justify-content: flex-start;
+  }
+  .number-data h2 {
+    font-size: 2rem;
+  }
+  .number-data-section {
+    flex-wrap: wrap;
+  }
+
+  .dealer2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+  }
+  .dealer2 {
+    gap: 100px;
+  }
+  .card-container .dealer-card {
+    box-shadow: 1px 1px 4px #234e6f;
+  }
+  .about-section-content h2 {
+    font-size: 3rem;
+  }
+  .property-tab-header {
+    margin: 0;
+  }
+  .image-wrapper {
+    height: 100% !important;
+  }
+  .image-wrapper img {
+    height: 100% !important;
+  }
+  .property-title {
+    width: max-content;
+  }
+  .property-specs > div {
+    border-right: 1px solid #ccc;
+    padding: 10px 5px;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+  .footer-left-content {
+    justify-content: space-between;
+    gap: 0;
+  }
+  .footer-logo img {
+    width: 80%;
+  }
+  .number-data-section {
+    padding: 40px;
+  }
+  .about-card-container {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+
+    gap: 20px;
+  }
+  .penta-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .sp-card {
+    width: 100%;
+  }
+  .special-card1,
+  .special-card2,
+  .special-card3 {
+    height: 400px;
   }
 }

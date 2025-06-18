@@ -27,7 +27,7 @@ const SpecializationSection = () => {
           </div>
         </div>
 
-        <div className="row gy-4">
+        <div className="row gy-4 penta-container">
           <div className="col-md-4 sp-card">
             <div className="card border-0   specialization-card special-card1">
               <img

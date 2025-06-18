@@ -105,7 +105,7 @@ const FamousProperty = () => {
   };
   return (
     <>
-      <div className="container">
+      <div className="container property-slider">
         <Slider {...settings}>
           {Property.map((item, i) => (
             <div key={i} className="card slick-card">
