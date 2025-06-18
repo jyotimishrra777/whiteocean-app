@@ -4,6 +4,7 @@ import { FaMapMarkerAlt, FaWhatsapp } from "react-icons/fa";
 import { GetImageUrl } from "../../utils/GetImageURL";
 import { Button } from "react-bootstrap";
 import Property from "../staticData/Property.json";
+import { GoPersonFill } from "react-icons/go";
 
 // Utility to convert "60lacs" to 6000000
 const parsePrice = (priceString) => {
@@ -95,13 +96,16 @@ const PropertyListing = ({
                     <div className="d-flex flex-column flex-md-row justify-content-between">
                       <div>
                         <h6 className="property-title mb-1">{item.name}</h6>
-                        <div className="text-muted prorety-location">
+                        <div className="text-muted property-location">
                           <FaMapMarkerAlt /> {item.location}
                         </div>
                       </div>
                       <div className="text-md-end mt-2 mt-md-0">
-                        <h6 className="property-developer mb-1">Haresh Vaja</h6>
-                        <div className="text-muted prorety-location">
+                        <h6 className="property-developer mb-1">
+                          <GoPersonFill className="fs-5" />
+                          Haresh Vaja
+                        </h6>
+                        <div className="text-muted property-location">
                           📅 Possession : June 2026
                         </div>
                       </div>
@@ -110,15 +114,15 @@ const PropertyListing = ({
                     <div className="d-flex flex-wrap mt-3 mb-3 property-specs">
                       <div className="d-flex flex-column">
                         <strong>{item.bhk}-BHK</strong>
-                        <p className="mb-0 fw-bold">{item.type}</p>
+                        <p className="mb-0 ">{item.type}</p>
                       </div>
-                      <div className="d-flex flex-column text-black-50">
-                        <p className="mb-0">
+                      <div className="d-flex flex-column text-black">
+                        <p className="mb-0 text-black">
                           <strong>{item.size}</strong>
                         </p>
-                        <p className="mb-0">(Super Built-up Area)</p>
+                        <p className="mb-0 text-black">Prime Location</p>
                       </div>
-                      <div className="text-black-50">
+                      <div className="text-black">
                         <strong>{item.price}</strong>
                       </div>
                     </div>

@@ -2,7 +2,7 @@
   {
     "id": 1,
     "name":"Iscon Ahmedabad",
-    "image":"/images/h1.jpg",
+    "image":"/images/property1.jpg",
     "location":"Ahmedabad",
     "type":"Commercial",
     "size":"4000 sqft",
@@ -13,7 +13,7 @@
   {
     "id": 2,
     "name":"Navratna Ahmedabad",
-    "image":"/images/h2.jpg",
+    "image":"/images/property2.jpg",
     "location":"Ahmedabad",
     "type":"Residential",
     "size":"2000 sqft",
@@ -25,7 +25,7 @@
   {
     "id": 3,
     "name":"Baxter Ahmedabad",
-    "image":"/images/h3.jpg",
+    "image":"/images/property3.jpg",
     "location":"Ahmedabad",
     "type":"Commercial",
     "size":"5000 sqft",
@@ -37,7 +37,7 @@
   {
     "id": 4,
     "name":"Nakshtra Ahmedabad",
-    "image":"/images/h2.jpg",
+    "image":"/images/property4.jpg",
     "location":"Geeta Mandir Ahmedabad",
     "type":"Agriculture",
     "size":"3500 sqft",
@@ -48,7 +48,7 @@
   {
     "id": 5,
     "name":"Acropolis Ahmedabad",
-    "image":"/images/h1.jpg",
+    "image":"/images/property5.jpg",
     "location":"Thaltej Ahmedabad",
     "type":"Industrial",
     "size":"4000 sqft",
@@ -61,7 +61,7 @@
   {
     "id": 6,
     "name":"Nakshtra Ahmedabad",
-    "image":"/images/h2.jpg",
+    "image":"/images/property6.jpg",
     "location":"Geeta Mandir Ahmedabad",
     "type":"Commercial",
     "size":"3500 sqft",
@@ -73,7 +73,7 @@
   {
     "id": 7,
     "name":"Baxter Ahmedabad",
-    "image":"/images/h3.jpg",
+    "image":"/images/property7.jpg",
     "location":"Ahmedabad",
     "type":"Commercial",
     "size":"5000 sqft",
@@ -85,7 +85,7 @@
   {
     "id": 8,
     "name":"Acropolis Ahmedabad",
-    "image":"/images/h2.jpg",
+    "image":"/images/property8.jpg",
     "location":"Thaltej Ahmedabad",
     "type":"Residencial",
     "size":"4000 sqft",
@@ -97,7 +97,7 @@
   {
     "id": 9,
     "name":"Navratna Ahmedabad",
-    "image":"/images/h3.jpg",
+    "image":"/images/property9.jpg",
     "location":"Ahmedabad",
     "type":"Residencial",
     "size":"2000 sqft",
@@ -109,7 +109,7 @@
   {
     "id": 10,
     "name":"Baxter Ahmedabad",
-    "image":"/images/h1.jpg",
+    "image":"/images/property10.jpg",
     "location":"Ahmedabad",
     "type":"Commercial",
     "size":"5000 sqft",
@@ -121,7 +121,7 @@
   {
     "id": 11,
     "name":"Acropolis Ahmedabad",
-    "image":"/images/h2.jpg",
+    "image":"/images/property11.jpg",
     "location":"Thaltej Ahmedabad",
     "type":"Residencial",
     "size":"4000 sqft",
@@ -133,7 +133,7 @@
   {
     "id": 12,
     "name":"Navratna Ahmedabad",
-    "image":"/images/h3.jpg",
+    "image":"/images/property12.jpg",
     "location":"Ahmedabad",
     "type":"Residencial",
     "size":"2000 sqft",

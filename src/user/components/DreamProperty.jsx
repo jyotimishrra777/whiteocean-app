@@ -26,15 +26,15 @@ const DreamProperty = () => {
               we’re just getting started.
             </p>
             <div className="d-flex justify-content-between  mt-5">
-              <div>
+              <div className="services-time">
                 <h4 className="fs-4 fw-bolder mb-0">10+ years</h4>
                 <p className="fs-6 lh-sm">of experience </p>
               </div>
-              <div>
+              <div className="services-time">
                 <h4 className="fs-4 fw-bolder mb-0">100+</h4>
                 <p className="fs-6 lh-sm">projects delivered </p>
               </div>
-              <div>
+              <div className="services-time">
                 <h4 className="fs-4 fw-bolder mb-0">24/7</h4>
                 <p className="fs-6 lh-sm">Online & Offline Assistance </p>
               </div>

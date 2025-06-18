@@ -1409,6 +1409,8 @@ p {
   color: #234e6f;
   font-weight: bold;
   font-size: 18px;
+  display: flex;
+  gap: 5px;
 }
 .brochure-btn,
 .view-details-btn {
@@ -1428,8 +1430,10 @@ p {
   background: #f4875a;
 }
 
-.prorety-location {
+.property-location {
   font-size: 18px;
+  color: #234e6f !important;
+  font-weight: 700;
 }
 .property-specs {
   max-width: 700px;
@@ -1545,6 +1549,9 @@ select {
   .section {
     padding: 50px 15px !important;
   }
+  .pages-section {
+    min-height: 50vh;
+  }
   .section-title {
     font-size: 24px;
     text-align: center;
@@ -1599,6 +1606,16 @@ select {
   .dealer-card .card-body .card-text {
     text-align: center !important;
   }
+  .dealer1 h2 {
+    padding: 0;
+  }
+  .slick-card {
+    box-shadow: 0px 0px 2px 0px #234e6f;
+  }
+  .bottom-step .line-connector,
+  .top-step .line-connector {
+    height: 30px;
+  }
 
   .right-container .image-description {
     font-size: 18px;
@@ -1616,6 +1633,9 @@ select {
   }
   .about-card .card-body h5 {
     text-align: center;
+  }
+  .services-time {
+    flex: 1;
   }
   /* number data section  */
 
@@ -1942,8 +1962,13 @@ select {
   }
   .property-specs {
     justify-content: start;
-    flex-direction: column !important;
+    /* flex-direction: column !important; */
     gap: 10px;
+    color: black;
+  }
+  .property-title {
+    font-size: 21px;
+    color: #f27947;
   }
   .brochure-viewdetail {
     display: flex;
@@ -1984,11 +2009,10 @@ select {
     border-radius: 20px;
     background: white;
   }
-  .view-details-btn {
-    font-size: 15px;
-  }
+  .view-details-btn,
   .brochure-btn {
     font-size: 15px;
+    flex: 1;
   }
 
   /* Contact section */
