@@ -40,7 +40,8 @@ const Property = () => {
         <div className="row">
           <div className="container text-light d-flex justify-content-md-between align-items-start about-section-content">
             <h2 className="col-md-6 col-sm-12 fw-bolder">
-              Premium properties just curated for you
+              Premium properties <br />
+              just curated for you
             </h2>
             <div className="col-md-6 col-sm-12">
               <p>

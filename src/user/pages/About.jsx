@@ -16,7 +16,7 @@ const About = () => {
             <h2 className="col-md-6 col-sm-12  fw-bolder">
               Get your{" "}
               {/* <img src={GetImageUrl("images/star.png")} alt="img err" /> */}
-              {/* <br /> */}
+              <br />
               Sapno Ka Ghar
             </h2>
             <div className="col-md-6 col-sm-12">
