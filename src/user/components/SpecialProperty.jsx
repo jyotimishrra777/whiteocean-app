@@ -5,7 +5,8 @@ import { GetImageUrl } from "../../utils/GetImageURL";
 const SpecialProperty = () => {
   return (
     <>
-      <div className="container">
+      <div>
+        {/* <div className="container"> */}
         <div className="row g-5 align-items-center mb-5 ">
           <div className="col-lg-6">
             <div className="icon mb-3">

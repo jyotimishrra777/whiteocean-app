@@ -205,13 +205,34 @@ const Footer = () => {
             </footer>
           </div>
         </div>
-        <div className="d-flex justify-content-between align-items-center py-3 mt-4  px-5 border-top copy-right-sec">
+        {/* <div className="d-flex justify-content-between align-items-center py-3 mt-4  px-5 border-top copy-right-sec">
           <div className="copy-right">
             <p className="mb-0">
               {<PiCopyright />} {currentYear} - {currentYear + 1} Copyright
               White Ocean Properties. All Rights Reserved.
             </p>
             <p className="mb-0">
+              Designed & Developed By
+              <Link
+                to="https://www.ecodedash.com/"
+                target="blank"
+                className="ecode-dash-link ml-2 text-decoration-none"
+              >
+                Ecode Dash Pvt Ltd
+              </Link>
+            </p>
+          </div>
+          {shouldShowArrow && (
+            <div className="footer-arrow " onClick={handleScrollToTop}>
+              <IoIosArrowRoundUp />
+            </div>
+          )}
+        </div> */}
+        <div className=" copy-right-section">
+          <div className=" copy-right-section-content ">
+            <p className="text-white  mb-0 text-center">
+              {<PiCopyright />} {currentYear} - {currentYear + 1} Copyright
+              White Ocean Properties. All Rights Reserved <br />
               Designed & Developed By
               <Link
                 to="https://www.ecodedash.com/"

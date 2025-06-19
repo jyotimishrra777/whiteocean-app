@@ -53,7 +53,8 @@ const steps = [
 
 const ProcessTimeline = () => {
   return (
-    <div className="container pb-5">
+    // <div className="container pb-5">
+    <div className=" pb-5">
       <div className="timeline-wrapper">
         <div className="timeline-bar">
           <div className="segment segment-1"></div>

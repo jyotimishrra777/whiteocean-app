@@ -131,7 +131,8 @@ const Home = () => {
 
       {/* second section */}
       <section className="section">
-        <div className="container second-section">
+        {/* <div className="container second-section"> */}
+        <div className=" second-section">
           <h6 className="dealer-choose">
             {" "}
             <span>
@@ -194,7 +195,8 @@ const Home = () => {
 
       {/* fourth section */}
       <section className="section explore-section">
-        <div className="container">
+        {/* <div className="container"> */}
+        <div>
           <h6 className="dealer-choose">
             {" "}
             <span>
@@ -242,7 +244,8 @@ const Home = () => {
 
       <section className="section property-section">
         <div className="dealer">
-          <div className="dealer1 mb-5 col-12">
+          {/* <div className=" container dealer1 mb-5 col-12"> */}
+          <div className="  dealer1 mb-5 col-12">
             <h2 className="col-md-6 col-sm-12">
               The most famous rent properties across ahmedabad
             </h2>
@@ -265,7 +268,8 @@ const Home = () => {
       {/* seven section */}
 
       <section className="section service-section">
-        <div className="container ">
+        <div>
+          {/* <div className="container "> */}
           <h6 className="dealer-choose">
             {" "}
             <span>
@@ -287,8 +291,9 @@ const Home = () => {
         </div>
 
         <div>
-          <div className="container services-container">
-            <div className="col-12 d-flex gap-5 services-inner-container">
+          {/* <div className="container services-container"> */}
+          <div className=" services-container">
+            <div className="col-12 d-flex gap-2 services-inner-container">
               <div className="card services-card rounded-5 p-2">
                 <div className="card-img">
                   <img
@@ -360,7 +365,8 @@ const Home = () => {
       {/* eight section */}
 
       <section className="section timeline-section">
-        <div className="container">
+        {/* <div className="container"> */}
+        <div>
           <h6 className="dealer-choose">
             {" "}
             <span>
