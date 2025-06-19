@@ -346,14 +346,17 @@ p {
 }
 .number-data h2 {
   letter-spacing: 0.1rem;
-  /* padding: 0 40px; */
   font-weight: 900;
-  font-size: 3rem;
+  font-size: 2rem;
+}
+.number-data img {
+  width: 270px;
+  max-width: 300px;
 }
 .number-data-arrow {
   color: #fff;
-  height: 100px;
-  width: 100px;
+  height: 80px;
+  width: 80px;
   font-size: 50px;
   border: 1px solid white;
   border-radius: 100%;
@@ -722,21 +725,29 @@ p {
 .footer-link {
   width: max-content;
 }
-.copy-right {
-  color: #fff;
-  display: flex;
-}
-.copy-right p {
-  flex: initial;
-}
-.copy-right-sec {
-  background: #234e6f;
-}
+
 .ecode-dash-link {
-  color: rgb(7 194 31);
+  color: rgb(241 103 46);
 }
 .ecode-dash-link:hover {
-  color: rgb(7 194 31) !important;
+  color: rgb(241 103 46) !important;
+}
+
+/* Updated copy right */
+.copy-right-section {
+  background: #234e6f;
+}
+
+.copy-right-section-content {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-wrap: wrap;
+  padding: 20px 0;
+}
+.copy-right-section-content p {
+  flex: initial;
 }
 
 /* ProcessTimeline */
@@ -1721,9 +1732,9 @@ select {
   .testimonial-card {
     padding: 30px 15px;
   }
-  .testomonial-container {
+  /* .testomonial-container {
     padding: 0;
-  }
+  } */
 
   .nav-buttons {
     justify-content: space-around;
@@ -2217,5 +2228,11 @@ select {
   .special-card2,
   .special-card3 {
     height: 400px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .thumbs img {
+    height: 200px;
   }
 }

@@ -162,11 +162,13 @@ const Testimonial = () => {
 
   return (
     <section className="section testomonial-section">
-      <div className="testimonial-wrapper">
+      <div>
+        {/* <div className="testimonial-wrapper"> */}
         {/* <div> */}
-        <div className="container">
+        {/* <div className="container"> */}
+        <div>
           <div className=" row align-items-center">
-            <div className="col-5 testomonial-container">
+            <div className="col-md-5 col-sm-12 testomonial-container">
               <div className="left-content">
                 <h2 className="section-title">
                   See Why Customers Love <br /> White Ocean Properties
@@ -195,7 +197,7 @@ const Testimonial = () => {
               </div>
             </div>
 
-            <div className="col-7 testomonial-container">
+            <div className="col-md-7 col-sm-12 testomonial-container">
               <div className="testimonial-card-wrapper">
                 <div
                   className={`testimonial-card ${
