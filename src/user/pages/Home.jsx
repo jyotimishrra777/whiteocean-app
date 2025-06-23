@@ -170,7 +170,7 @@ const Home = () => {
               <div className="card-columns card-container">
                 {Dealer.map((item, i) => (
                   <div key={i} className="card dealer-card ">
-                    <div className="card-body text-start">
+                    <div className="card-body text-center">
                       <img
                         src={GetImageUrl(item.img)}
                         alt="Error"
