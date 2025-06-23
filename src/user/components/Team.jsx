@@ -16,7 +16,7 @@ const Team = () => {
         <div className="team-container  d-flex justify-content-between align-items-center">
           <div className="col-md-5 col-sm-12 p-0 right-container position-relative team-left">
             <img
-              src={GetImageUrl("images/haresh1.png")}
+              src={GetImageUrl("images/haresh1.jpg")}
               alt="Property"
               className="img-fluid mt-0 dream-right-img"
             />
