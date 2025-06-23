@@ -8,93 +8,15 @@ import { GrLocation } from "react-icons/gr";
 import { MdCurrencyRupee } from "react-icons/md";
 import { GetImageUrl } from "../../utils/GetImageURL";
 
-const TeamData = [
-  {
-    id: "1",
-    name: "Haresh Vaja",
-    post: "Founder & CEO",
-    image: "/images/haresh.png",
-  },
-  {
-    id: "2",
-    name: "Akshat",
-    post: "Sr. Sales Executive",
-    image: "/images/akshat.png",
-  },
-  {
-    id: "3",
-    name: "Chirag",
-    post: "Sales Executive",
-    image: "/images/chirag.png",
-  },
-  {
-    id: "4",
-    name: "Akash",
-    post: "Sales Executive",
-    image: "/images/akash.png",
-  },
-];
-
 const Team = () => {
-  // var settings = {
-  //   dots: true,
-  //   infinite: false,
-  //   speed: 500,
-  //   slidesToShow: 3,
-  //   slidesToScroll: 1,
-  //   initialSlide: 0,
-  //   responsive: [
-  //     {
-  //       breakpoint: 1024,
-  //       settings: {
-  //         slidesToShow: 3,
-  //         slidesToScroll: 1,
-  //         infinite: true,
-  //         dots: true,
-  //       },
-  //     },
-  //     {
-  //       breakpoint: 600,
-  //       settings: {
-  //         slidesToShow: 2,
-  //         slidesToScroll: 1,
-  //         initialSlide: 1,
-  //       },
-  //     },
-  //     {
-  //       breakpoint: 480,
-  //       settings: {
-  //         slidesToShow: 1,
-  //         slidesToScroll: 1,
-  //       },
-  //     },
-  //   ],
-  // };
-
   return (
     <>
-      {/* <Slider {...settings}>
-            {TeamData.map((item, i) => (
-              <div key={i} className="card slick-card" style="width: 18rem;">
-                <img
-                  src={GetImageUrl(item.image)}
-                  className="card-img-top"
-                  alt="Interior"
-                />
-                <div className="team-detail rounded-4 text-light py-2">
-                  <h4 className="fs-4 fw-bold mb-0">{item.name}</h4>
-                  <p className="py-0 mb-0">{item.post}</p>
-                </div>
-              </div>
-            ))}
-          </Slider> */}
-
       <section className="section">
         {/* <div className="team-container container d-flex justify-content-between align-items-center"> */}
         <div className="team-container  d-flex justify-content-between align-items-center">
           <div className="col-md-5 col-sm-12 p-0 right-container position-relative team-left">
             <img
-              src={GetImageUrl("images/haresh.png")}
+              src={GetImageUrl("images/haresh2.jpg")}
               alt="Property"
               className="img-fluid mt-0 dream-right-img"
             />
