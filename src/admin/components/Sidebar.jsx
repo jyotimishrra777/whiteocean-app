@@ -13,7 +13,7 @@ import {
   FaUsers,
   FaBars,
 } from "react-icons/fa";
-
+// This is sidebar
 const Sidebar = ({ isOpen, toggleSidebar }) => {
   const { adminAuth, logout } = useAuth();
   const navigate = useNavigate();
