@@ -19,12 +19,102 @@
   z-index: 999;
 }
 
-.admin-sidebar:not(.open) {
+/* .admin-sidebar:not(.open) {
   transform: translateX(-100%);
-}
+} */
 
 @media (min-width: 768px) {
   .admin-sidebar {
     transform: translateX(0);
+  }
+}
+
+/* Login & Register */
+
+.form-label {
+  font-size: 1.1rem;
+  font-weight: 900;
+}
+.form-control {
+  font-size: 1.1rem;
+}
+.eye-icon {
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  transform: translateY(-50%);
+  cursor: pointer;
+  z-index: 10;
+}
+.input-error {
+  border: 1px solid red;
+}
+.error {
+  color: red;
+  font-size: 1.1rem;
+}
+
+/* sidebar */
+
+.admin-sidebar .nav-link:hover {
+  background-color: #f8f9fa;
+  border-radius: 6px;
+  padding-left: 8px;
+  transition: all 0.2s ease-in-out;
+}
+
+/* AdminDashboard */
+
+.main-title {
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+
+.card-title {
+  font-size: 1.3rem;
+  font-weight: 900;
+}
+
+/* Responsive Design for the Whiteocean */
+
+@media (min-width: 288px) and (max-width: 576px) {
+}
+@media (min-width: 577px) and (max-width: 767px) {
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .section {
+    padding: 50px 30px !important;
+  }
+
+  .search-items {
+    padding: 10px 10px;
+  }
+  .search-fields {
+    gap: 0;
+    padding: 10px 20px;
+  }
+  .search-items input {
+    padding: 8px 5px;
+  }
+  .search-btn {
+    padding: 0px 5px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .auth {
+    display: none;
+  }
+  .hero-images {
+    display: none;
+  }
+  .hamburger {
+    display: block;
+  }
+  .navbar {
+    display: none !important;
+  }
+  .header {
+    padding: 12px 20px !important;
   }
 }

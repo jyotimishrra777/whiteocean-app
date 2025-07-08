@@ -7,18 +7,19 @@ import "../../styles/style2.css";
 const AdminLayout = () => {
   const [sidebarOpen, setSidebarOpen] = useState(true);
 
-  const toggleSidebar = () => {
-    setSidebarOpen((prev) => !prev);
-  };
+  const toggleSidebar = () => setSidebarOpen((prev) => !prev);
 
   return (
     <div>
       <Header toggleSidebar={toggleSidebar} />
       <div className="d-flex">
-        <Sidebar isOpen={sidebarOpen} />
+        <Sidebar isOpen={sidebarOpen} toggleSidebar={toggleSidebar} />
         <div
           className="flex-grow-1 p-4"
-          style={{ marginLeft: "250px", marginTop: "56px" }}
+          style={{
+            marginLeft: sidebarOpen ? "250px" : "70px",
+            transition: "margin-left 0.3s ease",
+          }}
         >
           <Outlet />
         </div>
