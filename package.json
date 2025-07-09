@@ -2,7 +2,7 @@
   "name": "whiteocean-app",
   "version": "0.0.0",
   "private": true,
-  "homepage": "https://jyotimishrra777.github.io/whiteocean",
+  "homepage": "https://jyotimishrra777.github.io/whiteocean-app",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
