@@ -1,6 +1,7 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
+
 export default defineConfig({
-  base: "/whiteocean-app/", // ✅ MUST match your repo name
+  base: "/whiteocean-app/",
   plugins: [react()],
 });
