@@ -51,15 +51,13 @@ const ViewProperty = () => {
             <thead className="table-primary">
               <tr>
                 <th>Sr. No</th>
-                <th>Address</th>
-                <th>Rooms</th>
-                <th>Bathrooms</th>
+                <th>Property name</th>
+                <th>Location</th>
+                <th>Type</th>
                 <th>Size (sq.ft)</th>
-                <th>Rent (₹)</th>
-                <th>Feature</th>
-                <th>Amenities</th>
-                <th>Surrounding</th>
-                <th>Description</th>
+                <th>Price(₹)</th>
+                <th>Furnished</th>
+                <th>BHK</th>
                 <th>Edit</th>
                 <th>Delete</th>
               </tr>
@@ -68,15 +66,14 @@ const ViewProperty = () => {
               {properties.map((prop, index) => (
                 <tr key={index}>
                   <td>{index + 1}</td>
-                  <td>{prop.address}</td>
-                  <td>{prop.rooms}</td>
-                  <td>{prop.bathrooms}</td>
+                  <td>{prop.name}</td>
+                  <td>{prop.location}</td>
+                  <td>{prop.type}</td>
                   <td>{prop.size}</td>
-                  <td>{prop.rent}</td>
-                  <td>{prop.feature}</td>
-                  <td>{prop.amenities}</td>
-                  <td>{prop.surrounding}</td>
-                  <td>{prop.description}</td>
+                  <td>{prop.price}</td>
+                  <td>{prop.furnished}</td>
+                  <td>{prop.bhk}</td>
+
                   <td>
                     <button
                       className="btn btn-sm btn-outline-primary"
@@ -110,44 +107,46 @@ const ViewProperty = () => {
         className="modal-fullscreen"
       >
         <Modal.Header closeButton>
-          <Modal.Title>Edit Property</Modal.Title>
+          <Modal.Title>
+            <h4 className="main-title text-primary px-5">Edit Property</h4>
+          </Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <form className="p-5">
             <div className="row">
               <div className="mb-3 col-md-6">
-                <label>Address</label>
+                <label className="form-label">Address</label>
                 <input
                   type="text"
-                  name="address"
-                  value={editData.address || ""}
+                  name="name"
+                  value={editData.name || ""}
                   onChange={handleEditChange}
                   className="form-control"
                 />
               </div>
               <div className="mb-3 col-md-6">
-                <label>Rooms</label>
+                <label className="form-label">Location</label>
                 <input
                   type="text"
-                  name="rooms"
-                  value={editData.rooms || ""}
+                  name="location"
+                  value={editData.location || ""}
                   onChange={handleEditChange}
                   className="form-control"
                 />
               </div>
 
               <div className="mb-3 col-md-6">
-                <label>Bathrooms</label>
+                <label className="form-label">Type</label>
                 <input
                   type="text"
-                  name="bathrooms"
-                  value={editData.bathrooms || ""}
+                  name="type"
+                  value={editData.type || ""}
                   onChange={handleEditChange}
                   className="form-control"
                 />
               </div>
               <div className="mb-3 col-md-6">
-                <label>Size (sq.ft)</label>
+                <label className="form-label">Size (sq.ft)</label>
                 <input
                   type="text"
                   name="size"
@@ -158,55 +157,34 @@ const ViewProperty = () => {
               </div>
 
               <div className="mb-3 col-md-6">
-                <label>Rent (₹)</label>
+                <label className="form-label">Price (₹)</label>
                 <input
                   type="text"
                   name="rent"
-                  value={editData.rent || ""}
+                  value={editData.price || ""}
                   onChange={handleEditChange}
                   className="form-control"
                 />
               </div>
               <div className="mb-3 col-md-6">
-                <label>Feature</label>
+                <label className="form-label">Furnished</label>
                 <input
                   type="text"
-                  name="feature"
-                  value={editData.feature || ""}
+                  name="furnished"
+                  value={editData.furnished || ""}
                   onChange={handleEditChange}
                   className="form-control"
                 />
               </div>
 
               <div className="mb-3 col-md-6">
-                <label>Amenities</label>
+                <label className="form-label">BHK</label>
                 <input
                   type="text"
-                  name="amenities"
-                  value={editData.amenities || ""}
+                  name="bhk"
+                  value={editData.bhk || ""}
                   onChange={handleEditChange}
                   className="form-control"
-                />
-              </div>
-              <div className="mb-3 col-md-6">
-                <label>Surrounding</label>
-                <input
-                  type="text"
-                  name="surrounding"
-                  value={editData.surrounding || ""}
-                  onChange={handleEditChange}
-                  className="form-control"
-                />
-              </div>
-
-              <div className="mb-3 col-12">
-                <label>Description</label>
-                <textarea
-                  name="description"
-                  value={editData.description || ""}
-                  onChange={handleEditChange}
-                  className="form-control"
-                  rows={3}
                 />
               </div>
             </div>

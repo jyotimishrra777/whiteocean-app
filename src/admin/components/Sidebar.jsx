@@ -50,11 +50,13 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
         overflowX: "hidden",
       }}
     >
-      <div className="d-flex justify-content-end p-2">
-        <button
-          onClick={toggleSidebar}
-          className="btn btn-md btn-outline-0  rounded-circle"
-        >
+      <div className="d-flex align-items-center justify-content-between p-3 border-bottom">
+        {isOpen && (
+          <div>
+            <h6 className="mb-0 fw-bold">Admin</h6>
+          </div>
+        )}
+        <button onClick={toggleSidebar} className="btn btn-sm expand-menu">
           <FaBars />
         </button>
       </div>
@@ -64,7 +66,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
           to="/admin"
           end
           onClick={() => setActiveMenu("dashboard")}
-          className={`nav-link d-flex align-items-center gap-2 fw-semibold rounded px-3 py-2 ${
+          className={`nav-link d-flex align-items-center gap-2 fw-semibold rounded px-3 py-2  ${
             activeMenu === "dashboard" ? "bg-primary text-white" : "text-dark"
           }`}
         >

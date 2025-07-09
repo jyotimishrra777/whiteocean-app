@@ -1,22 +1,40 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 import { FaUpload } from "react-icons/fa";
+import * as yup from "yup";
+
+// Yup Validation Schema
+const propertySchema = yup.object().shape({
+  name: yup.string().required("Name is required"),
+  location: yup.string().required("location is required"),
+  type: yup.string().required("Property type is required"),
+
+  size: yup.string().required("Size is required"),
+  price: yup.string().required("Price is required"),
+  furnished: yup.string().required("Furnished is required"),
+  bhk: yup.string().required("BHK is required"),
+  image: yup
+    .mixed()
+    .required("Image is required")
+    .test("fileSize", "Image must be under 20MB", (file) => {
+      return file && file.size <= 20 * 1024 * 1024;
+    }),
+});
 
 const AddProperty = () => {
   const [formData, setFormData] = useState({
-    address: "",
-    description: "",
-    rooms: "",
-    bathrooms: "",
+    name: "",
+    location: "",
+    type: "",
     size: "",
-    rent: "",
-    feature: "",
-    amenities: "",
-    surrounding: "",
-    image: null,
+    price: "",
+    furnished: "",
+    bhk: "",
+    image: "",
   });
 
-  const navigate = useNavigate();
+  const [errors, setErrors] = useState({});
+  // const navigate = useNavigate();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -27,102 +45,121 @@ const AddProperty = () => {
     setFormData((prev) => ({ ...prev, image: e.target.files[0] }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    const existing = JSON.parse(localStorage.getItem("properties")) || [];
-    localStorage.setItem("properties", JSON.stringify([...existing, formData]));
-    navigate("/admin/view-property");
+
+    try {
+      await propertySchema.validate(formData, { abortEarly: false });
+      const existing = JSON.parse(localStorage.getItem("properties")) || [];
+      localStorage.setItem(
+        "properties",
+        JSON.stringify([...existing, formData])
+      );
+    } catch (validationError) {
+      const formattedErrors = {};
+      validationError.inner.forEach((err) => {
+        formattedErrors[err.path] = err.message;
+      });
+      setErrors(formattedErrors);
+    }
   };
 
   return (
     <div className="container py-4">
       <h4 className="mb-4 fw-bold text-primary">➕ Add Property</h4>
       <form onSubmit={handleSubmit}>
-        {/* Address */}
+        {/* Name */}
         <div className="mb-3">
-          <label className="form-label ">Properties address</label>
+          <label className="form-label">Property Name</label>
           <input
             type="text"
-            className="form-control"
-            name="address"
-            placeholder="Type Properties address"
-            value={formData.address}
+            className={`form-control  ${errors.name ? "input-error" : ""}`}
+            name="name"
+            placeholder="Property Name"
+            value={formData.name}
             onChange={handleChange}
           />
+          {errors.name && <p className="error">{errors.name}</p>}
         </div>
 
-        {/* Description */}
+        {/* location */}
         <div className="mb-3">
-          <label className="form-label ">Properties description</label>
+          <label className="form-label">Property location</label>
           <textarea
-            className="form-control"
-            name="description"
-            rows="4"
-            placeholder="Type description"
-            value={formData.description}
+            className={`form-control ${errors.location ? "input-error" : ""}`}
+            name="location"
+            rows="2"
+            placeholder="Location"
+            value={formData.location}
             onChange={handleChange}
           ></textarea>
+          {errors.location && <p className="error">{errors.location}</p>}
         </div>
 
-        {/* Rooms, Bathroom, Size, Rent */}
+        {/* Rooms, size, Size, furnished */}
         <div className="row mb-3">
-          <div className="col-md-3">
+          <div className="col-md-4">
+            <label className="form-label">Property Type</label>
+            <select
+              className={`form-control ${errors.type ? "input-error" : ""}`}
+              name="type"
+              value={formData.type}
+              onChange={handleChange}
+            >
+              <option value="">Property type</option>
+              <option value="Commercial">Commercial</option>
+              <option value="Residencial">Residencial</option>
+              <option value="Plot">Plot</option>
+              <option value="Agriculture">Agriculture</option>
+              <option value="Apartment">Apartment</option>
+              <option value="Tenament">Tenament</option>
+              <option value="Penthouse">Penthouse</option>
+            </select>
+            {errors.type && <p className="error">{errors.type}</p>}
+          </div>
+          <div className="col-md-4">
+            <label className="form-label">Property Price</label>
             <input
               type="text"
-              className="form-control"
-              placeholder="Rooms"
-              name="rooms"
-              value={formData.rooms}
+              className={`form-control ${errors.price ? "input-error" : ""}`}
+              placeholder="price"
+              name="price"
+              value={formData.price}
               onChange={handleChange}
             />
+            {errors.price && <p className="error">{errors.price}</p>}
           </div>
-          <div className="col-md-3">
+          <div className="col-md-4">
+            <label className="form-label">Property Size</label>
             <input
               type="text"
-              className="form-control"
-              placeholder="Bathroom"
-              name="bathrooms"
-              value={formData.bathrooms}
-              onChange={handleChange}
-            />
-          </div>
-          <div className="col-md-3">
-            <input
-              type="text"
-              className="form-control"
-              placeholder="Space Size"
+              className={`form-control ${errors.size ? "input-error" : ""}`}
+              placeholder="Size (1200 sqft)"
               name="size"
               value={formData.size}
               onChange={handleChange}
             />
-          </div>
-          <div className="col-md-3">
-            <input
-              type="text"
-              className="form-control"
-              placeholder="Monthly Rent"
-              name="rent"
-              value={formData.rent}
-              onChange={handleChange}
-            />
+            {errors.size && <p className="error">{errors.size}</p>}
           </div>
         </div>
 
         {/* Image Upload */}
         <div
-          className="border rounded p-4 mb-4 text-center"
+          className={`border rounded p-4 mb-4 text-center ${
+            errors.image ? "border-danger" : ""
+          }`}
           style={{
             border: "2px dashed #ddd",
           }}
         >
           <label
             htmlFor="imageUpload"
-            className="form-label  cursor-pointer d-block"
+            className="form-label d-block cursor-pointer"
           >
             <FaUpload size={32} className="text-muted mb-2" />
             <div>
-              <span className="text-danger fw-semibold">Upload a image</span> or
-              drag and drop
+              <span className="text-danger fw-semibold">Upload an image</span>{" "}
+              or drag and drop
             </div>
             <small className="d-block text-muted">
               Image size up to 20MB
@@ -137,48 +174,46 @@ const AddProperty = () => {
             onChange={handleImageChange}
             accept="image/*"
           />
+          {errors.image && (
+            <div className="text-danger mt-2">{errors.image}</div>
+          )}
         </div>
 
-        {/* Feature, Amenities, Surrounding */}
+        {/* bhk*/}
         <div className="row mb-4">
-          <div className="col-md-4">
+          <div className="col-md-6">
+            <label className="form-label">Property BHK</label>
             <select
-              className="form-select"
-              name="feature"
-              value={formData.feature}
+              className={`form-control ${errors.bhk ? "input-error" : ""}`}
+              name="bhk"
+              value={formData.bhk}
               onChange={handleChange}
             >
-              <option value="">Add Feature</option>
-              <option value="Balcony">Balcony</option>
-              <option value="Parking">Parking</option>
-              <option value="Garden">Garden</option>
+              <option value="">Add bhk</option>
+              <option value="1 BHK">1 BHK</option>
+              <option value="2 BHK">2 BHK</option>
+              <option value="3 BHK">3 BHK</option>
+              <option value="4 BHK">4 BHK</option>
+              <option value="5 BHK">5 BHK</option>
+              <option value="5 +BHK">5+ BHK</option>
             </select>
+            {errors.bhk && <p className="error">{errors.bhk}</p>}
           </div>
-          <div className="col-md-4">
+          <div className="col-md-6">
+            <label className="form-label">Property Furnished</label>
             <select
-              className="form-select"
-              name="amenities"
-              value={formData.amenities}
+              className={`form-control ${
+                errors.furnished ? "input-error" : ""
+              }`}
+              name="furnished"
+              value={formData.furnished}
               onChange={handleChange}
             >
-              <option value="">Add Amenities</option>
-              <option value="WiFi">WiFi</option>
-              <option value="AC">Air Conditioning</option>
-              <option value="Security">24/7 Security</option>
+              <option value="">Furnished</option>
+              <option value="Balcony">Yes</option>
+              <option value="Parking">No</option>
             </select>
-          </div>
-          <div className="col-md-4">
-            <select
-              className="form-select"
-              name="surrounding"
-              value={formData.surrounding}
-              onChange={handleChange}
-            >
-              <option value="">Add Surrounding</option>
-              <option value="School">Near School</option>
-              <option value="Hospital">Near Hospital</option>
-              <option value="Market">Near Market</option>
-            </select>
+            {errors.furnished && <p className="error">{errors.furnished}</p>}
           </div>
         </div>
 
