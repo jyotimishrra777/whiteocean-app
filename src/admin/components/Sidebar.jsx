@@ -30,7 +30,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
 
   const baseClass =
     "nav-link d-flex align-items-center gap-2 px-3 py-2 rounded fw-semibold text-dark";
-  const activeClass = "bg-primary text-white fw-semibold shadow-sm";
+  const activeClass = "bg-primary text-white fw-semibold shadow-none";
 
   // Check if current path starts with these prefixes
   // const isPropertyActive =
@@ -50,21 +50,19 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
         overflowX: "hidden",
       }}
     >
-      <div className="d-flex justify-content-end p-2">
-        <button
-          onClick={toggleSidebar}
-          className="btn btn-md btn-outline-0  rounded-circle"
-        >
+      <div className="d-flex justify-content-between p-3 bg-info">
+        {isOpen && <h5 className="bold mb-0 fw-bold">Admin Panel</h5>}
+        <button onClick={toggleSidebar} className="sidebar-menu">
           <FaBars />
         </button>
       </div>
-      <nav className="nav flex-column p-3 gap-2">
+      <nav className="nav flex-column px-2 py-3 gap-2">
         {/* Dashboard */}
         <NavLink
           to="/admin"
           end
           onClick={() => setActiveMenu("dashboard")}
-          className={`nav-link d-flex align-items-center gap-2 fw-semibold rounded px-3 py-2 ${
+          className={`nav-link d-flex align-items-center gap-2 fw-semibold rounded px-3 py-2 sidebar-link ${
             activeMenu === "dashboard" ? "bg-primary text-white" : "text-dark"
           }`}
         >
@@ -73,8 +71,8 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
         </NavLink>
 
         {/* Users Dropdown */}
-        <button
-          className={`btn btn-toggle align-items-center rounded d-flex justify-content-between w-100 px-3 py-2 text-start ${
+        <NavLink
+          className={`nav-link d-flex align-items-center justify-content-between fw-semibold rounded px-3 py-2 sidebar-link ${
             activeMenu === "users" ? "bg-primary text-white" : "text-dark"
           }`}
           onClick={() => {
@@ -85,15 +83,15 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
           <span className="d-flex align-items-center gap-2 fw-semibold">
             <FaUsers /> {isOpen && "Users"}
           </span>
-          {userMenuOpen ? <FaChevronUp /> : <FaChevronDown />}
-        </button>
+          {isOpen && (userMenuOpen ? <FaChevronUp /> : <FaChevronDown />)}
+        </NavLink>
 
         {userMenuOpen && isOpen && (
           <div className="ms-3 mt-1 d-flex flex-column gap-1">
             <NavLink
               to="/admin/add-user"
               className={({ isActive }) =>
-                `${baseClass} ${isActive ? activeClass : ""}`
+                `sidebar-sublink ${baseClass} ${isActive ? activeClass : ""}`
               }
             >
               <FaPlus /> Add User
@@ -101,7 +99,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
             <NavLink
               to="/admin/view-user"
               className={({ isActive }) =>
-                `${baseClass} ${isActive ? activeClass : ""}`
+                `sidebar-sublink ${baseClass} ${isActive ? activeClass : ""}`
               }
             >
               <FaList /> View Users
@@ -111,7 +109,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
 
         {/* Property Dropdown */}
         <button
-          className={`btn btn-toggle align-items-center rounded d-flex justify-content-between w-100 px-3 py-2 text-start ${
+          className={`nav-link d-flex align-items-center justify-content-between fw-semibold rounded px-3 py-2 sidebar-link ${
             activeMenu === "property" ? "bg-primary text-white" : "text-dark"
           }`}
           onClick={() => {
@@ -122,7 +120,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
           <span className="d-flex align-items-center gap-2 fw-semibold">
             <FaHome /> {isOpen && "Property"}
           </span>
-          {propertyMenuOpen ? <FaChevronUp /> : <FaChevronDown />}
+          {isOpen && (propertyMenuOpen ? <FaChevronUp /> : <FaChevronDown />)}
         </button>
 
         {propertyMenuOpen && isOpen && (
@@ -130,7 +128,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
             <NavLink
               to="/admin/add-property"
               className={({ isActive }) =>
-                `${baseClass} ${isActive ? activeClass : ""}`
+                `sidebar-sublink ${baseClass} ${isActive ? activeClass : ""}`
               }
             >
               <FaPlus /> Add Property
@@ -138,7 +136,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
             <NavLink
               to="/admin/view-property"
               className={({ isActive }) =>
-                `${baseClass} ${isActive ? activeClass : ""}`
+                `sidebar-sublink ${baseClass} ${isActive ? activeClass : ""}`
               }
             >
               <FaList /> View Properties
@@ -151,7 +149,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
           <NavLink
             to="/admin/login"
             className={({ isActive }) =>
-              `${baseClass} ${isActive ? "text-primary" : ""}`
+              `logout ${baseClass} ${isActive ? "text-primary" : ""}`
             }
           >
             <FaSignInAlt />
@@ -160,7 +158,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
         ) : (
           <button
             onClick={handleLogout}
-            className="nav-link d-flex align-items-center gap-2 text-danger fw-semibold border-0 bg-transparent px-3 py-2"
+            className="logout nav-link d-flex align-items-center gap-2 text-danger fw-semibold border-0 bg-transparent px-3 py-2"
           >
             <FaSignOutAlt /> {isOpen && "Logout"}
           </button>

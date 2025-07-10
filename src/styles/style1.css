@@ -20,10 +20,11 @@ a:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 12px 60px;
+  padding: 10px 60px;
   border-bottom: 1px solid #f0f0f0;
   position: sticky;
   background-color: #ffffff;
+  box-shadow: 0 0 8px #433b3b9e;
   top: 0;
   left: 0;
   right: 0;
@@ -1249,6 +1250,7 @@ p {
 .nav-item {
   margin: 0 15px;
   text-decoration: none;
+  font-size: 19px;
   font-weight: 600;
   color: #333;
   position: relative;
@@ -1265,7 +1267,7 @@ p {
   font-weight: bold;
   background: #008080;
   color: #fff;
-  padding: 8px 25px;
+  padding: 5px 25px;
   border: none;
   border-radius: 20px;
   cursor: pointer;
