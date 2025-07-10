@@ -51,7 +51,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
         overflowX: "hidden",
       }}
     >
-      <div className="d-flex justify-content-between p-3 bg-info">
+      <div className="d-flex justify-content-between p-3 ">
         {isOpen && <h5 className="bold mb-0 fw-bold">Admin Panel</h5>}
         <button onClick={toggleSidebar} className="sidebar-menu">
           <FaBars />

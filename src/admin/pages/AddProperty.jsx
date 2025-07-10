@@ -55,6 +55,17 @@ const AddProperty = () => {
         "properties",
         JSON.stringify([...existing, formData])
       );
+      setFormData({
+        name: "",
+        location: "",
+        type: "",
+        size: "",
+        price: "",
+        furnished: "",
+        bhk: "",
+        image: "",
+      });
+      setErrors({});
     } catch (validationError) {
       const formattedErrors = {};
       validationError.inner.forEach((err) => {
