@@ -35,7 +35,8 @@
   font-size: 1.1rem;
   font-weight: 900;
 }
-.form-control {
+.form-control,
+select {
   font-size: 1.1rem;
   box-shadow: none;
 }
@@ -63,7 +64,9 @@
 }
 
 /* sidebar */
-
+.expand-menu {
+  box-shadow: none;
+}
 .admin-sidebar .nav-link:hover {
   background-color: #f8f9fa;
   border-radius: 6px;

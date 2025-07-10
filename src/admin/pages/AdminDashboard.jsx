@@ -90,7 +90,6 @@ const AdminDashboard = () => {
                 <th>Title</th>
                 <th>Location</th>
                 <th>Price</th>
-                <th>Status</th>
               </tr>
             </thead>
             <tbody>
@@ -98,25 +97,16 @@ const AdminDashboard = () => {
                 <td>Luxury Villa</td>
                 <td>Mumbai</td>
                 <td>₹2.5 Cr</td>
-                <td>
-                  <span className="badge bg-success">Published</span>
-                </td>
               </tr>
               <tr>
                 <td>3BHK Apartment</td>
                 <td>Bangalore</td>
                 <td>₹90 Lakh</td>
-                <td>
-                  <span className="badge bg-warning">Pending</span>
-                </td>
               </tr>
               <tr>
                 <td>Office Space</td>
                 <td>Delhi</td>
                 <td>₹1.2 Cr</td>
-                <td>
-                  <span className="badge bg-success">Published</span>
-                </td>
               </tr>
             </tbody>
           </Table>
