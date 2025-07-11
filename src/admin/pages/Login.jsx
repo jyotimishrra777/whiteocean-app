@@ -3,7 +3,7 @@ import { useAuth } from "../../context/useAuth";
 import { useNavigate, Link } from "react-router-dom";
 import * as yup from "yup";
 import { IoEyeOutline, IoEyeOffOutline } from "react-icons/io5";
-import { FaEnvelope } from "react-icons/fa";
+import { FaEnvelope, FaLock } from "react-icons/fa";
 
 // ✅ Yup schema
 const schema = yup.object().shape({
@@ -84,6 +84,9 @@ const Login = () => {
         className="card shadow p-5 rounded"
         style={{ width: "100%", maxWidth: "560px" }}
       >
+        <div className="d-flex justify-content-center align-items-center mb-3 mt-4">
+          <img src="/public/images/logo.jpg" alt="logo" />
+        </div>
         <div className="text-center mb-5 mt-4">
           <h3 className="fw-bold text-primary">Admin Login</h3>
         </div>
@@ -91,29 +94,35 @@ const Login = () => {
         <form onSubmit={handleSubmit}>
           {/* Email */}
 
-          <div className="mb-3 position-relative">
-            <label className="form-label ">Email address</label>
-
-            <input
-              type="email"
-              className={`form-control   ${errors.email ? "input-error" : ""}`}
-              placeholder="example@gmail.com"
-              name="email"
-              value={formValues.email}
-              onChange={handleChange}
-            />
-            {errors.email && <p className="error">{errors.email}</p>}
+          <div className="mb-2 fs-5">
+            <label className="form-label ">Email</label>
+            <div className="position-relative">
+              <span className="input-icon">
+                <FaEnvelope />
+              </span>
+              <input
+                type="email"
+                className={`form-control  px-5 ${
+                  errors.email ? "input-error" : ""
+                }`}
+                placeholder="Email"
+                name="email"
+                value={formValues.email}
+                onChange={handleChange}
+              />
+            </div>
+            {errors.password && <p className="error">{errors.password}</p>}
           </div>
           {/* Password */}
           <div className="mb-2 fs-5">
             <label className="form-label ">Password</label>
             <div className="position-relative">
-              <span className="eye-icon">
-                <IoEyeOutline />
+              <span className="input-icon">
+                <FaLock />
               </span>
               <input
                 type={showPassword ? "text" : "password"}
-                className={`form-control  pe-5 ${
+                className={`form-control  px-5 ${
                   errors.password ? "input-error" : ""
                 }`}
                 placeholder="Password"

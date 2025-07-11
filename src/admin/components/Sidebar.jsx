@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import { useAuth } from "../../context/useAuth";
+import { Link } from "react-router-dom";
 import {
   FaTachometerAlt,
   FaPlus,
@@ -12,7 +13,12 @@ import {
   FaHome,
   FaUsers,
   FaBars,
+  FaFacebook,
+  FaTwitterSquare,
+  FaInstagramSquare,
+  FaEnvelope,
 } from "react-icons/fa";
+import { IoMdChatbubbles } from "react-icons/io";
 // This is sidebar
 // This is sidebar
 const Sidebar = ({ isOpen, toggleSidebar }) => {
@@ -57,6 +63,56 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
           <FaBars />
         </button>
       </div>
+      {isOpen && (
+        <div className="sidebar">
+          <div className="user-info">
+            <div className="image">
+              <Link to="profile.html" className=" waves-effect waves-block">
+                <img src="images/admin-logo.jpg" alt="User" />
+              </Link>
+            </div>
+            <div className="detail">
+              <h5 className="fw-bold">Haresh Vaja</h5>
+              <p className="text-center">Property Dealer</p>
+            </div>
+            <Link
+              to="events.html"
+              title="Facebook"
+              className=" waves-effect waves-block"
+            >
+              <FaFacebook />
+            </Link>
+            <Link
+              to="mail-inbox.html"
+              title="Twitter"
+              className=" waves-effect waves-block"
+            >
+              <FaTwitterSquare />
+            </Link>
+            <Link
+              to="contact.html"
+              title="Instagram"
+              className=" waves-effect waves-block"
+            >
+              <FaInstagramSquare />
+            </Link>
+            <Link
+              to="chat.html"
+              title="Mail"
+              className=" waves-effect waves-block"
+            >
+              <FaEnvelope />
+            </Link>
+            <Link
+              to="sign-in.html"
+              title="Chat"
+              className=" waves-effect waves-block"
+            >
+              <IoMdChatbubbles />
+            </Link>
+          </div>
+        </div>
+      )}
       <nav className="nav flex-column px-2 py-3 gap-2">
         {/* Dashboard */}
         <NavLink

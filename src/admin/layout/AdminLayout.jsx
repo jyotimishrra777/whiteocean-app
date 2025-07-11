@@ -5,7 +5,7 @@ import Sidebar from "../components/Sidebar";
 import "../../styles/style2.css";
 
 const AdminLayout = () => {
-  const [sidebarOpen, setSidebarOpen] = useState(true);
+  const [sidebarOpen, setSidebarOpen] = useState(false);
 
   const toggleSidebar = () => setSidebarOpen((prev) => !prev);
 

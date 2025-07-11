@@ -6,6 +6,7 @@ import {
   FaUserTie,
   FaEnvelopeOpenText,
 } from "react-icons/fa";
+import PropertyStats from "../components/PropertyStats";
 
 const AdminDashboard = () => {
   return (
@@ -60,7 +61,8 @@ const AdminDashboard = () => {
         </div>
       </div>
 
-      {/* Placeholder for Charts */}
+      {/* property Stats */}
+      <PropertyStats />
 
       {/* Recently Added Properties */}
       <Card className="shadow-sm border-1 px-3 py-4">
